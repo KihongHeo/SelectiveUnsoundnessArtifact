@@ -7,14 +7,18 @@ import subprocess
 from sklearn import svm
 import numpy as np 
 
-pgms = [
+bo_pgms = [
        "crackaddr", "recipient", "mime1", "mime2", "prescan", "tTflag", "dns",
        "nxt", "sig", "iquery", "ns",
        "mapped", "obo", "realpath",
        "polymorph","ncompress", "129.compress", "spell", "man", "bzip2", "gzip", "bc", "sed"
        ]
+format_pgms = ["mp3","ghost","uni2ascii","latex", "daemon","rplay", "rptp",
+               "urjtag", "pal", "shntool", "rrd", "sdop",
+               "a2ps", "dico", "ddico"]
 
 bug_info = {
+# buffer overrun bugs
   'crackaddr' : 
     ["crackaddr-bad.c:197","crackaddr-bad.c:215","crackaddr-bad.c:248","crackaddr-bad.c:252","crackaddr-bad.c:303",
      "crackaddr-bad.c:305","crackaddr-bad.c:317","crackaddr-bad.c:333","crackaddr-bad.c:335","crackaddr-bad.c:345",
@@ -55,7 +59,114 @@ bug_info = {
                  "gzip.c:1133", "gzip.c:1434", "gzip.c:1439", "gzip.c:1467", "gzip.c:1502",
                  "gzip.c:1504", "gzip.c:1685", "gzip.c:1688"], 
   "bc"        : ["storage.c:177", "util.c:577"],
-  "sed"       : ["regex_internal.c:674"]
+  "sed"       : ["regex_internal.c:674"],
+# format string bugs
+  "mp3"       : ["mp3rename.c:554<-argv@mp3rename.c:25"],
+  "uni2ascii" : ["uni2ascii.c:3111<-argv@uni2ascii.c:2722",
+    "uni2ascii.c:3120<-argv@uni2ascii.c:2722",
+    "uni2ascii.c:3130<-argv@uni2ascii.c:2722",
+    "uni2ascii.c:3148<-argv@uni2ascii.c:2722",
+    "uni2ascii.c:3152<-argv@uni2ascii.c:2722",
+    "uni2ascii.c:3165<-argv@uni2ascii.c:2722",
+    "uni2ascii.c:3167<-argv@uni2ascii.c:2722"],
+  "ghost"    : [ "genconf.c:773<-argv@genconf.c:338", "genconf.c:865<-argv@genconf.c:338"],
+  "latex"    : [ "main.c:873<-_IO_getc@parser.c:438", "main.c:873<-_IO_getc@parser.c:449"],
+  "daemon"   : [ "prog.c:1502<-argv@daemon.c:3299"],
+  "rplay"    : [],
+  "rptp"     : [ "rptp.c:320<-recv@rptp.c:358", "rptp.c:320<-fread@rptp.c:687", "rptp.c:261<-argv@rptp.c:153"], 
+  "a2ps"     : [
+   "dstring.c:326<-getenv@userdata.c:62",
+   "dstring.c:326<-getenv@userdata.c:70",
+   "dstring.c:326<-getenv@userdata.c:72",
+   "dstring.c:326<-getenv@metaseq.c:538",
+   "dstring.c:326<-getenv@metaseq.c:568",
+   "dstring.c:326<-argv@main.c:928"],
+  "dico"     : [ "diag.c:80<-getenv@connect.c:135"],
+  "ddico"    : [ "main.c:1291<-argv@main.c:1355"],
+  "gnuplot"  : [ "mouse.c:439<-fgets@misc.c:197"],
+  "urjtag" : [
+   "prototype.c:174<-fgets@jtag.c:226",
+   "prototype.c:179<-fgets@jtag.c:226",
+   "prototype.c:191<-fgets@jtag.c:226",
+   "prototype.c:202<-fgets@jtag.c:226",
+   "prototype.c:207<-fgets@jtag.c:226",
+   "prototype.c:219<-fgets@jtag.c:226",
+
+   "prototype.c:174<-fgetc@parse.c:130",
+   "prototype.c:179<-fgetc@parse.c:130",
+   "prototype.c:191<-fgetc@parse.c:130",
+   "prototype.c:202<-fgetc@parse.c:130",
+   "prototype.c:207<-fgetc@parse.c:130",
+   "prototype.c:219<-fgetc@parse.c:130"],
+
+  "pal" : [ "input.c:466<-argv@main.c:703", "input.c:466<-fgets@input.c:633", "input.c:621<-argv@main.c:703"],
+  "shntool" : ["core_mode.c:766<-argv@core_shntool.c:357"],
+  "rrd" : [ "rrd_info.c:28<-argv@rrd_tool.c:400" ],
+  "sdop" : [ "write.c:1347<-fgets@read.c:772",
+   "number.c:123<-fgets@read.c:772",
+   "number.c:127<-fgets@read.c:772" ,
+   "number.c:131<-fgets@read.c:772",
+   "number.c:142<-fgets@read.c:772",
+   "number.c:166<-fgets@read.c:772",
+   "number.c:170<-fgets@read.c:772",
+   "number.c:174<-fgets@read.c:772",
+   "number.c:185<-fgets@read.c:772",
+   "number.c:209<-fgets@read.c:772",
+   "number.c:213<-fgets@read.c:772",
+   "number.c:217<-fgets@read.c:772",
+   "number.c:228<-fgets@read.c:772",
+   "number.c:123<-fgets@read.c:320",
+   "number.c:123<-fgets@read.c:351",
+   "number.c:123<-fgets@read.c:394",
+   "number.c:123<-fgets@read.c:553",
+   "number.c:127<-fgets@read.c:320",
+   "number.c:127<-fgets@read.c:351",
+   "number.c:127<-fgets@read.c:394",
+   "number.c:127<-fgets@read.c:553",
+   "number.c:131<-fgets@read.c:320",
+   "number.c:131<-fgets@read.c:351",
+   "number.c:131<-fgets@read.c:394",
+   "number.c:131<-fgets@read.c:553",
+   "number.c:142<-fgets@read.c:320",
+   "number.c:142<-fgets@read.c:351",
+   "number.c:142<-fgets@read.c:394",
+   "number.c:142<-fgets@read.c:553",
+   "number.c:166<-fgets@read.c:320",
+   "number.c:166<-fgets@read.c:351",
+   "number.c:166<-fgets@read.c:394",
+   "number.c:166<-fgets@read.c:553",
+   "number.c:170<-fgets@read.c:320",
+   "number.c:170<-fgets@read.c:351",
+   "number.c:170<-fgets@read.c:394",
+   "number.c:170<-fgets@read.c:553",
+   "number.c:174<-fgets@read.c:320",
+   "number.c:174<-fgets@read.c:351",
+   "number.c:174<-fgets@read.c:394",
+   "number.c:174<-fgets@read.c:553",
+   "number.c:185<-fgets@read.c:320",
+   "number.c:185<-fgets@read.c:351",
+   "number.c:185<-fgets@read.c:394",
+   "number.c:185<-fgets@read.c:553",
+   "number.c:209<-fgets@read.c:320",
+   "number.c:209<-fgets@read.c:351",
+   "number.c:209<-fgets@read.c:394",
+   "number.c:209<-fgets@read.c:553",
+   "number.c:213<-fgets@read.c:320",
+   "number.c:213<-fgets@read.c:351",
+   "number.c:213<-fgets@read.c:394",
+   "number.c:213<-fgets@read.c:553",
+   "number.c:217<-fgets@read.c:320",
+   "number.c:217<-fgets@read.c:351",
+   "number.c:217<-fgets@read.c:394",
+   "number.c:217<-fgets@read.c:553",
+   "number.c:228<-fgets@read.c:320",
+   "number.c:228<-fgets@read.c:351",
+   "number.c:228<-fgets@read.c:394",
+   "number.c:228<-fgets@read.c:553",
+   "write.c:1347<-fgets@read.c:320",
+   "write.c:1347<-fgets@read.c:351",
+   "write.c:1347<-fgets@read.c:394",
+   "write.c:1347<-fgets@read.c:553"]
 }
 
 def get_bug_info(pgm,output):
@@ -68,7 +179,7 @@ def get_bug_info(pgm,output):
       num_of_bugs = num_of_bugs + 1
   return (num_of_alarms, num_of_bugs,  num_of_alarms - num_of_bugs)
 
-def run(pgm,tunable_loop,tunable_lib,verbose):
+def run(target,pgm,tunable_loop,tunable_lib,verbose):
   loop_param = ""
   lib_param = ""
   for loopid in tunable_loop:
@@ -76,8 +187,7 @@ def run(pgm,tunable_loop,tunable_lib,verbose):
   for libid in tunable_lib:
     lib_param = lib_param + "-unsound_lib " + libid + " "
 
-  cmd = ("./bo_analyzer benchmarks/"+ pgm + "*.c " + loop_param + " " + lib_param)
-  
+  cmd = ("./"+target+"_analyzer benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param)
   if verbose == True:
     print("== tunable loops ==")
     print(tunable_loop)
@@ -95,8 +205,8 @@ def run(pgm,tunable_loop,tunable_lib,verbose):
     (alarms,bugs,false) = get_bug_info(pgm,output)
     return (bugs,false)
 
-def doSoundAnalysis(pgm):
-  return run(pgm,[],[],False)
+def doSoundAnalysis(target,pgm):
+  return run(target,pgm,[],[],False)
 
 def mkTrSet(fnames):
   lines = []
@@ -130,7 +240,7 @@ def mkTestSet(fnames):
     tokens = tokens[1:len(tokens)] # all features
     for b in tokens:
       feat.append(float(b))
-    testset.append(feat)
+    testset.append(feat) 
   return testset
 
 def doOCSVM(trset,testset):
@@ -147,29 +257,39 @@ def doOCSVM(trset,testset):
       tunable.append(feat[0])
   return tunable
 
-def doSelectiveAnalysis(pgm,f_train,f_test):
-  loop_training = map(lambda x: "data/loop_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
-  loop_test = map(lambda x: "data/loop_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
-  lib_training = map(lambda x: "data/lib_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
-  lib_test = map(lambda x: "data/lib_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
-  loop_trset = mkTrSet(loop_training)
-  loop_testset = mkTestSet(loop_test)
+def doSelectiveAnalysis(target,pgm,f_train,f_test):
+  if target == "bo":
+    loop_training = map(lambda x: "data/"+target+"_data/loop_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
+    loop_test = map(lambda x: "data/"+target+"_data/loop_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
+    loop_trset = mkTrSet(loop_training)
+    loop_testset = mkTestSet(loop_test)
+    tunable_loop = doOCSVM(loop_trset,loop_testset)
+  else:
+    tunable_loop = []
+  lib_training = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
+  lib_test = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
   lib_trset = mkTrSet(lib_training)
   lib_testset = mkTestSet(lib_test)
-  tunable_loop = doOCSVM(loop_trset,loop_testset)
   tunable_lib = doOCSVM(lib_trset,lib_testset)
-  return run(pgm,tunable_loop,tunable_lib,False)
+  return run(target,pgm,tunable_loop,tunable_lib,False)
 
-def doUnsoundAnalysis(pgm,f_test):
-  loop_test = map(lambda x: "data/loop_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
-  lib_test = map(lambda x: "data/lib_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
-  loop_testset = mkTestSet(loop_test)
+def doUnsoundAnalysis(target,pgm,f_test):
+  if target == "bo":
+    loop_test = map(lambda x: "data/"+target+"_data/loop_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
+    loop_testset = mkTestSet(loop_test)
+    tunable_loop = [ x[0] for x in loop_testset ]
+  else:
+    tunable_loop = []
+  lib_test = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
   lib_testset = mkTestSet(lib_test)
-  tunable_loop = [ x[0] for x in loop_testset ]
   tunable_lib = [ x[0] for x in lib_testset ]
-  return run(pgm,tunable_loop,tunable_lib,False)
+  return run(target,pgm,tunable_loop,tunable_lib,False)
 
-def leave_one_out():
+def leave_one_out(target):
+  if target == "bo":
+    pgms = bo_pgms
+  else:
+    pgms = format_pgms
   total_bugs = 0
   total_sound_true = 0
   total_sound_false = 0
@@ -177,17 +297,19 @@ def leave_one_out():
   total_selective_false = 0
   total_unsound_true = 0
   total_unsound_false = 0
+  print "Target : %s" % target
+  print "Leave-one-out Cross Validation"
   print "-----------------------------------------------------------------"
   print "%20s %5s %10s %13s %10s" % ("", "", "Sound", "Selective", "Unsound")
   print "%20s %5s %5s %5s %5s %5s %5s %5s" % ("Program", "Bug", "T", "F", "T", "F", "T", "F")
   print "-----------------------------------------------------------------"
   for p in pgms:
     sys.stdout.flush()
-    train = "cv/train_"+p
-    test = "cv/test_"+p
-    (sound_true, sound_false) = doSoundAnalysis(p)
-    (selective_true, selective_false) = doSelectiveAnalysis(p,train,test)
-    (unsound_true, unsound_false) = doUnsoundAnalysis(p,test)
+    train = "cv/"+target+"_cv/train_"+p
+    test = "cv/"+target+"_cv/test_"+p
+    (sound_true, sound_false) = doSoundAnalysis(target,p)
+    (selective_true, selective_false) = doSelectiveAnalysis(target,p,train,test)
+    (unsound_true, unsound_false) = doUnsoundAnalysis(target,p,test)
     print "%20s %5d %5d %5d %5d %5d %5d %5d" % (p, len(bug_info[p]), sound_true, sound_false, selective_true, selective_false, unsound_true, unsound_false)
     total_bugs += len(bug_info[p])
     total_sound_true += sound_true
@@ -201,38 +323,38 @@ def leave_one_out():
   print "-----------------------------------------------------------------"
 
 
-def cv_sound(f_test):
+def cv_sound(target,f_test):
   pgms = map (lambda x: x.strip("\n"), open (f_test, 'r').readlines())
   total_true = 0
   total_false = 0
   for p in pgms:
-    (sound_true, sound_false) = doSoundAnalysis(p)
+    (sound_true, sound_false) = doSoundAnalysis(target,p)
     total_true += sound_true
     total_false += sound_false
   return (total_true, total_false)
 
-def cv_selective(f_train, f_test):
+def cv_selective(target,f_train, f_test):
   pgms = map (lambda x: x.strip("\n"), open (f_test, 'r').readlines())
   total_true = 0
   total_false = 0
   for p in pgms:
-    (true, false) = doSelectiveAnalysis(p,f_train,f_test)
+    (true, false) = doSelectiveAnalysis(target,p,f_train,f_test)
     total_true += true
     total_false += false
   return (total_true, total_false)
  
-def cv_unsound(f_test):
+def cv_unsound(target,f_test):
   pgms = map (lambda x: x.strip("\n"), open (f_test, 'r').readlines())
   total_true = 0
   total_false = 0
   for p in pgms:
-    (true, false) = doUnsoundAnalysis(p,f_test)
+    (true, false) = doUnsoundAnalysis(target,p,f_test)
     total_true += true
     total_false += false
   return (total_true, total_false)
  
 
-def k_fold(k):
+def k_fold(target,k):
   total_bugs = 0
   total_sound_true = 0
   total_sound_false = 0
@@ -240,6 +362,7 @@ def k_fold(k):
   total_selective_false = 0
   total_unsound_true = 0
   total_unsound_false = 0
+  print "Target : %s" % target
   print "%d - fold Cross Validation" % k
   print "-----------------------------------------------------------------"
   print "%5s %10s %13s %10s" % ("", "Sound", "Selective", "Unsound")
@@ -247,11 +370,11 @@ def k_fold(k):
   print "-----------------------------------------------------------------"
   for i in range(0,10):
     sys.stdout.flush()
-    train = "cv/train"+str(k)+"_"+str(i)
-    test = "cv/test"+str(k)+"_"+str(i)
-    (sound_true, sound_false) = cv_sound(test)
-    (selective_true, selective_false) = cv_selective(train,test)
-    (unsound_true, unsound_false) = cv_unsound(test)
+    train = "cv/"+target+"_cv/train"+str(k)+"_"+str(i)
+    test = "cv/"+target+"_cv/test"+str(k)+"_"+str(i)
+    (sound_true, sound_false) = cv_sound(target,test)
+    (selective_true, selective_false) = cv_selective(target,train,test)
+    (unsound_true, unsound_false) = cv_unsound(target,test)
     print "%5d %5d %5d %5d %5d %5d %5d" % (i, sound_true, sound_false, selective_true, selective_false, unsound_true, unsound_false)
     total_sound_true += sound_true
     total_sound_false += sound_false
@@ -264,16 +387,17 @@ def k_fold(k):
   print "-----------------------------------------------------------------"
 
 def main(argv):
-  parser = argparse.ArgumentParser(description='ICSE 2017 Experiments -- Interval Analysis')
+  parser = argparse.ArgumentParser(description='ICSE 2017 Experiments')
+  parser.add_argument('--target')
   parser.add_argument('--cv')
   args = parser.parse_args()
 
   if args.cv == 'leave-one-out':
-    leave_one_out()
+    leave_one_out(args.target)
   elif args.cv == 'two-fold':
-    k_fold(55)
+    k_fold(args.target,55)
   elif args.cv == 'three-fold':
-    k_fold(73)
+    k_fold(args.target,73)
   else:
     print 'Invalid Argument: ' + args.cv
     parser.print_help()
