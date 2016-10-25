@@ -1,0 +1,9 @@
+crackaddr-bad.c:157:strcpy	0	1.	0	0	0.	1	1	0	0	0	1	0	1.	0.5	1.	0
+crackaddr-bad.c:163:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+crackaddr-bad.c:322:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+crackaddr-bad.c:359:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+crackaddr-bad.c:379:strchr	0	1.	1	0	0.	1	1	1	1	1	0	0	0.	1.	0.	0
+crackaddr-bad.c:415:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+crackaddr-bad.c:519:scanf	0	1.	0	0	0.	0	0	0	0	0	0	0	0.	0.25	0.	0
+crackaddr-bad.c:523:scanf	0	1.	0	0	0.	0	0	0	0	0	0	0	1.	0.5	0.	0
+crackaddr-bad.c:527:strlen	0	0.5	1	1	0.	1	1	0	0	0	0	0	1.	1.	0.	0

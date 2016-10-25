@@ -1,0 +1,11 @@
+prescan-overflow-bad.c:328:zoo_print	0	0.5	0	0	0.	0	0	1	1	0	0	0	1.	0.5	0.	0
+prescan-overflow-bad.c:329:zoo_print	0	0.5	0	0	0.	0	0	1	1	0	0	0	1.	0.5	0.	0
+prescan-overflow-bad.c:332:zoo_print	0	0.5	0	0	0.	0	0	1	1	0	0	0	1.	0.5	0.	0
+prescan-overflow-bad.c:340:strlen	0	0.5	1	1	0.	0	1	0	0	0	0	0	1.	1.	0.	0
+prescan-overflow-bad.c:341:zoo_print	0	0.5	0	0	0.	0	0	0	1	0	0	0	1.	0.5	0.	0
+prescan-overflow-bad.c:358:zoo_print	0	0.5	0	0	0.	0	0	1	1	0	0	0	1.	0.5	0.	0
+prescan-overflow-bad.c:460:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+prescan-overflow-bad.c:477:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+prescan-overflow-bad.c:499:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+prescan-overflow-bad.c:606:strlen	0	0.5	1	1	0.	0	1	0	0	0	0	0	1.	1.	0.	0
+prescan-overflow-bad.c:608:strcpy	0	1.	0	0	0.	1	1	0	0	0	1	0	1.	0.75	0.	0

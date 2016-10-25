@@ -1,0 +1,12 @@
+mime2-bad.c:150:strcpy	0	1.	0	0	0.	0	1	0	0	0	1	0	1.	0.25	1.	0
+mime2-bad.c:165:strcasecmp	0	1.	1	1	0.	0	1	0	0	0	0	0	1.	0.5	1.	0
+mime2-bad.c:170:fgetc	0	0.5	1	1	0.	0	0	1	0	1	0	0	0.	1.	0.	1
+mime2-bad.c:172:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+mime2-bad.c:175:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+mime2-bad.c:177:fgetc	0	0.5	1	1	0.	0	0	1	0	1	0	0	0.	1.	0.	1
+mime2-bad.c:182:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+mime2-bad.c:184:fgetc	0	0.5	1	1	0.	0	0	1	0	1	0	0	0.	1.	0.	1
+mime2-bad.c:189:__ctype_b_loc	1	0.	1	0	0.	0	0	1	0	1	0	0	1.	0.	1.	1
+mime2-bad.c:191:fgetc	0	0.5	1	1	0.	0	0	1	0	1	0	0	0.	1.	0.	1
+mime2-bad.c:307:strcasecmp	0	1.	1	1	0.	0	1	1	0	1	0	0	1.	0.625	1.	0
+mime2-bad.c:88:fopen	0	1.	1	0	1.	1	0	0	0	0	0	0	1.	0.625	1.	0
