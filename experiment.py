@@ -13,9 +13,8 @@ bo_pgms = [
        "mapped", "obo", "realpath",
        "polymorph","ncompress", "129.compress", "spell", "man", "bzip2", "gzip", "bc", "sed"
        ]
-format_pgms = ["mp3","ghost","uni2ascii","latex", "daemon","rplay", "rptp",
-               "urjtag", "pal", "shntool", "rrd", "sdop",
-               "a2ps", "dico", "ddico"]
+format_pgms = ["mp3","ghost","uni2ascii","pal", "shntool", "sdop", "latex", "rrd", "daemon","rplay", "rptp",
+               "urjtag", "a2ps", "dico", "ddico"]
 
 bug_info = {
 # buffer overrun bugs
@@ -100,6 +99,7 @@ bug_info = {
    "prototype.c:219<-fgetc@parse.c:130"],
 
   "pal" : [ "input.c:466<-argv@main.c:703", "input.c:466<-fgets@input.c:633", "input.c:621<-argv@main.c:703"],
+
   "shntool" : ["core_mode.c:766<-argv@core_shntool.c:357"],
   "rrd" : [ "rrd_info.c:28<-argv@rrd_tool.c:400" ],
   "sdop" : [ "write.c:1347<-fgets@read.c:772",
@@ -188,11 +188,13 @@ def run(target,pgm,tunable_loop,tunable_lib,verbose):
     lib_param = lib_param + "-unsound_lib " + libid + " "
 
   cmd = ("./"+target+"_analyzer benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param)
+
   if verbose == True:
     print("== tunable loops ==")
     print(tunable_loop)
     print("== tunable libs ==")
     print(tunable_lib)
+    print cmd
 
     output = subprocess.check_output(cmd, stderr=subprocess.STDOUT, shell=True)
     (alarms,bugs,false) = get_bug_info(pgm,output)
@@ -243,9 +245,12 @@ def mkTestSet(fnames):
     testset.append(feat) 
   return testset
 
-def doOCSVM(trset,testset):
+def doOCSVM(target,trset,testset):
   # fit the model
-  clf = svm.OneClassSVM(nu=0.1, kernel="rbf", gamma=0.1)
+  if target == "bo": 
+    clf = svm.OneClassSVM(nu=0.1, kernel="rbf", gamma=0.1)
+  else:
+    clf = svm.OneClassSVM(nu=0.2, kernel="rbf", gamma=0.1)
   clf.fit(trset)
   tunable = []
 
@@ -263,14 +268,14 @@ def doSelectiveAnalysis(target,pgm,f_train,f_test):
     loop_test = map(lambda x: "data/"+target+"_data/loop_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
     loop_trset = mkTrSet(loop_training)
     loop_testset = mkTestSet(loop_test)
-    tunable_loop = doOCSVM(loop_trset,loop_testset)
+    tunable_loop = doOCSVM(target,loop_trset,loop_testset)
   else:
     tunable_loop = []
   lib_training = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
   lib_test = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
   lib_trset = mkTrSet(lib_training)
   lib_testset = mkTestSet(lib_test)
-  tunable_lib = doOCSVM(lib_trset,lib_testset)
+  tunable_lib = doOCSVM(target,lib_trset,lib_testset)
   return run(target,pgm,tunable_loop,tunable_lib,False)
 
 def doUnsoundAnalysis(target,pgm,f_test):
