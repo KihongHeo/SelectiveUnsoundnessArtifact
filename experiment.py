@@ -283,11 +283,12 @@ def doUnsoundAnalysis(target,pgm,f_test):
     loop_test = map(lambda x: "data/"+target+"_data/loop_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
     loop_testset = mkTestSet(loop_test)
     tunable_loop = [ x[0] for x in loop_testset ]
+    lib_test = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
+    lib_testset = mkTestSet(lib_test)
+    tunable_lib = [ x[0] for x in lib_testset ]
   else:
     tunable_loop = []
-  lib_test = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
-  lib_testset = mkTestSet(lib_test)
-  tunable_lib = [ x[0] for x in lib_testset ]
+    tunable_lib = ["-1"]
   return run(target,pgm,tunable_loop,tunable_lib,False)
 
 def leave_one_out(target):
