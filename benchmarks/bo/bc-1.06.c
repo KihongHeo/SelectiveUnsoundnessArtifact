@@ -6215,7 +6215,7 @@ void more_arrays(void)
       goto while_break___0;
     }
 #line 177
-    *(arrays + indx) = (bc_var_array *)((void *)0);       // ZOO_BUG
+    *(arrays + indx) = (bc_var_array *)((void *)0);       // BUG
 #line 176
     indx ++;
   }

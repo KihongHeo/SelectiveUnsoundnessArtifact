@@ -2496,9 +2496,9 @@ void hbCreateDecodeTables(int *limit___0 , int *base___0 , int *perm___0 , unsig
       goto while_break___5;
     }
 #line 1077
-    vec += *(base___0 + (i + 1)) - *(base___0 + i);   // ZOO_BUG
+    vec += *(base___0 + (i + 1)) - *(base___0 + i);   // BUG
 #line 1078
-    *(limit___0 + i) = vec - 1;                       // ZOO_BUG
+    *(limit___0 + i) = vec - 1;                       // BUG
 #line 1079
     vec <<= 1;
 #line 1076
@@ -2522,7 +2522,7 @@ void hbCreateDecodeTables(int *limit___0 , int *base___0 , int *perm___0 , unsig
       goto while_break___6;
     }
 #line 1082 
-    *(base___0 + i) = ((*(limit___0 + (i - 1)) + 1) << 1) - *(base___0 + i);    // ZOO_BUG
+    *(base___0 + i) = ((*(limit___0 + (i - 1)) + 1) << 1) - *(base___0 + i);    // BUG
 #line 1081
     i ++;
   }

@@ -1371,7 +1371,7 @@ int readbytes(char *buf___1 , int n )
 #line 1192
     InBuff ++;
 #line 1192
-    *(buf___1 + i) = (char )*tmp;     // ZOO_BUG
+    *(buf___1 + i) = (char )*tmp;     // BUG
 #line 1193
     InCnt --;
 #line 1191
@@ -5557,7 +5557,7 @@ int add_line(char *buf___1 , int count , int num_letters , char letter )
       goto while_break;
     }
 #line 26
-    *(buf___1 + i) = letter;        // ZOO_BUG
+    *(buf___1 + i) = letter;        // BUG
 #line 24
     i ++;
   }
@@ -5568,7 +5568,7 @@ int add_line(char *buf___1 , int count , int num_letters , char letter )
 #line 28
   count = i;
 #line 29
-  *(buf___1 + count) = (char )'\n';   // ZOO_BUG
+  *(buf___1 + count) = (char )'\n';   // BUG
 #line 30
   count ++;
 #line 31
@@ -5915,12 +5915,12 @@ int compare_buffer(char *buf1 , int count1 , char *buf2 , int count2 )
 #line 196
       if ((int )*(buf1 + 0) == (int )*(buf2 + 0)) {     
 #line 196
-        if ((int )*(buf1 + (count1 - 1)) == (int )*(buf2 + (count2 - 1))) {   // ZOO_BUG
+        if ((int )*(buf1 + (count1 - 1)) == (int )*(buf2 + (count2 - 1))) {   // BUG
           {
           {
 #line 198
           printf((char const   */* __restrict  */)"First character (%c) and Last Character (%c) match. \n",
-                 (int )*(buf1 + 0), (int )*(buf1 + (count1 - 1)));  // ZOO_BUG
+                 (int )*(buf1 + 0), (int )*(buf1 + (count1 - 1)));  // BUG
           }
           }
         } else {
@@ -5936,8 +5936,8 @@ int compare_buffer(char *buf1 , int count1 , char *buf2 , int count2 )
           }
           {
 #line 204
-          printf((char const   */* __restrict  */)"or %c does not match %c\n", (int )*(buf1 + (count1 - 1)),    // ZOO_BUG
-                 (int )*(buf2 + (count2 - 1)));       // ZOO_BUG
+          printf((char const   */* __restrict  */)"or %c does not match %c\n", (int )*(buf1 + (count1 - 1)),    // BUG
+                 (int )*(buf2 + (count2 - 1)));       // BUG
           }
           }
         }
