@@ -1,0 +1,199 @@
+benchmarks/bo/sig.c 
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+
+Front-end completes: 0.0240000000001
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 921
+#unreachable : 33
+
+Translation to graphs completes: 0.0360000000001
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+
+iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7iteration : 8
+mem size : 306
+
+#functions all : 9
+#recursive : 0
+{}
+#unreachable   : 1
+unreachable functions : {newstr}
+
+Pre-analysis completes: 0.0360000000001
+To inline : []
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+#Procs : 9
+#Nodes : 888
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+
+live memory : 3976 kB
+iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7iteration : 8
+mem size : 306
+
+#functions all : 9
+#recursive : 0
+{}
+#unreachable   : 1
+unreachable functions : {newstr}
+#total abstract locations  = 314
+Def-use graph construction begins...
+draw intra-procedural edges
+[======......................................................] (1/9)     [=============...............................................] (2/9)     [====================........................................] (3/9)     [==========================..................................] (4/9)     [=================================...........................] (5/9)     [========================================....................] (6/9)     [==============================================..............] (7/9)     [=====================================================.......] (8/9)     [============================================================] (9/9)     
+draw inter-procedural edges
+[............................................................] (1/84)     [=...........................................................] (2/84)     [==..........................................................] (3/84)     [==..........................................................] (4/84)     [===.........................................................] (5/84)     [====........................................................] (6/84)     [=====.......................................................] (7/84)     [=====.......................................................] (8/84)     [======......................................................] (9/84)     [=======.....................................................] (10/84)     [=======.....................................................] (11/84)     [========....................................................] (12/84)     [=========...................................................] (13/84)     [==========..................................................] (14/84)     [==========..................................................] (15/84)     [===========.................................................] (16/84)     [============................................................] (17/84)     [============................................................] (18/84)     [=============...............................................] (19/84)     [==============..............................................] (20/84)     [===============.............................................] (21/84)     [===============.............................................] (22/84)     [================............................................] (23/84)     [=================...........................................] (24/84)     [=================...........................................] (25/84)     [==================..........................................] (26/84)     [===================.........................................] (27/84)     [====================........................................] (28/84)     [====================........................................] (29/84)     [=====================.......................................] (30/84)     [======================......................................] (31/84)     [======================......................................] (32/84)     [=======================.....................................] (33/84)     [========================....................................] (34/84)     [=========================...................................] (35/84)     [=========================...................................] (36/84)     [==========================..................................] (37/84)     [===========================.................................] (38/84)     [===========================.................................] (39/84)     [============================................................] (40/84)     [=============================...............................] (41/84)     [==============================..............................] (42/84)     [==============================..............................] (43/84)     [===============================.............................] (44/84)     [================================............................] (45/84)     [================================............................] (46/84)     [=================================...........................] (47/84)     [==================================..........................] (48/84)     [===================================.........................] (49/84)     [===================================.........................] (50/84)     [====================================........................] (51/84)     [=====================================.......................] (52/84)     [=====================================.......................] (53/84)     [======================================......................] (54/84)     [=======================================.....................] (55/84)     [========================================....................] (56/84)     [========================================....................] (57/84)     [=========================================...................] (58/84)     [==========================================..................] (59/84)     [==========================================..................] (60/84)     [===========================================.................] (61/84)     [============================================................] (62/84)     [=============================================...............] (63/84)     [=============================================...............] (64/84)     [==============================================..............] (65/84)     [===============================================.............] (66/84)     [===============================================.............] (67/84)     [================================================............] (68/84)     [=================================================...........] (69/84)     [==================================================..........] (70/84)     [==================================================..........] (71/84)     [===================================================.........] (72/84)     [====================================================........] (73/84)     [====================================================........] (74/84)     [=====================================================.......] (75/84)     [======================================================......] (76/84)     [=======================================================.....] (77/84)     [=======================================================.....] (78/84)     [========================================================....] (79/84)     [=========================================================...] (80/84)     [=========================================================...] (81/84)     [==========================================================..] (82/84)     [===========================================================.] (83/84)     [============================================================] (84/84)     
+Def-use graph construction completes: 0.104
+live memory : 5054 kB
+#Nodes in def-use graph : 738
+#Locs on def-use graph : 7508
+Workorder computation begins...
+Workorder computation completes: 0.0120000000001
+Fixpoint iteration with widening begins...
+#iteration in widening : 843
+Fixpoint iteration with widening completes: 0.0280000000001
+
+Itv Sparse Analysis completes: 0.196000000001
+
+
+
+--------------------------------------------------------------------------------
+Generate Buffer overrun report begins...
+--------------------------------------------------------------------------------
+
+[............................................................] (0/888)     
+Generate Buffer overrun report completes: 0.
+
+= Alarms =
+1. sig-bad.c:144 {__res_dnok} UnProven
+  *(tmp) @__res_dnok-648:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-18340
+2. sig-bad.c:155 {__res_hnok} UnProven
+  *(tmp___0) @__res_hnok-746:  offset: [1, +oo], size: [100, 100] UnProven, allocsite: main-18340
+3. sig-bad.c:312 {rrextract} UnProven
+  *(t_cp+1) @rrextract-1260:  offset: [13, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+  *(t_cp+0) @rrextract-1260:  offset: [12, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+4. sig-bad.c:316 {rrextract} UnProven
+  *(t_cp___0+1) @rrextract-1266:  offset: [17, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+  *(t_cp___0+0) @rrextract-1266:  offset: [16, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+5. sig-bad.c:336 {rrextract} UnProven
+  *(t_cp___2+1) @rrextract-1281:  offset: [29, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+  *(t_cp___2+0) @rrextract-1281:  offset: [28, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+6. sig-bad.c:412 {rrextract} UnProven
+  *(t_cp___3+1) @rrextract-1300:  offset: [33, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+  *(t_cp___3+0) @rrextract-1300:  offset: [32, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+7. sig-bad.c:417 {rrextract} UnProven
+  *(t_cp___4+1) @rrextract-1306:  offset: [37, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+  *(t_cp___4+0) @rrextract-1306:  offset: [36, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+8. sig-bad.c:440 {rrextract} UnProven
+  *(t_cp___8+1) @rrextract-1332:  offset: [65, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+  *(t_cp___8+0) @rrextract-1332:  offset: [64, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+9. sig-bad.c:484 {rrextract} UnProven
+  memcpy ((void */* __restrict  */)((void *)cp1), (void const   */* __restrict  */)((void const   *)cp), (size_t )18) @rrextract-1352:  offset: [69, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+10. sig-bad.c:561 {rrextract} UnProven
+  memcpy ((void */* __restrict  */)((void *)cp1), (void const   */* __restrict  */)((void const   *)cp), (size_t )n) @rrextract-1376:  offset: [20, +oo], size: [4140, 4140] UnProven, allocsite: rrextract-11790
+  memcpy ((void */* __restrict  */)((void *)cp1), (void const   */* __restrict  */)((void const   *)cp), (size_t )n) @rrextract-1376:  offset: [51, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+11. sig-bad.c:633 {createSig} UnProven
+  *(temp) @createSig-1565:  offset: [0, +oo], size: [400, 400] UnProven, allocsite: createSig-17680
+  *(temp) @createSig-1566:  offset: [0, +oo], size: [400, 400] UnProven, allocsite: createSig-17680
+12. sig-bad.c:634 {createSig} UnProven
+  *(tmp___6) @createSig-1593:  offset: [0, +oo], size: [400, 400] UnProven, allocsite: createSig-17680
+  *(tmp___5) @createSig-1593:  offset: [0, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+13. sig-bad.c:650 {createSig} UnProven
+  *(tmp___11) @createSig-1613:  offset: [0, +oo], size: [200, 200] UnProven, allocsite: createSig-17660
+  *(tmp___10) @createSig-1613:  offset: [0, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+14. sig-bad.c:654 {createSig} UnProven
+  *(tmp___12) @createSig-1620:  offset: [0, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+15. sig-bad.c:654 {createSig} UnProven
+  *(t_cp) @createSig-1621:  offset: [1, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+16. sig-bad.c:657 {createSig} UnProven
+  *(tmp___13) @createSig-1628:  offset: [4, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+17. sig-bad.c:657 {createSig} UnProven
+  *(t_cp___0) @createSig-1629:  offset: [5, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+18. sig-bad.c:660 {createSig} UnProven
+  *(tmp___14) @createSig-1636:  offset: [8, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+19. sig-bad.c:660 {createSig} UnProven
+  *(tmp___15) @createSig-1639:  offset: [9, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+20. sig-bad.c:660 {createSig} UnProven
+  *(tmp___16) @createSig-1642:  offset: [10, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+21. sig-bad.c:660 {createSig} UnProven
+  *(t_cp___1) @createSig-1643:  offset: [11, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+22. sig-bad.c:663 {createSig} UnProven
+  *(tmp___17) @createSig-1650:  offset: [16, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+23. sig-bad.c:663 {createSig} UnProven
+  *(t_cp___2) @createSig-1651:  offset: [17, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+24. sig-bad.c:670 {createSig} UnProven
+  *(tmp___18) @createSig-1659:  offset: [20, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+25. sig-bad.c:670 {createSig} UnProven
+  *(t_cp___3) @createSig-1660:  offset: [21, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+26. sig-bad.c:673 {createSig} UnProven
+  *(tmp___19) @createSig-1667:  offset: [24, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+27. sig-bad.c:673 {createSig} UnProven
+  *(t_cp___4) @createSig-1668:  offset: [25, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+28. sig-bad.c:676 {createSig} UnProven
+  *(tmp___20) @createSig-1675:  offset: [28, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+29. sig-bad.c:676 {createSig} UnProven
+  *(tmp___21) @createSig-1678:  offset: [29, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+30. sig-bad.c:676 {createSig} UnProven
+  *(tmp___22) @createSig-1681:  offset: [30, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+31. sig-bad.c:676 {createSig} UnProven
+  *(t_cp___5) @createSig-1682:  offset: [31, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+32. sig-bad.c:682 {createSig} UnProven
+  *(tmp___24) @createSig-1692:  offset: [36, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+33. sig-bad.c:682 {createSig} UnProven
+  *(tmp___25) @createSig-1695:  offset: [37, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+34. sig-bad.c:682 {createSig} UnProven
+  *(tmp___26) @createSig-1698:  offset: [38, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+35. sig-bad.c:682 {createSig} UnProven
+  *(t_cp___6) @createSig-1699:  offset: [39, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+36. sig-bad.c:684 {createSig} UnProven
+  *(tmp___27) @createSig-1706:  offset: [44, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+37. sig-bad.c:684 {createSig} UnProven
+  *(tmp___28) @createSig-1709:  offset: [45, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+38. sig-bad.c:684 {createSig} UnProven
+  *(tmp___29) @createSig-1712:  offset: [46, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+39. sig-bad.c:684 {createSig} UnProven
+  *(t_cp___7) @createSig-1713:  offset: [47, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+40. sig-bad.c:687 {createSig} UnProven
+  *(tmp___30) @createSig-1720:  offset: [52, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+41. sig-bad.c:687 {createSig} UnProven
+  *(t_cp___8) @createSig-1721:  offset: [53, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+42. sig-bad.c:707 {createSig} UnProven
+  *(tmp___35) @createSig-1745:  offset: [0, +oo], size: [200, 200] UnProven, allocsite: createSig-17670
+  *(tmp___34) @createSig-1745:  offset: [56, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+43. sig-bad.c:711 {createSig} UnProven
+  *(tmp___36) @createSig-1752:  offset: [56, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+44. sig-bad.c:711 {createSig} UnProven
+  *(tmp___37) @createSig-1755:  offset: [57, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+45. sig-bad.c:711 {createSig} UnProven
+  *(tmp___38) @createSig-1758:  offset: [58, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+46. sig-bad.c:711 {createSig} UnProven
+  *(t_cp___9) @createSig-1759:  offset: [59, +oo], size: [1000, 1000] UnProven, allocsite: main-18350
+
+#queries                 : 104
+#queries mod alarm point : 79
+#proven                  : 33
+#unproven                : 46
+#bot-involved            : 1
+Finished properly.
+0.292000000001

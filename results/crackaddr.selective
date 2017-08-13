@@ -1,0 +1,193 @@
+benchmarks/bo/crackaddr.c 
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+
+Front-end completes: 0.0120000000001
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 549
+#unreachable : 2
+
+Translation to graphs completes: 0.0240000000001
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 111
+
+#functions all : 3
+#recursive : 0
+{}
+#unreachable   : 0
+unreachable functions : {}
+
+Pre-analysis completes: 0.0120000000001
+To inline : []
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+#Procs : 3
+#Nodes : 547
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+
+live memory : 2676 kB
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 111
+
+#functions all : 3
+#recursive : 0
+{}
+#unreachable   : 0
+unreachable functions : {}
+#total abstract locations  = 114
+Def-use graph construction begins...
+draw intra-procedural edges
+[====================........................................] (1/3)     [========================================....................] (2/3)     [============================================================] (3/3)     
+draw inter-procedural edges
+[==..........................................................] (1/23)     [=====.......................................................] (2/23)     [=======.....................................................] (3/23)     [==========..................................................] (4/23)     [=============...............................................] (5/23)     [===============.............................................] (6/23)     [==================..........................................] (7/23)     [====================........................................] (8/23)     [=======================.....................................] (9/23)     [==========================..................................] (10/23)     [============================................................] (11/23)     [===============================.............................] (12/23)     [=================================...........................] (13/23)     [====================================........................] (14/23)     [=======================================.....................] (15/23)     [=========================================...................] (16/23)     [============================================................] (17/23)     [==============================================..............] (18/23)     [=================================================...........] (19/23)     [====================================================........] (20/23)     [======================================================......] (21/23)     [=========================================================...] (22/23)     [============================================================] (23/23)     
+Def-use graph construction completes: 0.0440000000001
+live memory : 3299 kB
+#Nodes in def-use graph : 455
+#Locs on def-use graph : 2374
+Workorder computation begins...
+Workorder computation completes: 0.008
+Fixpoint iteration with widening begins...
+#iteration in widening : 894
+Fixpoint iteration with widening completes: 0.0200000000001
+
+Itv Sparse Analysis completes: 0.0920000000001
+
+
+
+--------------------------------------------------------------------------------
+Generate Buffer overrun report begins...
+--------------------------------------------------------------------------------
+
+[............................................................] (0/547)     
+Generate Buffer overrun report completes: 0.
+
+= Alarms =
+1. crackaddr-bad.c:182 {crackaddr} UnProven
+  *(tmp___36) @crackaddr-804:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+2. crackaddr-bad.c:197 {crackaddr} UnProven
+  *(tmp___0) @crackaddr-809:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+3. crackaddr-bad.c:206 {crackaddr} UnProven
+  *(tmp___1) @crackaddr-813:  offset: [1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+4. crackaddr-bad.c:215 {crackaddr} UnProven
+  *(tmp___2) @crackaddr-817:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+5. crackaddr-bad.c:248 {crackaddr} UnProven
+  *(tmp___3) @crackaddr-829:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+6. crackaddr-bad.c:252 {crackaddr} UnProven
+  *(tmp___4) @crackaddr-832:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+7. crackaddr-bad.c:296 {crackaddr} UnProven
+  *(p) @crackaddr-671:  offset: [1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(p) @crackaddr-672:  offset: [1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+8. crackaddr-bad.c:296 {crackaddr} UnProven
+  *(p) @crackaddr-673:  offset: [1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(p) @crackaddr-674:  offset: [1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+9. crackaddr-bad.c:303 {crackaddr} UnProven
+  *(tmp___6) @crackaddr-843:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+10. crackaddr-bad.c:305 {crackaddr} UnProven
+  *(p) @crackaddr-846:  offset: [1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(tmp___7) @crackaddr-846:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+11. crackaddr-bad.c:317 {crackaddr} UnProven
+  *(tmp___8) @crackaddr-852:  offset: [0, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+12. crackaddr-bad.c:322 {crackaddr} UnProven
+  *(p) @crackaddr-685:  offset: [-1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(p) @crackaddr-686:  offset: [-1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+13. crackaddr-bad.c:322 {crackaddr} UnProven
+  *(p) @crackaddr-687:  offset: [-1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(p) @crackaddr-688:  offset: [-1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+14. crackaddr-bad.c:328 {crackaddr} UnProven
+  *(tmp___10) @crackaddr-860:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+15. crackaddr-bad.c:333 {crackaddr} UnProven
+  *(tmp___11) @crackaddr-863:  offset: [0, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+16. crackaddr-bad.c:335 {crackaddr} UnProven
+  *(tmp___12) @crackaddr-866:  offset: [0, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+17. crackaddr-bad.c:345 {crackaddr} UnProven
+  *(tmp___13) @crackaddr-870:  offset: [0, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+18. crackaddr-bad.c:347 {crackaddr} UnProven
+  *(tmp___15) @crackaddr-873:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+19. crackaddr-bad.c:351 {crackaddr} UnProven
+  *(tmp___14) @crackaddr-876:  offset: [-1, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+20. crackaddr-bad.c:355 {crackaddr} UnProven
+  *(tmp___16) @crackaddr-879:  offset: [-1, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+21. crackaddr-bad.c:359 {crackaddr} UnProven
+  *(p) @crackaddr-705:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(p) @crackaddr-706:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+22. crackaddr-bad.c:359 {crackaddr} UnProven
+  *(p) @crackaddr-707:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(p) @crackaddr-708:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+23. crackaddr-bad.c:362 {crackaddr} UnProven
+  *(tmp___18) @crackaddr-885:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(tmp___17) @crackaddr-885:  offset: [0, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+24. crackaddr-bad.c:375 {crackaddr} UnProven
+  *(tmp___20) @crackaddr-893:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+25. crackaddr-bad.c:411 {crackaddr} UnProven
+  *(tmp___22) @crackaddr-903:  offset: [0, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+26. crackaddr-bad.c:415 {crackaddr} UnProven
+  *(p) @crackaddr-733:  offset: [-1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(p) @crackaddr-734:  offset: [-1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+27. crackaddr-bad.c:415 {crackaddr} UnProven
+  *(p) @crackaddr-735:  offset: [-1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+  *(p) @crackaddr-736:  offset: [-1, +oo], size: [100, 100] UnProven, allocsite: main-10140
+28. crackaddr-bad.c:421 {crackaddr} UnProven
+  *(tmp___24) @crackaddr-911:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+29. crackaddr-bad.c:426 {crackaddr} UnProven
+  *(tmp___25) @crackaddr-914:  offset: [0, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+30. crackaddr-bad.c:428 {crackaddr} UnProven
+  *(tmp___26) @crackaddr-917:  offset: [0, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+31. crackaddr-bad.c:437 {crackaddr} UnProven
+  *(tmp___27) @crackaddr-921:  offset: [0, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+32. crackaddr-bad.c:438 {crackaddr} UnProven
+  *(tmp___29) @crackaddr-924:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10140
+33. crackaddr-bad.c:442 {crackaddr} UnProven
+  *(tmp___28) @crackaddr-927:  offset: [-1, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+34. crackaddr-bad.c:445 {crackaddr} UnProven
+  *(tmp___30) @crackaddr-930:  offset: [-1, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+35. crackaddr-bad.c:473 {crackaddr} UnProven
+  *(tmp___31) @crackaddr-943:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+36. crackaddr-bad.c:481 {crackaddr} UnProven
+  *(bp+-1) @crackaddr-771:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+  *(bp+-1) @crackaddr-772:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+37. crackaddr-bad.c:483 {crackaddr} UnProven
+  *(tmp___33) @crackaddr-946:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+38. crackaddr-bad.c:485 {crackaddr} UnProven
+  *(tmp___34) @crackaddr-949:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+39. crackaddr-bad.c:487 {crackaddr} UnProven
+  *(tmp___35) @crackaddr-952:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+40. crackaddr-bad.c:496 {crackaddr} UnProven
+  *(tmp___37) @crackaddr-957:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+41. crackaddr-bad.c:499 {crackaddr} UnProven
+  *(tmp___38) @crackaddr-962:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+42. crackaddr-bad.c:502 {crackaddr} UnProven
+  *(tmp___40) @crackaddr-967:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+43. crackaddr-bad.c:504 {crackaddr} UnProven
+  *(tmp___42) @crackaddr-970:  offset: [-oo, +oo], size: [31, 31] UnProven, allocsite: _G_-10550
+
+#queries                 : 72
+#queries mod alarm point : 49
+#proven                  : 6
+#unproven                : 43
+#bot-involved            : 0
+Finished properly.
+0.140000000001

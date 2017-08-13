@@ -1,0 +1,492 @@
+benchmarks/bo/bzip2-spec2000.c 
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+
+Front-end completes: 0.0720000000001
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 4893
+#unreachable : 9
+
+Translation to graphs completes: 0.112000000001
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+
+iteration : 1sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 2sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 3sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 4sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 5sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 6sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 7sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, allocateCompressStructures-42970 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+
+mem size : 786
+
+#functions all : 75
+#recursive : 0
+{}
+#unreachable   : 11
+unreachable functions : {badBGLengths,bitStreamEOF,bsGetInt32,bsPutInt32,mySIGSEGVorSIGBUScatcher,mySignalCatcher,ran,spec_random_load,spec_read,spec_write,testStream}
+
+Pre-analysis completes: 0.152000000001
+To inline : [allocateCompressStructures]
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+-inline allocateCompressStructures @spec.c:371
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs (after inline) begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 4926
+#unreachable : 9
+
+Translation to graphs (after inline) completes: 0.12
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis (after inline) begins...
+--------------------------------------------------------------------------------
+
+iteration : 1sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 2sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 3sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 4sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 5sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 6sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 7sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+
+mem size : 791
+
+#functions all : 75
+#recursive : 0
+{}
+#unreachable   : 12
+unreachable functions : {allocateCompressStructures,badBGLengths,bitStreamEOF,bsGetInt32,bsPutInt32,mySIGSEGVorSIGBUScatcher,mySignalCatcher,ran,spec_random_load,spec_read,spec_write,testStream}
+
+Pre-analysis (after inline) completes: 0.148000000001
+#Procs : 75
+#Nodes : 4917
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+
+live memory : 12207 kB
+iteration : 1sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 2sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 3sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 4sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 5sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 6sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+iteration : 7sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([5, 5], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [([2, 2], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+
+mem size : 790
+
+#functions all : 75
+#recursive : 0
+{}
+#unreachable   : 12
+unreachable functions : {allocateCompressStructures,badBGLengths,bitStreamEOF,bsGetInt32,bsPutInt32,mySIGSEGVorSIGBUScatcher,mySignalCatcher,ran,spec_random_load,spec_read,spec_write,testStream}
+sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, allocateCompressStructures-92160 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([1, 1], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, allocateCompressStructures-92160 -> ([0, 0], bot, [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([2, 2], bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([6, 6], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+#total abstract locations  = 950
+Def-use graph construction begins...
+draw intra-procedural edges
+[............................................................] (1/75)     [=...........................................................] (2/75)     [==..........................................................] (3/75)     [===.........................................................] (4/75)     [====........................................................] (5/75)     [====........................................................] (6/75)     [=====.......................................................] (7/75)     [======......................................................] (8/75)     [=======.....................................................] (9/75)     [========....................................................] (10/75)     [========....................................................] (11/75)     [=========...................................................] (12/75)     [==========..................................................] (13/75)     [===========.................................................] (14/75)     [============................................................] (15/75)     [============................................................] (16/75)     [=============...............................................] (17/75)     [==============..............................................] (18/75)     [===============.............................................] (19/75)     [================............................................] (20/75)     [================............................................] (21/75)     [=================...........................................] (22/75)     [==================..........................................] (23/75)     [===================.........................................] (24/75)     [====================........................................] (25/75)     [====================........................................] (26/75)     [=====================.......................................] (27/75)     [======================......................................] (28/75)     [=======================.....................................] (29/75)     [========================....................................] (30/75)     [========================....................................] (31/75)     [=========================...................................] (32/75)     [==========================..................................] (33/75)     [===========================.................................] (34/75)     [============================................................] (35/75)     [============================................................] (36/75)     [=============================...............................] (37/75)     [==============================..............................] (38/75)     [===============================.............................] (39/75)     [================================............................] (40/75)     [================================............................] (41/75)     [=================================...........................] (42/75)     [==================================..........................] (43/75)     [===================================.........................] (44/75)     [====================================........................] (45/75)     [====================================........................] (46/75)     [=====================================.......................] (47/75)     [======================================......................] (48/75)     [=======================================.....................] (49/75)     [========================================....................] (50/75)     [========================================....................] (51/75)     [=========================================...................] (52/75)     [==========================================..................] (53/75)     [===========================================.................] (54/75)     [============================================................] (55/75)     [============================================................] (56/75)     [=============================================...............] (57/75)     [==============================================..............] (58/75)     [===============================================.............] (59/75)     [================================================............] (60/75)     [================================================............] (61/75)     [=================================================...........] (62/75)     [==================================================..........] (63/75)     [===================================================.........] (64/75)     [====================================================........] (65/75)     [====================================================........] (66/75)     [=====================================================.......] (67/75)     [======================================================......] (68/75)     [=======================================================.....] (69/75)     [========================================================....] (70/75)     [========================================================....] (71/75)     [=========================================================...] (72/75)     [==========================================================..] (73/75)     [===========================================================.] (74/75)     [============================================================] (75/75)     
+draw inter-procedural edges
+[............................................................] (1/421)     [............................................................] (2/421)     [............................................................] (3/421)     [............................................................] (4/421)     [............................................................] (5/421)     [............................................................] (6/421)     [............................................................] (7/421)     [=...........................................................] (8/421)     [=...........................................................] (9/421)     [=...........................................................] (10/421)     [=...........................................................] (11/421)     [=...........................................................] (12/421)     [=...........................................................] (13/421)     [=...........................................................] (14/421)     [==..........................................................] (15/421)     [==..........................................................] (16/421)     [==..........................................................] (17/421)     [==..........................................................] (18/421)     [==..........................................................] (19/421)     [==..........................................................] (20/421)     [==..........................................................] (21/421)     [===.........................................................] (22/421)     [===.........................................................] (23/421)     [===.........................................................] (24/421)     [===.........................................................] (25/421)     [===.........................................................] (26/421)     [===.........................................................] (27/421)     [===.........................................................] (28/421)     [====........................................................] (29/421)     [====........................................................] (30/421)     [====........................................................] (31/421)     [====........................................................] (32/421)     [====........................................................] (33/421)     [====........................................................] (34/421)     [====........................................................] (35/421)     [=====.......................................................] (36/421)     [=====.......................................................] (37/421)     [=====.......................................................] (38/421)     [=====.......................................................] (39/421)     [=====.......................................................] (40/421)     [=====.......................................................] (41/421)     [=====.......................................................] (42/421)     [======......................................................] (43/421)     [======......................................................] (44/421)     [======......................................................] (45/421)     [======......................................................] (46/421)     [======......................................................] (47/421)     [======......................................................] (48/421)     [======......................................................] (49/421)     [=======.....................................................] (50/421)     [=======.....................................................] (51/421)     [=======.....................................................] (52/421)     [=======.....................................................] (53/421)     [=======.....................................................] (54/421)     [=======.....................................................] (55/421)     [=======.....................................................] (56/421)     [========....................................................] (57/421)     [========....................................................] (58/421)     [========....................................................] (59/421)     [========....................................................] (60/421)     [========....................................................] (61/421)     [========....................................................] (62/421)     [========....................................................] (63/421)     [=========...................................................] (64/421)     [=========...................................................] (65/421)     [=========...................................................] (66/421)     [=========...................................................] (67/421)     [=========...................................................] (68/421)     [=========...................................................] (69/421)     [=========...................................................] (70/421)     [==========..................................................] (71/421)     [==========..................................................] (72/421)     [==========..................................................] (73/421)     [==========..................................................] (74/421)     [==========..................................................] (75/421)     [==========..................................................] (76/421)     [==========..................................................] (77/421)     [===========.................................................] (78/421)     [===========.................................................] (79/421)     [===========.................................................] (80/421)     [===========.................................................] (81/421)     [===========.................................................] (82/421)     [===========.................................................] (83/421)     [===========.................................................] (84/421)     [============................................................] (85/421)     [============................................................] (86/421)     [============................................................] (87/421)     [============................................................] (88/421)     [============................................................] (89/421)     [============................................................] (90/421)     [============................................................] (91/421)     [=============...............................................] (92/421)     [=============...............................................] (93/421)     [=============...............................................] (94/421)     [=============...............................................] (95/421)     [=============...............................................] (96/421)     [=============...............................................] (97/421)     [=============...............................................] (98/421)     [==============..............................................] (99/421)     [==============..............................................] (100/421)     [==============..............................................] (101/421)     [==============..............................................] (102/421)     [==============..............................................] (103/421)     [==============..............................................] (104/421)     [==============..............................................] (105/421)     [===============.............................................] (106/421)     [===============.............................................] (107/421)     [===============.............................................] (108/421)     [===============.............................................] (109/421)     [===============.............................................] (110/421)     [===============.............................................] (111/421)     [===============.............................................] (112/421)     [================............................................] (113/421)     [================............................................] (114/421)     [================............................................] (115/421)     [================............................................] (116/421)     [================............................................] (117/421)     [================............................................] (118/421)     [================............................................] (119/421)     [=================...........................................] (120/421)     [=================...........................................] (121/421)     [=================...........................................] (122/421)     [=================...........................................] (123/421)     [=================...........................................] (124/421)     [=================...........................................] (125/421)     [=================...........................................] (126/421)     [==================..........................................] (127/421)     [==================..........................................] (128/421)     [==================..........................................] (129/421)     [==================..........................................] (130/421)     [==================..........................................] (131/421)     [==================..........................................] (132/421)     [==================..........................................] (133/421)     [===================.........................................] (134/421)     [===================.........................................] (135/421)     [===================.........................................] (136/421)     [===================.........................................] (137/421)     [===================.........................................] (138/421)     [===================.........................................] (139/421)     [===================.........................................] (140/421)     [====================........................................] (141/421)     [====================........................................] (142/421)     [====================........................................] (143/421)     [====================........................................] (144/421)     [====================........................................] (145/421)     [====================........................................] (146/421)     [====================........................................] (147/421)     [=====================.......................................] (148/421)     [=====================.......................................] (149/421)     [=====================.......................................] (150/421)     [=====================.......................................] (151/421)     [=====================.......................................] (152/421)     [=====================.......................................] (153/421)     [=====================.......................................] (154/421)     [======================......................................] (155/421)     [======================......................................] (156/421)     [======================......................................] (157/421)     [======================......................................] (158/421)     [======================......................................] (159/421)     [======================......................................] (160/421)     [======================......................................] (161/421)     [=======================.....................................] (162/421)     [=======================.....................................] (163/421)     [=======================.....................................] (164/421)     [=======================.....................................] (165/421)     [=======================.....................................] (166/421)     [=======================.....................................] (167/421)     [=======================.....................................] (168/421)     [========================....................................] (169/421)     [========================....................................] (170/421)     [========================....................................] (171/421)     [========================....................................] (172/421)     [========================....................................] (173/421)     [========================....................................] (174/421)     [========================....................................] (175/421)     [=========================...................................] (176/421)     [=========================...................................] (177/421)     [=========================...................................] (178/421)     [=========================...................................] (179/421)     [=========================...................................] (180/421)     [=========================...................................] (181/421)     [=========================...................................] (182/421)     [==========================..................................] (183/421)     [==========================..................................] (184/421)     [==========================..................................] (185/421)     [==========================..................................] (186/421)     [==========================..................................] (187/421)     [==========================..................................] (188/421)     [==========================..................................] (189/421)     [===========================.................................] (190/421)     [===========================.................................] (191/421)     [===========================.................................] (192/421)     [===========================.................................] (193/421)     [===========================.................................] (194/421)     [===========================.................................] (195/421)     [===========================.................................] (196/421)     [============================................................] (197/421)     [============================................................] (198/421)     [============================................................] (199/421)     [============================................................] (200/421)     [============================................................] (201/421)     [============================................................] (202/421)     [============================................................] (203/421)     [=============================...............................] (204/421)     [=============================...............................] (205/421)     [=============================...............................] (206/421)     [=============================...............................] (207/421)     [=============================...............................] (208/421)     [=============================...............................] (209/421)     [=============================...............................] (210/421)     [==============================..............................] (211/421)     [==============================..............................] (212/421)     [==============================..............................] (213/421)     [==============================..............................] (214/421)     [==============================..............................] (215/421)     [==============================..............................] (216/421)     [==============================..............................] (217/421)     [===============================.............................] (218/421)     [===============================.............................] (219/421)     [===============================.............................] (220/421)     [===============================.............................] (221/421)     [===============================.............................] (222/421)     [===============================.............................] (223/421)     [===============================.............................] (224/421)     [================================............................] (225/421)     [================================............................] (226/421)     [================================............................] (227/421)     [================================............................] (228/421)     [================================............................] (229/421)     [================================............................] (230/421)     [================================............................] (231/421)     [=================================...........................] (232/421)     [=================================...........................] (233/421)     [=================================...........................] (234/421)     [=================================...........................] (235/421)     [=================================...........................] (236/421)     [=================================...........................] (237/421)     [=================================...........................] (238/421)     [==================================..........................] (239/421)     [==================================..........................] (240/421)     [==================================..........................] (241/421)     [==================================..........................] (242/421)     [==================================..........................] (243/421)     [==================================..........................] (244/421)     [==================================..........................] (245/421)     [===================================.........................] (246/421)     [===================================.........................] (247/421)     [===================================.........................] (248/421)     [===================================.........................] (249/421)     [===================================.........................] (250/421)     [===================================.........................] (251/421)     [===================================.........................] (252/421)     [====================================........................] (253/421)     [====================================........................] (254/421)     [====================================........................] (255/421)     [====================================........................] (256/421)     [====================================........................] (257/421)     [====================================........................] (258/421)     [====================================........................] (259/421)     [=====================================.......................] (260/421)     [=====================================.......................] (261/421)     [=====================================.......................] (262/421)     [=====================================.......................] (263/421)     [=====================================.......................] (264/421)     [=====================================.......................] (265/421)     [=====================================.......................] (266/421)     [======================================......................] (267/421)     [======================================......................] (268/421)     [======================================......................] (269/421)     [======================================......................] (270/421)     [======================================......................] (271/421)     [======================================......................] (272/421)     [======================================......................] (273/421)     [=======================================.....................] (274/421)     [=======================================.....................] (275/421)     [=======================================.....................] (276/421)     [=======================================.....................] (277/421)     [=======================================.....................] (278/421)     [=======================================.....................] (279/421)     [=======================================.....................] (280/421)     [========================================....................] (281/421)     [========================================....................] (282/421)     [========================================....................] (283/421)     [========================================....................] (284/421)     [========================================....................] (285/421)     [========================================....................] (286/421)     [========================================....................] (287/421)     [=========================================...................] (288/421)     [=========================================...................] (289/421)     [=========================================...................] (290/421)     [=========================================...................] (291/421)     [=========================================...................] (292/421)     [=========================================...................] (293/421)     [=========================================...................] (294/421)     [==========================================..................] (295/421)     [==========================================..................] (296/421)     [==========================================..................] (297/421)     [==========================================..................] (298/421)     [==========================================..................] (299/421)     [==========================================..................] (300/421)     [==========================================..................] (301/421)     [===========================================.................] (302/421)     [===========================================.................] (303/421)     [===========================================.................] (304/421)     [===========================================.................] (305/421)     [===========================================.................] (306/421)     [===========================================.................] (307/421)     [===========================================.................] (308/421)     [============================================................] (309/421)     [============================================................] (310/421)     [============================================................] (311/421)     [============================================................] (312/421)     [============================================................] (313/421)     [============================================................] (314/421)     [============================================................] (315/421)     [=============================================...............] (316/421)     [=============================================...............] (317/421)     [=============================================...............] (318/421)     [=============================================...............] (319/421)     [=============================================...............] (320/421)     [=============================================...............] (321/421)     [=============================================...............] (322/421)     [==============================================..............] (323/421)     [==============================================..............] (324/421)     [==============================================..............] (325/421)     [==============================================..............] (326/421)     [==============================================..............] (327/421)     [==============================================..............] (328/421)     [==============================================..............] (329/421)     [===============================================.............] (330/421)     [===============================================.............] (331/421)     [===============================================.............] (332/421)     [===============================================.............] (333/421)     [===============================================.............] (334/421)     [===============================================.............] (335/421)     [===============================================.............] (336/421)     [================================================............] (337/421)     [================================================............] (338/421)     [================================================............] (339/421)     [================================================............] (340/421)     [================================================............] (341/421)     [================================================............] (342/421)     [================================================............] (343/421)     [=================================================...........] (344/421)     [=================================================...........] (345/421)     [=================================================...........] (346/421)     [=================================================...........] (347/421)     [=================================================...........] (348/421)     [=================================================...........] (349/421)     [=================================================...........] (350/421)     [==================================================..........] (351/421)     [==================================================..........] (352/421)     [==================================================..........] (353/421)     [==================================================..........] (354/421)     [==================================================..........] (355/421)     [==================================================..........] (356/421)     [==================================================..........] (357/421)     [===================================================.........] (358/421)     [===================================================.........] (359/421)     [===================================================.........] (360/421)     [===================================================.........] (361/421)     [===================================================.........] (362/421)     [===================================================.........] (363/421)     [===================================================.........] (364/421)     [====================================================........] (365/421)     [====================================================........] (366/421)     [====================================================........] (367/421)     [====================================================........] (368/421)     [====================================================........] (369/421)     [====================================================........] (370/421)     [====================================================........] (371/421)     [=====================================================.......] (372/421)     [=====================================================.......] (373/421)     [=====================================================.......] (374/421)     [=====================================================.......] (375/421)     [=====================================================.......] (376/421)     [=====================================================.......] (377/421)     [=====================================================.......] (378/421)     [======================================================......] (379/421)     [======================================================......] (380/421)     [======================================================......] (381/421)     [======================================================......] (382/421)     [======================================================......] (383/421)     [======================================================......] (384/421)     [======================================================......] (385/421)     [=======================================================.....] (386/421)     [=======================================================.....] (387/421)     [=======================================================.....] (388/421)     [=======================================================.....] (389/421)     [=======================================================.....] (390/421)     [=======================================================.....] (391/421)     [=======================================================.....] (392/421)     [========================================================....] (393/421)     [========================================================....] (394/421)     [========================================================....] (395/421)     [========================================================....] (396/421)     [========================================================....] (397/421)     [========================================================....] (398/421)     [========================================================....] (399/421)     [=========================================================...] (400/421)     [=========================================================...] (401/421)     [=========================================================...] (402/421)     [=========================================================...] (403/421)     [=========================================================...] (404/421)     [=========================================================...] (405/421)     [=========================================================...] (406/421)     [==========================================================..] (407/421)     [==========================================================..] (408/421)     [==========================================================..] (409/421)     [==========================================================..] (410/421)     [==========================================================..] (411/421)     [==========================================================..] (412/421)     [==========================================================..] (413/421)     [===========================================================.] (414/421)     [===========================================================.] (415/421)     [===========================================================.] (416/421)     [===========================================================.] (417/421)     [===========================================================.] (418/421)     [===========================================================.] (419/421)     [===========================================================.] (420/421)     [============================================================] (421/421)     
+Def-use graph construction completes: 0.368000000001
+live memory : 18801 kB
+#Nodes in def-use graph : 4290
+#Locs on def-use graph : 63734
+Workorder computation begins...
+Workorder computation completes: 0.504000000001
+Fixpoint iteration with widening begins...
+sparrow_print ([@szptr] @ bzip2.c:1306) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1375) : [(bot, bot, bot, bot)]
+sparrow_print ([@szptr] @ bzip2.c:1423) : [(bot, {NULL}, spec_initbufs-89130 -> ([0, 0], [1800000, 1800000], [2, 2], [0, +oo], bot), bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:305) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ spec.c:314) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:2918) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )icv] @ bzip2.c:1423) : [(bot, bot, bot, bot)]
+sparrow_print ([i] @ bzip2.c:1423) : [([0, 0], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1306) : [(bot, bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1309) : [(bot, bot, bot, bot)]
+sparrow_print ([wr] @ bzip2.c:1306) : [([0, 3], bot, bot, bot)]
+sparrow_print ([(int )*@szptr] @ bzip2.c:1602) : [(bot, bot, bot, bot)]
+sparrow_print ([EOB] @ bzip2.c:1306) : [([1, 2], bot, bot, bot)]
+#iteration in widening : 8898
+Fixpoint iteration with widening completes: 0.22
+
+Itv Sparse Analysis completes: 1.30800000001
+
+
+
+--------------------------------------------------------------------------------
+Generate Buffer overrun report begins...
+--------------------------------------------------------------------------------
+
+[............................................................] (0/4917)     [============................................................] (1000/4917)     [========================....................................] (2000/4917)     [====================================........................] (3000/4917)     [================================================............] (4000/4917)     
+Generate Buffer overrun report completes: 0.0120000000001
+
+= Alarms =
+1. bzip2.c:1077 {hbCreateDecodeTables} UnProven
+  *(base___0+i) @hbCreateDecodeTables-9180:  offset: [-1, 16], size: [258, 258] UnProven, allocsite: _G_-118300
+2. bzip2.c:1078 {hbCreateDecodeTables} UnProven
+  *(limit___0+i) @hbCreateDecodeTables-9181:  offset: [-1, 16], size: [258, 258] UnProven, allocsite: _G_-118210
+3. bzip2.c:1082 {hbCreateDecodeTables} UnProven
+  *(limit___0+(i-1)) @hbCreateDecodeTables-9185:  offset: [-1, 15], size: [258, 258] UnProven, allocsite: _G_-118210
+4. bzip2.c:1448 {sendMTFValues} UnProven
+  fave[bt] @sendMTFValues-9632:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: sendMTFValues-94030
+  fave[bt] @sendMTFValues-9632:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: sendMTFValues-94030
+5. bzip2.c:1456 {sendMTFValues} UnProven
+  @rfreq[bt] @sendMTFValues-9636:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118530
+  @rfreq[bt] @sendMTFValues-9636:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118530
+6. bzip2.c:1727 {getAndMoveToFrontDecode} UnProven
+  @selector[groupNo] @getAndMoveToFrontDecode-10009:  offset: [-1, 0], size: [18002, 18002] UnProven, allocsite: _G_-117990
+7. bzip2.c:1727 {getAndMoveToFrontDecode} UnProven
+  @minLens[zt] @getAndMoveToFrontDecode-10010:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118420
+8. bzip2.c:1727 {getAndMoveToFrontDecode} UnProven
+  @limit[zt][zn] @getAndMoveToFrontDecode-9940:  offset: [-1, 32], size: [258, 258] UnProven, allocsite: _G_-118210
+  @limit[zt] @getAndMoveToFrontDecode-9940:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118150
+  @limit[zt][zn] @getAndMoveToFrontDecode-9941:  offset: [-1, 32], size: [258, 258] UnProven, allocsite: _G_-118210
+  @limit[zt] @getAndMoveToFrontDecode-9941:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118150
+9. bzip2.c:1727 {getAndMoveToFrontDecode} UnProven
+  @base[zt][zn] @getAndMoveToFrontDecode-10022:  offset: [-1, 33], size: [258, 258] UnProven, allocsite: _G_-118300
+  @base[zt] @getAndMoveToFrontDecode-10022:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118240
+  @perm[zt] @getAndMoveToFrontDecode-10022:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118330
+10. bzip2.c:1741 {getAndMoveToFrontDecode} UnProven
+  @selector[groupNo] @getAndMoveToFrontDecode-10031:  offset: [-1, +oo], size: [18002, 18002] UnProven, allocsite: _G_-117990
+11. bzip2.c:1741 {getAndMoveToFrontDecode} UnProven
+  @minLens[zt___0] @getAndMoveToFrontDecode-10032:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118420
+12. bzip2.c:1741 {getAndMoveToFrontDecode} UnProven
+  @limit[zt___0][zn___0] @getAndMoveToFrontDecode-9958:  offset: [-1, 32], size: [258, 258] UnProven, allocsite: _G_-118210
+  @limit[zt___0] @getAndMoveToFrontDecode-9958:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118150
+  @limit[zt___0][zn___0] @getAndMoveToFrontDecode-9959:  offset: [-1, 32], size: [258, 258] UnProven, allocsite: _G_-118210
+  @limit[zt___0] @getAndMoveToFrontDecode-9959:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118150
+13. bzip2.c:1741 {getAndMoveToFrontDecode} UnProven
+  @base[zt___0][zn___0] @getAndMoveToFrontDecode-10044:  offset: [-1, 33], size: [258, 258] UnProven, allocsite: _G_-118300
+  @base[zt___0] @getAndMoveToFrontDecode-10044:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118240
+  @perm[zt___0] @getAndMoveToFrontDecode-10044:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118330
+14. bzip2.c:1793 {getAndMoveToFrontDecode} UnProven
+  @selector[groupNo] @getAndMoveToFrontDecode-10073:  offset: [-1, +oo], size: [18002, 18002] UnProven, allocsite: _G_-117990
+15. bzip2.c:1793 {getAndMoveToFrontDecode} UnProven
+  @minLens[zt___1] @getAndMoveToFrontDecode-10074:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118420
+16. bzip2.c:1793 {getAndMoveToFrontDecode} UnProven
+  @limit[zt___1][zn___1] @getAndMoveToFrontDecode-9986:  offset: [-1, 32], size: [258, 258] UnProven, allocsite: _G_-118210
+  @limit[zt___1] @getAndMoveToFrontDecode-9986:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118150
+  @limit[zt___1][zn___1] @getAndMoveToFrontDecode-9987:  offset: [-1, 32], size: [258, 258] UnProven, allocsite: _G_-118210
+  @limit[zt___1] @getAndMoveToFrontDecode-9987:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118150
+17. bzip2.c:1793 {getAndMoveToFrontDecode} UnProven
+  @base[zt___1][zn___1] @getAndMoveToFrontDecode-10086:  offset: [-1, 33], size: [258, 258] UnProven, allocsite: _G_-118300
+  @base[zt___1] @getAndMoveToFrontDecode-10086:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118240
+  @perm[zt___1] @getAndMoveToFrontDecode-10086:  offset: [-1, 0], size: [6, 6] UnProven, allocsite: _G_-118330
+18. bzip2.c:2805 {loadAndRLEsource} UnProven
+  @inUse[ch] @loadAndRLEsource-10966:  offset: [65536, 65536], size: [256, 256] UnProven, allocsite: _G_-117920
+19. bzip2.c:2817 {loadAndRLEsource} UnProven
+  @inUse[runLen-4] @loadAndRLEsource-10979:  offset: [65532, 65532], size: [256, 256] UnProven, allocsite: _G_-117920
+20. spec.c:134 {spec_random_load} UnProven
+  memcpy ((void */* __restrict  */)((void *)(*(@spec_fd[fd]).buf+i)), (void const   */* __restrict  */)((void const   *)StartOf(random_text[(int )(tmp___0*((double )32))])), (size_t )131072) @spec_random_load-8484:  offset: [131073, 131073], size: [131072, 131072] UnProven, allocsite: spec_random_load-84580
+21. spec.c:256 {spec_putc} UnProven
+  @spec_fd[fd] @spec_putc-8719:  offset: [0, 16], size: [9, 9] UnProven, allocsite: _G_-117350
+22. spec.c:256 {spec_putc} UnProven
+  @spec_fd[fd] @spec_putc-8720:  offset: [0, 16], size: [9, 9] UnProven, allocsite: _G_-117350
+  @spec_fd[fd] @spec_putc-8720:  offset: [0, 16], size: [9, 9] UnProven, allocsite: _G_-117350
+23. spec.c:256 {spec_putc} UnProven
+  @spec_fd[fd] @spec_putc-8721:  offset: [0, 16], size: [9, 9] UnProven, allocsite: _G_-117350
+24. spec.c:257 {spec_putc} UnProven
+  @spec_fd[fd] @spec_putc-8722:  offset: [0, 16], size: [9, 9] UnProven, allocsite: _G_-117350
+  @spec_fd[fd] @spec_putc-8722:  offset: [0, 16], size: [9, 9] UnProven, allocsite: _G_-117350
+
+#queries                 : 547
+#queries mod alarm point : 372
+#proven                  : 348
+#unproven                : 24
+#bot-involved            : 45
+Finished properly.
+1.94400000001

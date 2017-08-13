@@ -1,0 +1,501 @@
+benchmarks/bo/recipient.c 
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+
+Front-end completes: 0.00800000000001
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 363
+#unreachable : 7
+
+Translation to graphs completes: 0.00800000000001
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+
+iteration : 1sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, __extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, bot, bot)]
+iteration : 2sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 3sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 4sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 5sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 6sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 7sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-6210 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-6280 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+
+mem size : 113
+
+#functions all : 6
+#recursive : 0
+{}
+#unreachable   : 0
+unreachable functions : {}
+
+Pre-analysis completes: 0.00800000000001
+To inline : [xalloc]
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+-inline xalloc @recipient-bad.c:138
+-inline xalloc @recipient-bad.c:177
+-inline xalloc @recipient-bad.c:180
+-inline xalloc @recipient-bad.c:190
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs (after inline) begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 423
+#unreachable : 7
+
+Translation to graphs (after inline) completes: 0.00800000000001
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis (after inline) begins...
+--------------------------------------------------------------------------------
+
+iteration : 1sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, __extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, bot, bot)]
+iteration : 2sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 3sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 4sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 5sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 6sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+
+mem size : 137
+
+#functions all : 6
+#recursive : 0
+{}
+#unreachable   : 1
+unreachable functions : {xalloc}
+
+Pre-analysis (after inline) completes: 0.00800000000001
+#Procs : 6
+#Nodes : 416
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+
+live memory : 2699 kB
+iteration : 1sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, __extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, bot, bot)]
+iteration : 2sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, bot, bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, bot, bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 3sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 4sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 5sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+iteration : 6sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+
+mem size : 137
+
+#functions all : 6
+#recursive : 0
+{}
+#unreachable   : 1
+unreachable functions : {xalloc}
+sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+#total abstract locations  = 155
+Def-use graph construction begins...
+draw intra-procedural edges
+[==========..................................................] (1/6)     [====================........................................] (2/6)     [==============================..............................] (3/6)     [========================================....................] (4/6)     [==================================================..........] (5/6)     [============================================================] (6/6)     
+draw inter-procedural edges
+[=...........................................................] (1/58)     [==..........................................................] (2/58)     [===.........................................................] (3/58)     [====........................................................] (4/58)     [=====.......................................................] (5/58)     [======......................................................] (6/58)     [=======.....................................................] (7/58)     [========....................................................] (8/58)     [=========...................................................] (9/58)     [==========..................................................] (10/58)     [===========.................................................] (11/58)     [============................................................] (12/58)     [=============...............................................] (13/58)     [==============..............................................] (14/58)     [===============.............................................] (15/58)     [================............................................] (16/58)     [=================...........................................] (17/58)     [==================..........................................] (18/58)     [===================.........................................] (19/58)     [====================........................................] (20/58)     [=====================.......................................] (21/58)     [======================......................................] (22/58)     [=======================.....................................] (23/58)     [========================....................................] (24/58)     [=========================...................................] (25/58)     [==========================..................................] (26/58)     [===========================.................................] (27/58)     [============================................................] (28/58)     [==============================..............................] (29/58)     [===============================.............................] (30/58)     [================================............................] (31/58)     [=================================...........................] (32/58)     [==================================..........................] (33/58)     [===================================.........................] (34/58)     [====================================........................] (35/58)     [=====================================.......................] (36/58)     [======================================......................] (37/58)     [=======================================.....................] (38/58)     [========================================....................] (39/58)     [=========================================...................] (40/58)     [==========================================..................] (41/58)     [===========================================.................] (42/58)     [============================================................] (43/58)     [=============================================...............] (44/58)     [==============================================..............] (45/58)     [===============================================.............] (46/58)     [================================================............] (47/58)     [=================================================...........] (48/58)     [==================================================..........] (49/58)     [===================================================.........] (50/58)     [====================================================........] (51/58)     [=====================================================.......] (52/58)     [======================================================......] (53/58)     [=======================================================.....] (54/58)     [========================================================....] (55/58)     [=========================================================...] (56/58)     [==========================================================..] (57/58)     [============================================================] (58/58)     
+Def-use graph construction completes: 0.0280000000001
+live memory : 2707 kB
+#Nodes in def-use graph : 338
+#Locs on def-use graph : 2946
+Workorder computation begins...
+Workorder computation completes: 0.
+Fixpoint iteration with widening begins...
+sparrow_print ([pw] @ recipient-bad.c:293) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:293) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:291) : [(bot, {NULL}, __extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:291) : [(bot, bot, bot, bot)]
+sparrow_print ([login] @ util-bad.c:174) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:185) : [(bot, bot, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:185) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+sparrow_print ([pw] @ recipient-bad.c:162) : [(bot, {NULL}, finduser-11110 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	finduser-11180 -> ([0, 0], [1, 1], [48, 48], [0, +oo], {passwd})
+	__extern__getpwnam -> ([-oo, +oo], [-oo, +oo], [48, 48], [-oo, +oo], {passwd}), bot)]
+sparrow_print ([*pw.pw_name] @ recipient-bad.c:162) : [(bot, bot, __extern__getpwent.pw_name -> ([0, 0], [1, +oo], [1, 1], [0, +oo], bot), bot)]
+#iteration in widening : 487
+Fixpoint iteration with widening completes: 0.012
+
+Itv Sparse Analysis completes: 0.0600000000001
+
+
+
+--------------------------------------------------------------------------------
+Generate Buffer overrun report begins...
+--------------------------------------------------------------------------------
+
+[............................................................] (0/416)     
+Generate Buffer overrun report completes: 0.
+
+= Alarms =
+1. recipient-bad.c:143 {recipient} UnProven
+  *(p) @recipient-887:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+  *(p) @recipient-888:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+2. recipient-bad.c:145 {recipient} UnProven
+  *(p) @recipient-891:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+  *(p) @recipient-892:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+3. recipient-bad.c:262 {finduser} UnProven
+  *(p) @finduser-1069:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+  *(p) @finduser-1070:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+4. recipient-bad.c:264 {finduser} UnProven
+  *(p) @finduser-1071:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+  *(p) @finduser-1072:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+5. recipient-bad.c:264 {finduser} UnProven
+  *(p) @finduser-1073:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+  *(p) @finduser-1074:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+6. recipient-bad.c:266 {finduser} UnProven
+  *(p) @finduser-1098:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+7. recipient-bad.c:266 {finduser} UnProven
+  *(p) @finduser-1099:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+8. recipient-bad.c:287 {finduser} UnProven
+  *(p) @finduser-1081:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+  *(p) @finduser-1082:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+9. recipient-bad.c:289 {finduser} UnProven
+  *(p) @finduser-1083:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+  *(p) @finduser-1084:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+10. recipient-bad.c:289 {finduser} UnProven
+  *(p) @finduser-1085:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+  *(p) @finduser-1086:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+11. recipient-bad.c:290 {finduser} UnProven
+  *(p) @finduser-1105:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+12. recipient-bad.c:290 {finduser} UnProven
+  *(p) @finduser-1106:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8710
+13. util-bad.c:176 {buildfname} UnProven
+  strcpy ((char */* __restrict  */)bp, (char const   */* __restrict  */)((char const   *)login)) @buildfname-723:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8750
+  strcpy ((char */* __restrict  */)bp, (char const   */* __restrict  */)((char const   *)login)) @buildfname-723:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: finduser-10650
+14. util-bad.c:177 {buildfname} UnProven
+  *(bp) @buildfname-724:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8750
+  *(bp) @buildfname-724:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: finduser-10650
+15. util-bad.c:177 {buildfname} UnProven
+  *(bp) @buildfname-725:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8750
+  *(bp) @buildfname-725:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: finduser-10650
+16. util-bad.c:178 {buildfname} UnProven
+  *(bp) @buildfname-707:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8750
+  *(bp) @buildfname-707:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: finduser-10650
+  *(bp) @buildfname-708:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8750
+  *(bp) @buildfname-708:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: finduser-10650
+17. util-bad.c:183 {buildfname} UnProven
+  *(tmp___3) @buildfname-729:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8750
+  *(tmp___3) @buildfname-729:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: finduser-10650
+18. util-bad.c:187 {buildfname} UnProven
+  *(bp) @buildfname-732:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: recipient-8750
+  *(bp) @buildfname-732:  offset: [0, +oo], size: [5, 5] UnProven, allocsite: finduser-10650
+
+#queries                 : 124
+#queries mod alarm point : 48
+#proven                  : 30
+#unproven                : 18
+#bot-involved            : 2
+Finished properly.
+0.108000000001

@@ -1,0 +1,137 @@
+benchmarks/bo/mime2.c 
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+
+Front-end completes: 0.0120000000001
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 418
+#unreachable : 2
+
+Translation to graphs completes: 0.0120000000001
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 82
+
+#functions all : 4
+#recursive : 0
+{}
+#unreachable   : 0
+unreachable functions : {}
+
+Pre-analysis completes: 0.0120000000001
+To inline : []
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+#Procs : 4
+#Nodes : 416
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+
+live memory : 2236 kB
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 82
+
+#functions all : 4
+#recursive : 0
+{}
+#unreachable   : 0
+unreachable functions : {}
+#total abstract locations  = 84
+Def-use graph construction begins...
+draw intra-procedural edges
+[===============.............................................] (1/4)     [==============================..............................] (2/4)     [=============================================...............] (3/4)     [============================================================] (4/4)     
+draw inter-procedural edges
+[==..........................................................] (1/26)     [====........................................................] (2/26)     [======......................................................] (3/26)     [=========...................................................] (4/26)     [===========.................................................] (5/26)     [=============...............................................] (6/26)     [================............................................] (7/26)     [==================..........................................] (8/26)     [====================........................................] (9/26)     [=======================.....................................] (10/26)     [=========================...................................] (11/26)     [===========================.................................] (12/26)     [==============================..............................] (13/26)     [================================............................] (14/26)     [==================================..........................] (15/26)     [====================================........................] (16/26)     [=======================================.....................] (17/26)     [=========================================...................] (18/26)     [===========================================.................] (19/26)     [==============================================..............] (20/26)     [================================================............] (21/26)     [==================================================..........] (22/26)     [=====================================================.......] (23/26)     [=======================================================.....] (24/26)     [=========================================================...] (25/26)     [============================================================] (26/26)     
+Def-use graph construction completes: 0.028
+live memory : 2556 kB
+#Nodes in def-use graph : 367
+#Locs on def-use graph : 1492
+Workorder computation begins...
+Workorder computation completes: 0.00400000000001
+Fixpoint iteration with widening begins...
+#iteration in widening : 594
+Fixpoint iteration with widening completes: 0.012
+
+Itv Sparse Analysis completes: 0.0560000000001
+
+
+
+--------------------------------------------------------------------------------
+Generate Buffer overrun report begins...
+--------------------------------------------------------------------------------
+
+[............................................................] (0/416)     
+Generate Buffer overrun report completes: 0.
+
+= Alarms =
+1. mime2-bad.c:203 {mime7to8} UnProven
+  *(fbufp) @mime7to8-476:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+2. mime2-bad.c:213 {mime7to8} UnProven
+  *(tmp___3) @mime7to8-419:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+  *(tmp___3) @mime7to8-420:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+3. mime2-bad.c:216 {mime7to8} UnProven
+  *(fbufp) @mime7to8-423:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+  *(fbufp) @mime7to8-424:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+4. mime2-bad.c:216 {mime7to8} UnProven
+  *(fbufp) @mime7to8-425:  offset: [-1, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+  *(fbufp) @mime7to8-426:  offset: [-1, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+5. mime2-bad.c:219 {mime7to8} UnProven
+  *(fbufp) @mime7to8-483:  offset: [-1, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+6. mime2-bad.c:230 {mime7to8} UnProven
+  *(fbufp) @mime7to8-489:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+7. mime2-bad.c:231 {mime7to8} UnProven
+  *(tmp___4) @mime7to8-433:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+  *(tmp___4) @mime7to8-434:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+8. mime2-bad.c:234 {mime7to8} UnProven
+  *(fbufp) @mime7to8-437:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+  *(fbufp) @mime7to8-438:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+9. mime2-bad.c:234 {mime7to8} UnProven
+  *(fbufp) @mime7to8-439:  offset: [-1, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+  *(fbufp) @mime7to8-440:  offset: [-1, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+10. mime2-bad.c:236 {mime7to8} UnProven
+  *(fbufp) @mime7to8-496:  offset: [-1, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+11. mime2-bad.c:246 {mime7to8} UnProven
+  *(fbufp) @mime7to8-502:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+12. mime2-bad.c:247 {mime7to8} UnProven
+  *(tmp___5) @mime7to8-447:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+  *(tmp___5) @mime7to8-448:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+13. mime2-bad.c:250 {mime7to8} UnProven
+  *(fbufp) @mime7to8-451:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+  *(fbufp) @mime7to8-452:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+14. mime2-bad.c:250 {mime7to8} UnProven
+  *(fbufp) @mime7to8-453:  offset: [-1, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+  *(fbufp) @mime7to8-454:  offset: [-1, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+15. mime2-bad.c:252 {mime7to8} UnProven
+  *(fbufp) @mime7to8-509:  offset: [-1, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+16. mime2-bad.c:265 {mime7to8} UnProven
+  *(fbufp) @mime7to8-512:  offset: [0, +oo], size: [51, 51] UnProven, allocsite: mime7to8-3770
+
+#queries                 : 60
+#queries mod alarm point : 43
+#proven                  : 27
+#unproven                : 16
+#bot-involved            : 0
+Finished properly.
+0.0920000000001
