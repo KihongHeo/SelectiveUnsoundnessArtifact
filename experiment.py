@@ -179,15 +179,25 @@ def get_bug_info(pgm,output):
       num_of_bugs = num_of_bugs + 1
   return (num_of_alarms, num_of_bugs,  num_of_alarms - num_of_bugs)
 
-def run(target,pgm,tunable_loop,tunable_lib,verbose):
+def run(target,pgm,tunable_loop,tunable_lib,tunable_cast,tunable_update,verbose,name):
   loop_param = ""
   lib_param = ""
   for loopid in tunable_loop:
     loop_param = loop_param + "-unsound_loop " + loopid + " "
   for libid in tunable_lib:
     lib_param = lib_param + "-unsound_lib " + libid + " "
+  if tunable_cast == []:
+    cast_param = ""
+  else:
+    cast_param = " -unsound_cast "
+  if tunable_update == []:
+    update_param = ""
+  else:
+    update_param = " -unsound_update " 
 
-  cmd = ("./"+target+"_analyzer benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param)
+#  cmd = ("./"+target+"_analyzer benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param)
+#  cmd = ("./sparrow -unsound_bitwise -unsound_update -unsound_alarm_filter 2 -inline alloc -bugfinder 2 benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param)
+  cmd = ("../sparrow_public/main.native -inline alloc -inline fatal -bugfinder 2 benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param + " " + cast_param + " " + update_param)
 
   if verbose == True:
     print("== tunable loops ==")
@@ -205,10 +215,12 @@ def run(target,pgm,tunable_loop,tunable_lib,verbose):
   else:
     output = subprocess.check_output(cmd, stderr=subprocess.STDOUT, shell=True)
     (alarms,bugs,false) = get_bug_info(pgm,output)
+    with open("results/"+pgm+"."+name,'w') as f:
+      f.write(output)
     return (bugs,false)
 
 def doSoundAnalysis(target,pgm):
-  return run(target,pgm,[],[],False)
+  return run(target,pgm,[],[],[],[],False,"sound")
 
 def mkTrSet(fnames):
   lines = []
@@ -276,7 +288,7 @@ def doSelectiveAnalysis(target,pgm,f_train,f_test):
   lib_trset = mkTrSet(lib_training)
   lib_testset = mkTestSet(lib_test)
   tunable_lib = doOCSVM(target,lib_trset,lib_testset)
-  return run(target,pgm,tunable_loop,tunable_lib,False)
+  return run(target,pgm,tunable_loop,tunable_lib,[],[True],False,"selective")
 
 def doUnsoundAnalysis(target,pgm,f_test):
   if target == "bo":
@@ -289,7 +301,7 @@ def doUnsoundAnalysis(target,pgm,f_test):
   else:
     tunable_loop = []
     tunable_lib = ["-1"]
-  return run(target,pgm,tunable_loop,tunable_lib,False)
+  return run(target,pgm,tunable_loop,tunable_lib,[],[True],False,"unsound")
 
 def leave_one_out(target):
   if target == "bo":

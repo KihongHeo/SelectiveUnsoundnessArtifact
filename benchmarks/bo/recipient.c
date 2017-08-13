@@ -218,7 +218,7 @@ void buildfname(char *gecos , char *login , char *buf )
       tmp___1 = strlen((char const   *)bp);
 #line 173
       printf((char const   */* __restrict  */)"strlen(bp) = %d strlen(login) = %d\n",
-             tmp___1, tmp___0);
+             tmp___1, tmp___0);sparrow_print(login);
 #line 176
       strcpy((char */* __restrict  */)bp, (char const   */* __restrict  */)login);    // ZOO_BUG
 #line 177
@@ -414,7 +414,7 @@ ADDRESS *recipient(ADDRESS *a , ADDRESS **sendq , int aliaslevel )
   printf((char const   */* __restrict  */)"buf used in finduser = %s\n", buf);
 #line 161
   pw = finduser(buf, & fuzzy);
-  }
+  } sparrow_print(pw); sparrow_print(pw->pw_name);
 #line 162
   if ((unsigned long )pw == (unsigned long )((void *)0)) {
     {
@@ -464,8 +464,8 @@ ADDRESS *recipient(ADDRESS *a , ADDRESS **sendq , int aliaslevel )
            pw->pw_gecos, pw->pw_name);
 #line 184
     printf((char const   */* __restrict  */)"nbuf before call to buildfname = %s\n",
-           nbuf);
-#line 186
+           nbuf); sparrow_print(pw); sparrow_print(pw->pw_name);
+#line 186 
     buildfname(pw->pw_gecos, pw->pw_name, nbuf);
 #line 187
     printf((char const   */* __restrict  */)"nbuf after call to buildfname = %s\n",
@@ -607,11 +607,11 @@ struct passwd *finduser(char *name , enum bool *fuzzyp )
   }
   while_break___0: /* CIL Label */ ;
   }
-  {
+  { sparrow_print(pw); sparrow_print(pw->pw_name);
 #line 292
   setpwent();
 #line 293
-  pw = getpwent();
+  pw = getpwent(); sparrow_print(pw); sparrow_print(pw->pw_name);
 #line 294
   }
   {
@@ -623,7 +623,7 @@ struct passwd *finduser(char *name , enum bool *fuzzyp )
 #line 295
       goto while_break___1;
     }
-    { 
+    {
 #line 308
     buildfname(pw->pw_gecos, pw->pw_name, buf);
 #line 309

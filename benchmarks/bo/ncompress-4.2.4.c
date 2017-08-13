@@ -1772,7 +1772,7 @@ void compress(int fdin , int fdout )
 #line 1376
     if (bytes_in == 0L) {
 #line 1378
-      fcode.e.ent = (unsigned short )inbuf[0];
+      fcode.e.ent = (unsigned short )inbuf[0]; sparrow_print(inbuf[0]); sparrow_print(fcode.e.ent);
 #line 1379
       rpos = 1;
     } else {
@@ -1942,7 +1942,7 @@ void compress(int fdin , int fdout )
       goto next;
       hfound: 
 #line 1468
-      fcode.e.ent = codetab[hp];
+      fcode.e.ent = codetab[hp]; sparrow_print(codetab); sparrow_print(hp);
       next: 
 #line 1469
       if (rpos >= rlop) {
@@ -1955,9 +1955,9 @@ void compress(int fdin , int fdout )
 #line 1471
       rpos ++;
 #line 1471
-      fcode.e.c = inbuf[tmp___0];
+      fcode.e.c = inbuf[tmp___0]; sparrow_print(inbuf[tmp___0]); sparrow_print(fcode.e.c);
 #line 1480
-      hp = ((long )fcode.e.c << 8) ^ (long )fcode.e.ent;
+      hp = ((long )fcode.e.c << 8) ^ (long )fcode.e.ent; sparrow_print(hp); sparrow_print(fcode.e.ent);
 #line 1482
       i___1 = htab[hp];
 #line 1482
