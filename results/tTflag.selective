@@ -1,5 +1,5 @@
 benchmarks/bo/tTflag.c 
-
+optarg, optind, tTdvect, tTsize, tTvect, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.00800000000001
+Front-end completes: 0.00400100000001
 
 
 
@@ -16,7 +16,7 @@ Translation to graphs begins...
 --------------------------------------------------------------------------------
 
 
-#nodes all   : 139
+#nodes all   : 133
 #unreachable : 0
 
 Translation to graphs completes: 0.00400000000001
@@ -27,20 +27,8 @@ Translation to graphs completes: 0.00400000000001
 Pre-analysis begins...
 --------------------------------------------------------------------------------
 
-iteration : 1sparrow_print ([first] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-iteration : 2sparrow_print ([first] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-iteration : 3sparrow_print ([first] @ tTflag-bad.c:165) : [([99, 99], bot, bot, bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [([99, 99], bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, _G_-2980 -> ([0, 0], [100, 100], [1, 1], [0, +oo], bot), bot)]
-iteration : 4sparrow_print ([first] @ tTflag-bad.c:165) : [([99, 99], bot, bot, bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [([99, 99], bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, _G_-2980 -> ([0, 0], [100, 100], [1, 1], [0, +oo], bot), bot)]
-
-mem size : 35
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 24
 
 #functions all : 4
 #recursive : 0
@@ -53,7 +41,7 @@ To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
 #Procs : 4
-#Nodes : 139
+#Nodes : 133
 
 
 
@@ -61,50 +49,32 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 1645 kB
-iteration : 1sparrow_print ([first] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-iteration : 2sparrow_print ([first] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, bot, bot)]
-iteration : 3sparrow_print ([first] @ tTflag-bad.c:165) : [([99, 99], bot, bot, bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [([99, 99], bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, _G_-2980 -> ([0, 0], [100, 100], [1, 1], [0, +oo], bot), bot)]
-iteration : 4sparrow_print ([first] @ tTflag-bad.c:165) : [([99, 99], bot, bot, bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [([99, 99], bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, _G_-2980 -> ([0, 0], [100, 100], [1, 1], [0, +oo], bot), bot)]
-
-mem size : 35
+live memory : 1668 kB
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 24
 
 #functions all : 4
 #recursive : 0
 {}
 #unreachable   : 0
 unreachable functions : {}
-sparrow_print ([first] @ tTflag-bad.c:165) : [([100, 100], bot, bot, bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [([99, 99], bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, _G_-2980 -> ([0, 0], [100, 100], [1, 1], [0, +oo], bot), bot)]
-#total abstract locations  = 39
+#total abstract locations  = 38
 Def-use graph construction begins...
 draw intra-procedural edges
 [===============.............................................] (1/4)     [==============================..............................] (2/4)     [=============================================...............] (3/4)     [============================================================] (4/4)     
 draw inter-procedural edges
-[====........................................................] (1/15)     [========....................................................] (2/15)     [============................................................] (3/15)     [================............................................] (4/15)     [====================........................................] (5/15)     [========================....................................] (6/15)     [============================................................] (7/15)     [================================............................] (8/15)     [====================================........................] (9/15)     [========================================....................] (10/15)     [============================================................] (11/15)     [================================================............] (12/15)     [====================================================........] (13/15)     [========================================================....] (14/15)     [============================================================] (15/15)     
-Def-use graph construction completes: 0.00800000000001
-live memory : 1814 kB
-#Nodes in def-use graph : 111
-#Locs on def-use graph : 528
+[=====.......................................................] (1/12)     [==========..................................................] (2/12)     [===============.............................................] (3/12)     [====================........................................] (4/12)     [=========================...................................] (5/12)     [==============================..............................] (6/12)     [===================================.........................] (7/12)     [========================================....................] (8/12)     [=============================================...............] (9/12)     [==================================================..........] (10/12)     [=======================================================.....] (11/12)     [============================================================] (12/12)     
+Def-use graph construction completes: 0.00400000000001
+live memory : 1826 kB
+#Nodes in def-use graph : 108
+#Locs on def-use graph : 470
 Workorder computation begins...
 Workorder computation completes: 0.
 Fixpoint iteration with widening begins...
-sparrow_print ([first] @ tTflag-bad.c:165) : [([-oo, 99], bot, bot, bot)]
-sparrow_print ([@tTvect] @ tTflag-bad.c:165) : [(bot, bot, _G_-2980 -> ([0, 0], [100, 100], [1, 1], [0, +oo], bot), bot)]
-sparrow_print ([last] @ tTflag-bad.c:165) : [([-oo, 99], bot, bot, bot)]
-#iteration in widening : 111
-Fixpoint iteration with widening completes: 0.00400000000001
+#iteration in widening : 108
+Fixpoint iteration with widening completes: 0.00400100000001
 
-Itv Sparse Analysis completes: 0.0160000000001
+Itv Sparse Analysis completes: 0.0120010000001
 
 
 
@@ -112,15 +82,15 @@ Itv Sparse Analysis completes: 0.0160000000001
 Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
-[............................................................] (0/139)     
+[............................................................] (0/133)     
 Generate Buffer overrun report completes: 0.
 
 = Alarms =
 
-#queries                 : 50
-#queries mod alarm point : 13
-#proven                  : 13
+#queries                 : 27
+#queries mod alarm point : 12
+#proven                  : 12
 #unproven                : 0
 #bot-involved            : 3
 Finished properly.
-0.0320000000001
+0.0200020000001

@@ -1040,7 +1040,6 @@ int main(int argc , char **argv )
   {
 #line 304
   spec_initbufs();
-  sparrow_print(*szptr);
   }
 #line 306
   level = 7;
@@ -1073,7 +1072,7 @@ int main(int argc , char **argv )
       }
     }
     {
-    {sparrow_print(*szptr);
+    {
 #line 310
     spec_compress(0, 1, level);
     }
@@ -3106,14 +3105,13 @@ void generateMTFValues(void)
     }
   }
 #line 1306
-  *(szptr + wr) = (unsigned short )EOB; sparrow_print(szptr);sparrow_print(*szptr);sparrow_print(EOB); sparrow_print(wr);
+  *(szptr + wr) = (unsigned short )EOB;
 #line 1306
   wr ++;
 #line 1306
   (mtfFreq[EOB]) ++;
 #line 1308
   nMTF = wr;
-  sparrow_print(*szptr);
 #line 1309
   return;
 }
@@ -3178,7 +3176,6 @@ void sendMTFValues(void)
   char *__cil_tmp55 ;
   char *__cil_tmp56 ;
   char *__cil_tmp57 ;
-  sparrow_print(*szptr);
   {
 #line 1336
   if (verbosity >= 3) {
@@ -3527,7 +3524,7 @@ void sendMTFValues(void)
             goto while_break___10;
           }
 #line 1423
-          icv = *(szptr + i); sparrow_print(szptr); sparrow_print(icv); sparrow_print(i);
+          icv = *(szptr + i);
 #line 1424
           cost0 = (unsigned short )((int )cost0 + (int )len[0][icv]);
 #line 1425
@@ -4369,7 +4366,6 @@ void moveToFrontCodeAndSend(void)
   {
 #line 1601
   generateMTFValues();
-  sparrow_print(*szptr);
   }
   {
 #line 1602
@@ -8309,7 +8305,7 @@ void compressStream(int stream , int zStream )
       }
     }
     {
-    {sparrow_print(*szptr);
+    {
 #line 2916
     moveToFrontCodeAndSend();
     }

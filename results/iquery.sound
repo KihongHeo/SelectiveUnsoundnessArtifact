@@ -19,7 +19,7 @@ Translation to graphs begins...
 #nodes all   : 160
 #unreachable : 4
 
-Translation to graphs completes: 0.00400000000001
+Translation to graphs completes: 0.
 
 
 
@@ -27,8 +27,8 @@ Translation to graphs completes: 0.00400000000001
 Pre-analysis begins...
 --------------------------------------------------------------------------------
 
-iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7
-mem size : 85
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 84
 
 #functions all : 4
 #recursive : 0
@@ -36,7 +36,7 @@ mem size : 85
 #unreachable   : 0
 unreachable functions : {}
 
-Pre-analysis completes: 0.00800000000001
+Pre-analysis completes: 0.00400100000001
 To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
@@ -49,9 +49,9 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 1712 kB
-iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7
-mem size : 85
+live memory : 1738 kB
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 84
 
 #functions all : 4
 #recursive : 0
@@ -64,17 +64,17 @@ draw intra-procedural edges
 [===============.............................................] (1/4)     [==============================..............................] (2/4)     [=============================================...............] (3/4)     [============================================================] (4/4)     
 draw inter-procedural edges
 [==..........................................................] (1/22)     [=====.......................................................] (2/22)     [========....................................................] (3/22)     [==========..................................................] (4/22)     [=============...............................................] (5/22)     [================............................................] (6/22)     [===================.........................................] (7/22)     [=====================.......................................] (8/22)     [========================....................................] (9/22)     [===========================.................................] (10/22)     [==============================..............................] (11/22)     [================================............................] (12/22)     [===================================.........................] (13/22)     [======================================......................] (14/22)     [========================================....................] (15/22)     [===========================================.................] (16/22)     [==============================================..............] (17/22)     [=================================================...........] (18/22)     [===================================================.........] (19/22)     [======================================================......] (20/22)     [=========================================================...] (21/22)     [============================================================] (22/22)     
-Def-use graph construction completes: 0.0120000000001
-live memory : 2052 kB
+Def-use graph construction completes: 0.00800000000001
+live memory : 2091 kB
 #Nodes in def-use graph : 132
-#Locs on def-use graph : 1215
+#Locs on def-use graph : 1037
 Workorder computation begins...
 Workorder computation completes: 0.
 Fixpoint iteration with widening begins...
 #iteration in widening : 153
-Fixpoint iteration with widening completes: 0.00800000000001
+Fixpoint iteration with widening completes: 0.004001
 
-Itv Sparse Analysis completes: 0.0320000000001
+Itv Sparse Analysis completes: 0.0160010000001
 
 
 
@@ -107,4 +107,4 @@ Generate Buffer overrun report completes: 0.
 #unproven                : 5
 #bot-involved            : 0
 Finished properly.
-0.0520000000001
+0.0280020000001

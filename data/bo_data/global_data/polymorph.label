@@ -1,0 +1,13 @@
+clean : 0
+curr_dir : 0
+hidden : 0
+hidn_file : 0
+init_file : 0
+optarg : 0
+optind : 0
+status : 0
+target : 0
+tmpbuf : 0
+track : 0
+victim : 0
+wd : 0

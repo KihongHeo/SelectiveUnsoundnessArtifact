@@ -1,0 +1,8 @@
+sound true : 4, sound false : 13
+selective true : 1, selective false : 9
+selective true : 4, selective false : 11
+selective true : 4, selective false : 13
+selective true : 4, selective false : 13
+selective true : 2, selective false : 4
+selective true : 4, selective false : 13
+selective true : 4, selective false : 13

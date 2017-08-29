@@ -1,5 +1,5 @@
 benchmarks/bo/prescan.c 
-
+ConfigLevel, CurEnv, OperatorChars, StateTab, TokTypeNoC, TokTypeTab, delimptr, delimptrbuf, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.0160000000001
+Front-end completes: 0.0160010000001
 
 
 
@@ -19,7 +19,7 @@ Translation to graphs begins...
 #nodes all   : 929
 #unreachable : 2
 
-Translation to graphs completes: 0.0280000000001
+Translation to graphs completes: 0.0160010000001
 
 
 
@@ -28,7 +28,7 @@ Pre-analysis begins...
 --------------------------------------------------------------------------------
 
 iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5
-mem size : 118
+mem size : 103
 
 #functions all : 4
 #recursive : 0
@@ -36,7 +36,7 @@ mem size : 118
 #unreachable   : 0
 unreachable functions : {}
 
-Pre-analysis completes: 0.0160000000001
+Pre-analysis completes: 0.012001
 To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
@@ -49,32 +49,32 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 3272 kB
+live memory : 3249 kB
 iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5
-mem size : 118
+mem size : 103
 
 #functions all : 4
 #recursive : 0
 {}
 #unreachable   : 0
 unreachable functions : {}
-#total abstract locations  = 120
+#total abstract locations  = 115
 Def-use graph construction begins...
 draw intra-procedural edges
 [===============.............................................] (1/4)     [==============================..............................] (2/4)     [=============================================...............] (3/4)     [============================================================] (4/4)     
 draw inter-procedural edges
 [=...........................................................] (1/34)     [===.........................................................] (2/34)     [=====.......................................................] (3/34)     [=======.....................................................] (4/34)     [========....................................................] (5/34)     [==========..................................................] (6/34)     [============................................................] (7/34)     [==============..............................................] (8/34)     [===============.............................................] (9/34)     [=================...........................................] (10/34)     [===================.........................................] (11/34)     [=====================.......................................] (12/34)     [======================......................................] (13/34)     [========================....................................] (14/34)     [==========================..................................] (15/34)     [============================................................] (16/34)     [==============================..............................] (17/34)     [===============================.............................] (18/34)     [=================================...........................] (19/34)     [===================================.........................] (20/34)     [=====================================.......................] (21/34)     [======================================......................] (22/34)     [========================================....................] (23/34)     [==========================================..................] (24/34)     [============================================................] (25/34)     [=============================================...............] (26/34)     [===============================================.............] (27/34)     [=================================================...........] (28/34)     [===================================================.........] (29/34)     [====================================================........] (30/34)     [======================================================......] (31/34)     [========================================================....] (32/34)     [==========================================================..] (33/34)     [============================================================] (34/34)     
-Def-use graph construction completes: 0.0520000000001
-live memory : 4206 kB
-#Nodes in def-use graph : 855
-#Locs on def-use graph : 3644
+Def-use graph construction completes: 0.052003
+live memory : 3561 kB
+#Nodes in def-use graph : 854
+#Locs on def-use graph : 3017
 Workorder computation begins...
-Workorder computation completes: 0.00800000000001
+Workorder computation completes: 0.00400000000001
 Fixpoint iteration with widening begins...
-#iteration in widening : 1067
-Fixpoint iteration with widening completes: 0.028
+#iteration in widening : 1058
+Fixpoint iteration with widening completes: 0.0200020000001
 
-Itv Sparse Analysis completes: 0.120000000001
+Itv Sparse Analysis completes: 0.100006000001
 
 
 
@@ -83,7 +83,7 @@ Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
 [............................................................] (0/927)     
-Generate Buffer overrun report completes: 0.00400000000001
+Generate Buffer overrun report completes: 0.
 
 = Alarms =
 1. prescan-overflow-bad.c:354 {prescan} UnProven
@@ -103,15 +103,13 @@ Generate Buffer overrun report completes: 0.00400000000001
 7. prescan-overflow-bad.c:462 {prescan} UnProven
   *(ptr) @prescan-492:  offset: [0, +oo], size: [500, 500] UnProven, allocsite: main-7590
   *(ptr) @prescan-493:  offset: [0, +oo], size: [500, 500] UnProven, allocsite: main-7590
-8. prescan-overflow-bad.c:493 {prescan} UnProven
-  @StateTab[state] @prescan-602:  offset: [1, 64], size: [6, 6] UnProven, allocsite: _G_-7670
-9. prescan-overflow-bad.c:519 {prescan} UnProven
+8. prescan-overflow-bad.c:519 {prescan} UnProven
   *(tmp___6) @prescan-612:  offset: [0, +oo], size: [50, 50] UnProven, allocsite: parseaddr-7260
 
-#queries                 : 40
-#queries mod alarm point : 30
-#proven                  : 21
-#unproven                : 9
-#bot-involved            : 0
+#queries                 : 35
+#queries mod alarm point : 27
+#proven                  : 19
+#unproven                : 8
+#bot-involved            : 6
 Finished properly.
-0.188000000001
+0.144009000001

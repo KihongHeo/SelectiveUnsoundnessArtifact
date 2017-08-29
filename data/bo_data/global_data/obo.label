@@ -1,0 +1,6 @@
+block_sigmask : 0
+delaying : 0
+init_done : 0
+optarg : 0
+optind : 0
+saved_sigmask : 0

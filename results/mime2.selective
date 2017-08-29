@@ -1,5 +1,5 @@
 benchmarks/bo/mime2.c 
-
+index_64, optarg, optind, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.0120000000001
+Front-end completes: 0.00800000000001
 
 
 
@@ -19,7 +19,7 @@ Translation to graphs begins...
 #nodes all   : 418
 #unreachable : 2
 
-Translation to graphs completes: 0.0120000000001
+Translation to graphs completes: 0.00800100000001
 
 
 
@@ -28,7 +28,7 @@ Pre-analysis begins...
 --------------------------------------------------------------------------------
 
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 82
+mem size : 74
 
 #functions all : 4
 #recursive : 0
@@ -36,7 +36,7 @@ mem size : 82
 #unreachable   : 0
 unreachable functions : {}
 
-Pre-analysis completes: 0.0120000000001
+Pre-analysis completes: 0.00400000000001
 To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
@@ -49,32 +49,32 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 2236 kB
+live memory : 2298 kB
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 82
+mem size : 74
 
 #functions all : 4
 #recursive : 0
 {}
 #unreachable   : 0
 unreachable functions : {}
-#total abstract locations  = 84
+#total abstract locations  = 83
 Def-use graph construction begins...
 draw intra-procedural edges
 [===============.............................................] (1/4)     [==============================..............................] (2/4)     [=============================================...............] (3/4)     [============================================================] (4/4)     
 draw inter-procedural edges
 [==..........................................................] (1/26)     [====........................................................] (2/26)     [======......................................................] (3/26)     [=========...................................................] (4/26)     [===========.................................................] (5/26)     [=============...............................................] (6/26)     [================............................................] (7/26)     [==================..........................................] (8/26)     [====================........................................] (9/26)     [=======================.....................................] (10/26)     [=========================...................................] (11/26)     [===========================.................................] (12/26)     [==============================..............................] (13/26)     [================================............................] (14/26)     [==================================..........................] (15/26)     [====================================........................] (16/26)     [=======================================.....................] (17/26)     [=========================================...................] (18/26)     [===========================================.................] (19/26)     [==============================================..............] (20/26)     [================================================............] (21/26)     [==================================================..........] (22/26)     [=====================================================.......] (23/26)     [=======================================================.....] (24/26)     [=========================================================...] (25/26)     [============================================================] (26/26)     
-Def-use graph construction completes: 0.028
-live memory : 2556 kB
+Def-use graph construction completes: 0.016001
+live memory : 2539 kB
 #Nodes in def-use graph : 367
-#Locs on def-use graph : 1492
+#Locs on def-use graph : 1355
 Workorder computation begins...
-Workorder computation completes: 0.00400000000001
+Workorder computation completes: 0.
 Fixpoint iteration with widening begins...
 #iteration in widening : 594
-Fixpoint iteration with widening completes: 0.012
+Fixpoint iteration with widening completes: 0.00800100000001
 
-Itv Sparse Analysis completes: 0.0560000000001
+Itv Sparse Analysis completes: 0.0360030000001
 
 
 
@@ -83,7 +83,7 @@ Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
 [............................................................] (0/416)     
-Generate Buffer overrun report completes: 0.
+Generate Buffer overrun report completes: 0.00400000000001
 
 = Alarms =
 1. mime2-bad.c:203 {mime7to8} UnProven
@@ -132,6 +132,6 @@ Generate Buffer overrun report completes: 0.
 #queries mod alarm point : 43
 #proven                  : 27
 #unproven                : 16
-#bot-involved            : 0
+#bot-involved            : 4
 Finished properly.
-0.0920000000001
+0.0640040000001

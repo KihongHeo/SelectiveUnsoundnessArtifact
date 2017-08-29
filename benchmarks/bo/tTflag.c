@@ -217,7 +217,7 @@ void tTflag(char *s )
 #line 163
       last = tTsize - 1;
     }
-    {sparrow_print(first); sparrow_print(last); sparrow_print(tTvect);
+    {
 #line 166
     while (1) {
       while_continue___3: /* CIL Label */ ;

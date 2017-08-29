@@ -179,9 +179,10 @@ def get_bug_info(pgm,output):
       num_of_bugs = num_of_bugs + 1
   return (num_of_alarms, num_of_bugs,  num_of_alarms - num_of_bugs)
 
-def run(target,pgm,tunable_loop,tunable_lib,tunable_cast,tunable_update,verbose,name):
+def run(target,pgm,tunable_loop,tunable_lib,tunable_cast,tunable_global,verbose,name):
   loop_param = ""
   lib_param = ""
+  global_param = ""
   for loopid in tunable_loop:
     loop_param = loop_param + "-unsound_loop " + loopid + " "
   for libid in tunable_lib:
@@ -190,15 +191,15 @@ def run(target,pgm,tunable_loop,tunable_lib,tunable_cast,tunable_update,verbose,
     cast_param = ""
   else:
     cast_param = " -unsound_cast "
-  if tunable_update == []:
-    update_param = ""
-  else:
-    update_param = " -unsound_update " 
+  for loc in tunable_global:
+    if loc == "all":
+      global_param = "-unsound_global_all"
+    else:
+      global_param = global_param + "-unsound_global \"" + loc + "\" "
 
 #  cmd = ("./"+target+"_analyzer benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param)
 #  cmd = ("./sparrow -unsound_bitwise -unsound_update -unsound_alarm_filter 2 -inline alloc -bugfinder 2 benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param)
-  cmd = ("../sparrow_public/main.native -inline alloc -inline fatal -bugfinder 2 benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param + " " + cast_param + " " + update_param)
-
+  cmd = ("./main.native -inline alloc -inline fatal -bugfinder 2 -unsound_update_all benchmarks/"+ target + "/" + pgm + "*.c " + loop_param + " " + lib_param + " " + cast_param + " " + global_param)
   if verbose == True:
     print("== tunable loops ==")
     print(tunable_loop)
@@ -281,6 +282,12 @@ def doSelectiveAnalysis(target,pgm,f_train,f_test):
     loop_trset = mkTrSet(loop_training)
     loop_testset = mkTestSet(loop_test)
     tunable_loop = doOCSVM(target,loop_trset,loop_testset)
+
+    global_training = map(lambda x: "data/"+target+"_data/global_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
+    global_test = map(lambda x: "data/"+target+"_data/global_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
+    global_trset = mkTrSet(global_training)
+    global_testset = mkTestSet(global_test)
+    tunable_global = doOCSVM(target,global_trset,global_testset)
   else:
     tunable_loop = []
   lib_training = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
@@ -288,7 +295,7 @@ def doSelectiveAnalysis(target,pgm,f_train,f_test):
   lib_trset = mkTrSet(lib_training)
   lib_testset = mkTestSet(lib_test)
   tunable_lib = doOCSVM(target,lib_trset,lib_testset)
-  return run(target,pgm,tunable_loop,tunable_lib,[],[True],False,"selective")
+  return run(target,pgm,tunable_loop,tunable_lib,[],tunable_global,False,"selective")
 
 def doUnsoundAnalysis(target,pgm,f_test):
   if target == "bo":
@@ -298,10 +305,13 @@ def doUnsoundAnalysis(target,pgm,f_test):
     lib_test = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
     lib_testset = mkTestSet(lib_test)
     tunable_lib = [ x[0] for x in lib_testset ]
+    global_test = map(lambda x: "data/"+target+"_data/global_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
+    global_testset = mkTestSet(global_test)
+    tunable_global = [ x[0] for x in global_testset ]
   else:
     tunable_loop = []
     tunable_lib = ["-1"]
-  return run(target,pgm,tunable_loop,tunable_lib,[],[True],False,"unsound")
+  return run(target,pgm,tunable_loop,tunable_lib,[],tunable_global,False,"unsound")
 
 def leave_one_out(target):
   if target == "bo":
@@ -321,7 +331,7 @@ def leave_one_out(target):
   print "%20s %5s %10s %13s %10s" % ("", "", "Sound", "Selective", "Unsound")
   print "%20s %5s %5s %5s %5s %5s %5s %5s" % ("Program", "Bug", "T", "F", "T", "F", "T", "F")
   print "-----------------------------------------------------------------"
-  for p in pgms:
+  for p in pgms:#[15:16]:
     sys.stdout.flush()
     train = "cv/"+target+"_cv/train_"+p
     test = "cv/"+target+"_cv/test_"+p
@@ -404,6 +414,51 @@ def k_fold(target,k):
   print "      %5s %5s %5s %5s %5s %5s" % (total_sound_true, total_sound_false, total_selective_true, total_selective_false, total_unsound_true, total_unsound_false, )
   print "-----------------------------------------------------------------"
 
+def do_magic():
+  for p in bo_pgms:
+    print p
+    cmd = ("./main.native -inline alloc -inline fatal -bugfinder 2 -unsound_update_all -magic benchmarks/bo/" + p + "*.c > global_data/" + p + ".data")
+    output = subprocess.check_output(cmd, stderr=subprocess.STDOUT, shell=True)
+
+def global_extract():
+    target = "bo"
+    directory = "data/bo_data/global_data"
+    for p in bo_pgms:
+        print p
+        cmd = "~/project/sparrow/bin/sparrow benchmarks/"+ target + "/" + p + "*.c "
+        output = subprocess.check_output(cmd, shell=True)
+        with open(directory + "/" + p + ".feat", 'w') as f:
+               f.write(output)
+
+
+def global_labeling():
+    target = "bo"
+    directory = "global_data"
+    for p in bo_pgms:
+        print p
+        (sound_true, sound_false) = doSoundAnalysis(target,p)
+        f = open(directory + "/"+p+".data")
+        fw = open(directory + "/"+p+".label", 'w')
+        ft = open(directory + "/"+p+".temp", 'w')
+        lines = f.readlines()
+        trset = []
+        temp_line = "sound true : " + str(sound_true) + ", sound false : " + str(sound_false) + "\n"
+        ft.write(temp_line)
+        for line in lines:
+            col = re.split(r' |\t|\n',line)
+            col = filter(lambda x: x.strip() != '', col)[0]
+            (selective_true, selective_false) = run(target,p,[],[],[],[col],False,"selective")
+            temp_line = "selective true : " + str(selective_true) + ", selective false : " + str(selective_false) + "\n"
+            ft.write(temp_line)
+            if (sound_false > selective_false) and (sound_true == selective_true):
+                line = col + " : 1\n"
+                fw.write(line)
+            else:
+                line = col + " : 0\n"
+                fw.write(line)
+        f.close()
+        fw.close()
+
 def main(argv):
   parser = argparse.ArgumentParser(description='ICSE 2017 Experiments')
   parser.add_argument('--target')
@@ -416,6 +471,12 @@ def main(argv):
     k_fold(args.target,55)
   elif args.cv == 'three-fold':
     k_fold(args.target,73)
+  elif args.cv == 'magic':
+    do_magic()
+  elif args.cv == 'label':
+    global_labeling()
+  elif args.cv == 'extract':
+    global_extract()
   else:
     print 'Invalid Argument: ' + args.cv
     parser.print_help()

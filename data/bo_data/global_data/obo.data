@@ -1,0 +1,6 @@
+block_sigmask
+delaying
+init_done
+optarg
+optind
+saved_sigmask

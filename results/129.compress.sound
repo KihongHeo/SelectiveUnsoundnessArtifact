@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.0880000000001
+Front-end completes: 0.0720050000001
 
 
 
@@ -16,10 +16,10 @@ Translation to graphs begins...
 --------------------------------------------------------------------------------
 
 
-#nodes all   : 17339
+#nodes all   : 17333
 #unreachable : 23
 
-Translation to graphs completes: 0.416000000001
+Translation to graphs completes: 0.452028000001
 
 
 
@@ -27,32 +27,8 @@ Translation to graphs completes: 0.416000000001
 Pre-analysis begins...
 --------------------------------------------------------------------------------
 
-iteration : 1sparrow_print ([@InCnt] @ compress95.c:1167) : [(bot, bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [(bot, bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [(bot, bot, bot, bot)]
-iteration : 2sparrow_print ([@InCnt] @ compress95.c:1167) : [([-1, 0], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [(bot, bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [(bot, bot, bot, bot)]
-iteration : 3sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-1, -1], bot, bot, bot)]
-iteration : 4sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-iteration : 5sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-iteration : 6sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-iteration : 7sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-iteration : 8sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-
-mem size : 246
+iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5
+mem size : 226
 
 #functions all : 25
 #recursive : 0
@@ -60,12 +36,12 @@ mem size : 246
 #unreachable   : 6
 unreachable functions : {onintr,oops,print_buffer,ran,rindex,version}
 
-Pre-analysis completes: 0.476
+Pre-analysis completes: 0.452028
 To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
 #Procs : 25
-#Nodes : 17316
+#Nodes : 17310
 
 
 
@@ -73,64 +49,34 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 24641 kB
-iteration : 1sparrow_print ([@InCnt] @ compress95.c:1167) : [(bot, bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [(bot, bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-1, -1], bot, bot, bot)]
-iteration : 2sparrow_print ([@InCnt] @ compress95.c:1167) : [([-1, 0], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [(bot, bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-1, -1], bot, bot, bot)]
-iteration : 3sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-1, -1], bot, bot, bot)]
-iteration : 4sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-iteration : 5sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-iteration : 6sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-iteration : 7sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-iteration : 8sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-
-mem size : 246
+live memory : 25041 kB
+iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5
+mem size : 226
 
 #functions all : 25
 #recursive : 0
 {}
 #unreachable   : 6
 unreachable functions : {onintr,oops,print_buffer,ran,rindex,version}
-sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
 #total abstract locations  = 252
 Def-use graph construction begins...
 draw intra-procedural edges
 [==..........................................................] (1/25)     [====........................................................] (2/25)     [=======.....................................................] (3/25)     [=========...................................................] (4/25)     [============................................................] (5/25)     [==============..............................................] (6/25)     [================............................................] (7/25)     [===================.........................................] (8/25)     [=====================.......................................] (9/25)     [========================....................................] (10/25)     [==========================..................................] (11/25)     [============================................................] (12/25)     [===============================.............................] (13/25)     [=================================...........................] (14/25)     [====================================........................] (15/25)     [======================================......................] (16/25)     [========================================....................] (17/25)     [===========================================.................] (18/25)     [=============================================...............] (19/25)     [================================================............] (20/25)     [==================================================..........] (21/25)     [====================================================........] (22/25)     [=======================================================.....] (23/25)     [=========================================================...] (24/25)     [============================================================] (25/25)     
 draw inter-procedural edges
-[............................................................] (1/73)     [=...........................................................] (2/73)     [==..........................................................] (3/73)     [===.........................................................] (4/73)     [====........................................................] (5/73)     [====........................................................] (6/73)     [=====.......................................................] (7/73)     [======......................................................] (8/73)     [=======.....................................................] (9/73)     [========....................................................] (10/73)     [=========...................................................] (11/73)     [=========...................................................] (12/73)     [==========..................................................] (13/73)     [===========.................................................] (14/73)     [============................................................] (15/73)     [=============...............................................] (16/73)     [=============...............................................] (17/73)     [==============..............................................] (18/73)     [===============.............................................] (19/73)     [================............................................] (20/73)     [=================...........................................] (21/73)     [==================..........................................] (22/73)     [==================..........................................] (23/73)     [===================.........................................] (24/73)     [====================........................................] (25/73)     [=====================.......................................] (26/73)     [======================......................................] (27/73)     [=======================.....................................] (28/73)     [=======================.....................................] (29/73)     [========================....................................] (30/73)     [=========================...................................] (31/73)     [==========================..................................] (32/73)     [===========================.................................] (33/73)     [===========================.................................] (34/73)     [============================................................] (35/73)     [=============================...............................] (36/73)     [==============================..............................] (37/73)     [===============================.............................] (38/73)     [================================............................] (39/73)     [================================............................] (40/73)     [=================================...........................] (41/73)     [==================================..........................] (42/73)     [===================================.........................] (43/73)     [====================================........................] (44/73)     [====================================........................] (45/73)     [=====================================.......................] (46/73)     [======================================......................] (47/73)     [=======================================.....................] (48/73)     [========================================....................] (49/73)     [=========================================...................] (50/73)     [=========================================...................] (51/73)     [==========================================..................] (52/73)     [===========================================.................] (53/73)     [============================================................] (54/73)     [=============================================...............] (55/73)     [==============================================..............] (56/73)     [==============================================..............] (57/73)     [===============================================.............] (58/73)     [================================================............] (59/73)     [=================================================...........] (60/73)     [==================================================..........] (61/73)     [==================================================..........] (62/73)     [===================================================.........] (63/73)     [====================================================........] (64/73)     [=====================================================.......] (65/73)     [======================================================......] (66/73)     [=======================================================.....] (67/73)     [=======================================================.....] (68/73)     [========================================================....] (69/73)     [=========================================================...] (70/73)     [==========================================================..] (71/73)     [===========================================================.] (72/73)     [============================================================] (73/73)     
-Def-use graph construction completes: 20.1480000001
-live memory : 51355 kB
-#Nodes in def-use graph : 17184
-#Locs on def-use graph : 55643
+[............................................................] (1/70)     [=...........................................................] (2/70)     [==..........................................................] (3/70)     [===.........................................................] (4/70)     [====........................................................] (5/70)     [=====.......................................................] (6/70)     [======......................................................] (7/70)     [======......................................................] (8/70)     [=======.....................................................] (9/70)     [========....................................................] (10/70)     [=========...................................................] (11/70)     [==========..................................................] (12/70)     [===========.................................................] (13/70)     [============................................................] (14/70)     [============................................................] (15/70)     [=============...............................................] (16/70)     [==============..............................................] (17/70)     [===============.............................................] (18/70)     [================............................................] (19/70)     [=================...........................................] (20/70)     [==================..........................................] (21/70)     [==================..........................................] (22/70)     [===================.........................................] (23/70)     [====================........................................] (24/70)     [=====================.......................................] (25/70)     [======================......................................] (26/70)     [=======================.....................................] (27/70)     [========================....................................] (28/70)     [========================....................................] (29/70)     [=========================...................................] (30/70)     [==========================..................................] (31/70)     [===========================.................................] (32/70)     [============================................................] (33/70)     [=============================...............................] (34/70)     [==============================..............................] (35/70)     [==============================..............................] (36/70)     [===============================.............................] (37/70)     [================================............................] (38/70)     [=================================...........................] (39/70)     [==================================..........................] (40/70)     [===================================.........................] (41/70)     [====================================........................] (42/70)     [====================================........................] (43/70)     [=====================================.......................] (44/70)     [======================================......................] (45/70)     [=======================================.....................] (46/70)     [========================================....................] (47/70)     [=========================================...................] (48/70)     [==========================================..................] (49/70)     [==========================================..................] (50/70)     [===========================================.................] (51/70)     [============================================................] (52/70)     [=============================================...............] (53/70)     [==============================================..............] (54/70)     [===============================================.............] (55/70)     [================================================............] (56/70)     [================================================............] (57/70)     [=================================================...........] (58/70)     [==================================================..........] (59/70)     [===================================================.........] (60/70)     [====================================================........] (61/70)     [=====================================================.......] (62/70)     [======================================================......] (63/70)     [======================================================......] (64/70)     [=======================================================.....] (65/70)     [========================================================....] (66/70)     [=========================================================...] (67/70)     [==========================================================..] (68/70)     [===========================================================.] (69/70)     [============================================================] (70/70)     
+Def-use graph construction completes: 28.9138080001
+live memory : 51111 kB
+#Nodes in def-use graph : 17181
+#Locs on def-use graph : 55321
 Workorder computation begins...
-Workorder computation completes: 0.292000000001
+Workorder computation completes: 0.448027
 Fixpoint iteration with widening begins...
-#iters: 10000 took 31.8520000001
+#iters: 10000 took 39.9184950001
 
-sparrow_print ([c] @ compress95.c:516) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([@InCnt] @ compress95.c:1167) : [([-oo, +oo], bot, bot, bot)]
-sparrow_print ([(int )*@InBuff] @ compress95.c:1165) : [([-oo, +oo], bot, bot, bot)]
-#iteration in widening : 18495
-Fixpoint iteration with widening completes: 32.0120000001
+#iteration in widening : 18905
+Fixpoint iteration with widening completes: 40.1825120001
 
-Itv Sparse Analysis completes: 61.0480000001
+Itv Sparse Analysis completes: 81.6651040001
 
 
 
@@ -138,142 +84,116 @@ Itv Sparse Analysis completes: 61.0480000001
 Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
-[............................................................] (0/17316)     [===.........................................................] (1000/17316)     [======......................................................] (2000/17316)     [==========..................................................] (3000/17316)     [=============...............................................] (4000/17316)     [=================...........................................] (5000/17316)     [====================........................................] (6000/17316)     [========================....................................] (7000/17316)     [===========================.................................] (8000/17316)     [===============================.............................] (9000/17316)     [==================================..........................] (10000/17316)     [======================================......................] (11000/17316)     [=========================================...................] (12000/17316)     [=============================================...............] (13000/17316)     [================================================............] (14000/17316)     [===================================================.........] (15000/17316)     [=======================================================.....] (16000/17316)     [==========================================================..] (17000/17316)     
-Generate Buffer overrun report completes: 0.12
+[............................................................] (0/17310)     [===.........................................................] (1000/17310)     [======......................................................] (2000/17310)     [==========..................................................] (3000/17310)     [=============...............................................] (4000/17310)     [=================...........................................] (5000/17310)     [====================........................................] (6000/17310)     [========================....................................] (7000/17310)     [===========================.................................] (8000/17310)     [===============================.............................] (9000/17310)     [==================================..........................] (10000/17310)     [======================================......................] (11000/17310)     [=========================================...................] (12000/17310)     [=============================================...............] (13000/17310)     [================================================............] (14000/17310)     [===================================================.........] (15000/17310)     [=======================================================.....] (16000/17310)     [==========================================================..] (17000/17310)     
+Generate Buffer overrun report completes: 0.172011000001
 
 = Alarms =
-1. compress95.c:522 {compress} UnProven
-  @htab[i] @compress-716:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13500
-  @htab[i] @compress-717:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13500
-2. compress95.c:523 {compress} UnProven
-  @codetab[i] @compress-769:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13520
-3. compress95.c:525 {compress} UnProven
-  @htab[i] @compress-718:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13500
-  @htab[i] @compress-719:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13500
-4. compress95.c:534 {compress} UnProven
-  @htab[i] @compress-724:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13500
-  @htab[i] @compress-725:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13500
-5. compress95.c:535 {compress} UnProven
-  @codetab[i] @compress-774:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13520
-6. compress95.c:538 {compress} UnProven
-  @htab[i] @compress-726:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13500
-  @htab[i] @compress-727:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13500
-7. compress95.c:549 {compress} UnProven
-  @codetab[i] @compress-780:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13520
-8. compress95.c:550 {compress} UnProven
-  @htab[i] @compress-781:  offset: [-oo, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13500
-9. compress95.c:647 {output} UnProven
-  *(tmp) @output-838:  offset: [1, +oo], size: [16, 16] UnProven, allocsite: _G_-13760
-10. compress95.c:653 {output} UnProven
-  *(bp) @output-841:  offset: [1, +oo], size: [16, 16] UnProven, allocsite: _G_-13760
-11. compress95.c:660 {output} UnProven
-  *(tmp___0) @output-848:  offset: [0, +oo], size: [16, 16] UnProven, allocsite: _G_-13760
-12. compress95.c:757 {decompress} UnProven
-  *(tmp) @decompress-912:  offset: [-oo, +oo], size: [552008, 552008] UnProven, allocsite: _G_-13500
-13. compress95.c:769 {decompress} UnProven
-  *(((char_type *)StartOf(@htab))+code) @decompress-916:  offset: [256, +oo], size: [552008, 552008] UnProven, allocsite: _G_-13500
-  *(tmp___0) @decompress-916:  offset: [-oo, +oo], size: [552008, 552008] UnProven, allocsite: _G_-13500
-14. compress95.c:770 {decompress} UnProven
-  @codetab[code] @decompress-917:  offset: [256, +oo], size: [69001, 69001] UnProven, allocsite: _G_-13520
-15. compress95.c:772 {decompress} UnProven
-  *(((char_type *)StartOf(@htab))+code) @decompress-920:  offset: [-oo, 255], size: [552008, 552008] UnProven, allocsite: _G_-13500
-16. compress95.c:772 {decompress} UnProven
-  *(tmp___1) @decompress-921:  offset: [-oo, +oo], size: [552008, 552008] UnProven, allocsite: _G_-13500
-17. compress95.c:778 {decompress} UnProven
-  *(stackp) @decompress-923:  offset: [-oo, +oo], size: [552008, 552008] UnProven, allocsite: _G_-13500
-18. compress95.c:853 {getcode} UnProven
-  *(tmp) @getcode-966:  offset: [0, +oo], size: [17, 17] UnProven, allocsite: _G_-14040
-19. compress95.c:862 {getcode} UnProven
-  *(tmp___0) @getcode-971:  offset: [1, +oo], size: [17, 17] UnProven, allocsite: _G_-14040
-20. compress95.c:870 {getcode} UnProven
-  @rmask[bits] @getcode-974:  offset: [0, +oo], size: [9, 9] UnProven, allocsite: _G_-13890
-  *(bp) @getcode-974:  offset: [1, +oo], size: [17, 17] UnProven, allocsite: _G_-14040
-21. compress95.c:1090 {cl_hash} UnProven
-  *(htab_p-16) @cl_hash-1027:  offset: [-oo, 68985], size: [69001, 69001] UnProven, allocsite: _G_-13500
-22. compress95.c:1091 {cl_hash} UnProven
-  *(htab_p-15) @cl_hash-1028:  offset: [-oo, 68986], size: [69001, 69001] UnProven, allocsite: _G_-13500
-23. compress95.c:1092 {cl_hash} UnProven
-  *(htab_p-14) @cl_hash-1029:  offset: [-oo, 68987], size: [69001, 69001] UnProven, allocsite: _G_-13500
-24. compress95.c:1093 {cl_hash} UnProven
-  *(htab_p-13) @cl_hash-1030:  offset: [-oo, 68988], size: [69001, 69001] UnProven, allocsite: _G_-13500
-25. compress95.c:1094 {cl_hash} UnProven
-  *(htab_p-12) @cl_hash-1031:  offset: [-oo, 68989], size: [69001, 69001] UnProven, allocsite: _G_-13500
-26. compress95.c:1095 {cl_hash} UnProven
-  *(htab_p-11) @cl_hash-1032:  offset: [-oo, 68990], size: [69001, 69001] UnProven, allocsite: _G_-13500
-27. compress95.c:1096 {cl_hash} UnProven
-  *(htab_p-10) @cl_hash-1033:  offset: [-oo, 68991], size: [69001, 69001] UnProven, allocsite: _G_-13500
-28. compress95.c:1097 {cl_hash} UnProven
-  *(htab_p-9) @cl_hash-1034:  offset: [-oo, 68992], size: [69001, 69001] UnProven, allocsite: _G_-13500
-29. compress95.c:1098 {cl_hash} UnProven
-  *(htab_p-8) @cl_hash-1035:  offset: [-oo, 68993], size: [69001, 69001] UnProven, allocsite: _G_-13500
-30. compress95.c:1099 {cl_hash} UnProven
-  *(htab_p-7) @cl_hash-1036:  offset: [-oo, 68994], size: [69001, 69001] UnProven, allocsite: _G_-13500
-31. compress95.c:1100 {cl_hash} UnProven
-  *(htab_p-6) @cl_hash-1037:  offset: [-oo, 68995], size: [69001, 69001] UnProven, allocsite: _G_-13500
-32. compress95.c:1101 {cl_hash} UnProven
-  *(htab_p-5) @cl_hash-1038:  offset: [-oo, 68996], size: [69001, 69001] UnProven, allocsite: _G_-13500
-33. compress95.c:1102 {cl_hash} UnProven
-  *(htab_p-4) @cl_hash-1039:  offset: [-oo, 68997], size: [69001, 69001] UnProven, allocsite: _G_-13500
-34. compress95.c:1103 {cl_hash} UnProven
-  *(htab_p-3) @cl_hash-1040:  offset: [-oo, 68998], size: [69001, 69001] UnProven, allocsite: _G_-13500
-35. compress95.c:1104 {cl_hash} UnProven
-  *(htab_p-2) @cl_hash-1041:  offset: [-oo, 68999], size: [69001, 69001] UnProven, allocsite: _G_-13500
-36. compress95.c:1105 {cl_hash} UnProven
-  *(htab_p-1) @cl_hash-1042:  offset: [-oo, 69000], size: [69001, 69001] UnProven, allocsite: _G_-13500
-37. compress95.c:1113 {cl_hash} UnProven
-  *(htab_p) @cl_hash-1047:  offset: [-oo, 68984], size: [69001, 69001] UnProven, allocsite: _G_-13500
-38. compress95.c:1165 {getbyte} UnProven
-  *(@InBuff) @getbyte-1081:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178300
-  *(@InBuff) @getbyte-1081:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
-39. compress95.c:1167 {getbyte} UnProven
-  *(tmp) @getbyte-993:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178300
-  *(tmp) @getbyte-993:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
-40. compress95.c:1176 {putbyte} UnProven
-  *(tmp) @putbyte-1089:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178320
-  *(tmp) @putbyte-1089:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178300
-41. compress95.c:1192 {readbytes} UnProven
-  *(tmp) @readbytes-1100:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178300
-  *(tmp) @readbytes-1100:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
-  *(buf___1+i) @readbytes-1100:  offset: [0, +oo], size: [17, 17] UnProven, allocsite: _G_-14040
-42. compress95.c:1206 {writebytes} UnProven
-  *(buf___1+i) @writebytes-1108:  offset: [0, +oo], size: [16, 16] UnProven, allocsite: _G_-13760
-  *(tmp) @writebytes-1108:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178320
-  *(tmp) @writebytes-1108:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178300
-43. harness.c:26 {add_line} UnProven
-  *(buf___1+i) @add_line-1113:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
-44. harness.c:29 {add_line} UnProven
-  *(buf___1+count) @add_line-1116:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
-45. harness.c:141 {getranchar} UnProven
-  @prob_tab[c] @getranchar-1201:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-178120
-  @prob_tab[c] @getranchar-1202:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-178120
-46. harness.c:147 {getranchar} UnProven
-  @prob_tab[c][mid] @getranchar-1205:  offset: [127, +oo], size: [128, 128] UnProven, allocsite: _G_-178180
-  @prob_tab[c] @getranchar-1205:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-178120
-  @prob_tab[c][mid] @getranchar-1206:  offset: [127, +oo], size: [128, 128] UnProven, allocsite: _G_-178180
-  @prob_tab[c] @getranchar-1206:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-178120
-47. harness.c:149 {getranchar} UnProven
-  @prob_tab[c][mid] @getranchar-1207:  offset: [127, +oo], size: [128, 128] UnProven, allocsite: _G_-178180
-  @prob_tab[c] @getranchar-1207:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-178120
-  @prob_tab[c][mid] @getranchar-1208:  offset: [127, +oo], size: [128, 128] UnProven, allocsite: _G_-178180
-  @prob_tab[c] @getranchar-1208:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-178120
-48. harness.c:196 {compare_buffer} UnProven
-  *(buf2+(count2-1)) @compare_buffer-1232:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178320
-  *(buf1+(count1-1)) @compare_buffer-1232:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
-  *(buf2+(count2-1)) @compare_buffer-1233:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178320
-  *(buf1+(count1-1)) @compare_buffer-1233:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
-49. harness.c:198 {compare_buffer} UnProven
-  *(buf1+(count1-1)) @compare_buffer-1246:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
-50. harness.c:204 {compare_buffer} UnProven
-  *(buf2+(count2-1)) @compare_buffer-1255:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178320
-  *(buf1+(count1-1)) @compare_buffer-1255:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
-51. harness.c:204 {compare_buffer} UnProven
-  *(buf2+(count2-1)) @compare_buffer-1264:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178320
-  *(buf1+(count1-1)) @compare_buffer-1264:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178280
+1. compress95.c:647 {output} UnProven
+  *(tmp) @output-827:  offset: [1, +oo], size: [16, 16] UnProven, allocsite: _G_-13590
+2. compress95.c:653 {output} UnProven
+  *(bp) @output-830:  offset: [1, +oo], size: [16, 16] UnProven, allocsite: _G_-13590
+3. compress95.c:660 {output} UnProven
+  *(tmp___0) @output-837:  offset: [0, +oo], size: [16, 16] UnProven, allocsite: _G_-13590
+4. compress95.c:757 {decompress} UnProven
+  *(tmp) @decompress-901:  offset: [-oo, +oo], size: [552008, 552008] UnProven, allocsite: _G_-13330
+5. compress95.c:769 {decompress} UnProven
+  *(tmp___0) @decompress-905:  offset: [-oo, +oo], size: [552008, 552008] UnProven, allocsite: _G_-13330
+6. compress95.c:772 {decompress} UnProven
+  *(((char_type *)StartOf(@htab))+code) @decompress-909:  offset: [-oo, 0], size: [552008, 552008] UnProven, allocsite: _G_-13330
+7. compress95.c:772 {decompress} UnProven
+  *(tmp___1) @decompress-910:  offset: [-oo, +oo], size: [552008, 552008] UnProven, allocsite: _G_-13330
+8. compress95.c:778 {decompress} UnProven
+  *(stackp) @decompress-912:  offset: [-oo, +oo], size: [552008, 552008] UnProven, allocsite: _G_-13330
+9. compress95.c:853 {getcode} UnProven
+  *(tmp) @getcode-955:  offset: [0, +oo], size: [17, 17] UnProven, allocsite: _G_-13870
+10. compress95.c:862 {getcode} UnProven
+  *(tmp___0) @getcode-960:  offset: [1, +oo], size: [17, 17] UnProven, allocsite: _G_-13870
+11. compress95.c:870 {getcode} UnProven
+  @rmask[bits] @getcode-963:  offset: [0, +oo], size: [9, 9] UnProven, allocsite: _G_-13720
+  *(bp) @getcode-963:  offset: [1, +oo], size: [17, 17] UnProven, allocsite: _G_-13870
+12. compress95.c:1090 {cl_hash} UnProven
+  *(htab_p-16) @cl_hash-1016:  offset: [-oo, 68985], size: [69001, 69001] UnProven, allocsite: _G_-13330
+13. compress95.c:1091 {cl_hash} UnProven
+  *(htab_p-15) @cl_hash-1017:  offset: [-oo, 68986], size: [69001, 69001] UnProven, allocsite: _G_-13330
+14. compress95.c:1092 {cl_hash} UnProven
+  *(htab_p-14) @cl_hash-1018:  offset: [-oo, 68987], size: [69001, 69001] UnProven, allocsite: _G_-13330
+15. compress95.c:1093 {cl_hash} UnProven
+  *(htab_p-13) @cl_hash-1019:  offset: [-oo, 68988], size: [69001, 69001] UnProven, allocsite: _G_-13330
+16. compress95.c:1094 {cl_hash} UnProven
+  *(htab_p-12) @cl_hash-1020:  offset: [-oo, 68989], size: [69001, 69001] UnProven, allocsite: _G_-13330
+17. compress95.c:1095 {cl_hash} UnProven
+  *(htab_p-11) @cl_hash-1021:  offset: [-oo, 68990], size: [69001, 69001] UnProven, allocsite: _G_-13330
+18. compress95.c:1096 {cl_hash} UnProven
+  *(htab_p-10) @cl_hash-1022:  offset: [-oo, 68991], size: [69001, 69001] UnProven, allocsite: _G_-13330
+19. compress95.c:1097 {cl_hash} UnProven
+  *(htab_p-9) @cl_hash-1023:  offset: [-oo, 68992], size: [69001, 69001] UnProven, allocsite: _G_-13330
+20. compress95.c:1098 {cl_hash} UnProven
+  *(htab_p-8) @cl_hash-1024:  offset: [-oo, 68993], size: [69001, 69001] UnProven, allocsite: _G_-13330
+21. compress95.c:1099 {cl_hash} UnProven
+  *(htab_p-7) @cl_hash-1025:  offset: [-oo, 68994], size: [69001, 69001] UnProven, allocsite: _G_-13330
+22. compress95.c:1100 {cl_hash} UnProven
+  *(htab_p-6) @cl_hash-1026:  offset: [-oo, 68995], size: [69001, 69001] UnProven, allocsite: _G_-13330
+23. compress95.c:1101 {cl_hash} UnProven
+  *(htab_p-5) @cl_hash-1027:  offset: [-oo, 68996], size: [69001, 69001] UnProven, allocsite: _G_-13330
+24. compress95.c:1102 {cl_hash} UnProven
+  *(htab_p-4) @cl_hash-1028:  offset: [-oo, 68997], size: [69001, 69001] UnProven, allocsite: _G_-13330
+25. compress95.c:1103 {cl_hash} UnProven
+  *(htab_p-3) @cl_hash-1029:  offset: [-oo, 68998], size: [69001, 69001] UnProven, allocsite: _G_-13330
+26. compress95.c:1104 {cl_hash} UnProven
+  *(htab_p-2) @cl_hash-1030:  offset: [-oo, 68999], size: [69001, 69001] UnProven, allocsite: _G_-13330
+27. compress95.c:1105 {cl_hash} UnProven
+  *(htab_p-1) @cl_hash-1031:  offset: [-oo, 69000], size: [69001, 69001] UnProven, allocsite: _G_-13330
+28. compress95.c:1113 {cl_hash} UnProven
+  *(htab_p) @cl_hash-1036:  offset: [-oo, 68984], size: [69001, 69001] UnProven, allocsite: _G_-13330
+29. compress95.c:1167 {getbyte} UnProven
+  *(tmp) @getbyte-976:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178130
+  *(tmp) @getbyte-976:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178110
+30. compress95.c:1176 {putbyte} UnProven
+  *(tmp) @putbyte-1074:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178150
+  *(tmp) @putbyte-1074:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178130
+31. compress95.c:1192 {readbytes} UnProven
+  *(tmp) @readbytes-1085:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178130
+  *(tmp) @readbytes-1085:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178110
+  *(buf___1+i) @readbytes-1085:  offset: [0, +oo], size: [17, 17] UnProven, allocsite: _G_-13870
+32. compress95.c:1206 {writebytes} UnProven
+  *(buf___1+i) @writebytes-1093:  offset: [0, +oo], size: [16, 16] UnProven, allocsite: _G_-13590
+  *(tmp) @writebytes-1093:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178150
+  *(tmp) @writebytes-1093:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178130
+33. harness.c:26 {add_line} UnProven
+  *(buf___1+i) @add_line-1098:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178110
+34. harness.c:29 {add_line} UnProven
+  *(buf___1+count) @add_line-1101:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178110
+35. harness.c:141 {getranchar} UnProven
+  @prob_tab[c] @getranchar-1184:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-177950
+  @prob_tab[c] @getranchar-1185:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-177950
+36. harness.c:147 {getranchar} UnProven
+  @prob_tab[c][mid] @getranchar-1188:  offset: [127, +oo], size: [128, 128] UnProven, allocsite: _G_-178010
+  @prob_tab[c] @getranchar-1188:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-177950
+  @prob_tab[c][mid] @getranchar-1189:  offset: [127, +oo], size: [128, 128] UnProven, allocsite: _G_-178010
+  @prob_tab[c] @getranchar-1189:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-177950
+37. harness.c:149 {getranchar} UnProven
+  @prob_tab[c][mid] @getranchar-1190:  offset: [127, +oo], size: [128, 128] UnProven, allocsite: _G_-178010
+  @prob_tab[c] @getranchar-1190:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-177950
+  @prob_tab[c][mid] @getranchar-1191:  offset: [127, +oo], size: [128, 128] UnProven, allocsite: _G_-178010
+  @prob_tab[c] @getranchar-1191:  offset: [-oo, +oo], size: [128, 128] UnProven, allocsite: _G_-177950
+38. harness.c:196 {compare_buffer} UnProven
+  *(buf2+(count2-1)) @compare_buffer-1215:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178150
+  *(buf1+(count1-1)) @compare_buffer-1215:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178110
+  *(buf2+(count2-1)) @compare_buffer-1216:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178150
+  *(buf1+(count1-1)) @compare_buffer-1216:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178110
+39. harness.c:198 {compare_buffer} UnProven
+  *(buf1+(count1-1)) @compare_buffer-1229:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178110
+40. harness.c:204 {compare_buffer} UnProven
+  *(buf2+(count2-1)) @compare_buffer-1238:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178150
+  *(buf1+(count1-1)) @compare_buffer-1238:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178110
+41. harness.c:204 {compare_buffer} UnProven
+  *(buf2+(count2-1)) @compare_buffer-1247:  offset: [-oo, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178150
+  *(buf1+(count1-1)) @compare_buffer-1247:  offset: [0, +oo], size: [14500000, 14500000] UnProven, allocsite: _G_-178110
 
-#queries                 : 115
-#queries mod alarm point : 68
-#proven                  : 17
-#unproven                : 51
-#bot-involved            : 2
+#queries                 : 113
+#queries mod alarm point : 67
+#proven                  : 26
+#unproven                : 41
+#bot-involved            : 11
 Finished properly.
-62.1640000001
+82.8331770001

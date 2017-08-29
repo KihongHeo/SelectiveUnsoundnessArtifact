@@ -1,0 +1,7 @@
+block_sigmask
+chroot_path
+delaying
+init_done
+optarg
+optind
+saved_sigmask

@@ -386,7 +386,7 @@ void compress(void)
     {
     {
 #line 516
-    c = getbyte(); sparrow_print(c);
+    c = getbyte();
     }
     }
 #line 516
@@ -1303,9 +1303,9 @@ int getbyte(void)
 { 
   unsigned char *tmp ;
 
-  {sparrow_print(InCnt);
+  {
 #line 1165
-  if (InCnt > 0) {sparrow_print(*InBuff);
+  if (InCnt > 0) {
 #line 1166
     InCnt --;
 #line 1167

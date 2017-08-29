@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.00800000000001
+Front-end completes: 0.0120000000001
 
 
 
@@ -19,7 +19,7 @@ Translation to graphs begins...
 #nodes all   : 414
 #unreachable : 3
 
-Translation to graphs completes: 0.00800000000001
+Translation to graphs completes: 0.00800100000001
 
 
 
@@ -27,8 +27,8 @@ Translation to graphs completes: 0.00800000000001
 Pre-analysis begins...
 --------------------------------------------------------------------------------
 
-iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7
-mem size : 138
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 136
 
 #functions all : 6
 #recursive : 0
@@ -36,7 +36,7 @@ mem size : 138
 #unreachable   : 1
 unreachable functions : {xalloc}
 
-Pre-analysis completes: 0.00800000000001
+Pre-analysis completes: 0.00400000000001
 To inline : [xalloc]
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
@@ -51,7 +51,7 @@ Translation to graphs (after inline) begins...
 #nodes all   : 414
 #unreachable : 3
 
-Translation to graphs (after inline) completes: 0.00800000000001
+Translation to graphs (after inline) completes: 0.00400100000001
 
 
 
@@ -59,8 +59,8 @@ Translation to graphs (after inline) completes: 0.00800000000001
 Pre-analysis (after inline) begins...
 --------------------------------------------------------------------------------
 
-iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7
-mem size : 138
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 136
 
 #functions all : 6
 #recursive : 0
@@ -78,32 +78,32 @@ Pre-analysis (after inline) completes: 0.00800000000001
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 2648 kB
-iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7
-mem size : 138
+live memory : 2623 kB
+iteration : 1iteration : 2iteration : 3iteration : 4
+mem size : 136
 
 #functions all : 6
 #recursive : 0
 {}
 #unreachable   : 1
 unreachable functions : {xalloc}
-#total abstract locations  = 140
+#total abstract locations  = 138
 Def-use graph construction begins...
 draw intra-procedural edges
 [==========..................................................] (1/6)     [====================........................................] (2/6)     [==============================..............................] (3/6)     [========================================....................] (4/6)     [==================================================..........] (5/6)     [============================================================] (6/6)     
 draw inter-procedural edges
 [=...........................................................] (1/31)     [===.........................................................] (2/31)     [=====.......................................................] (3/31)     [=======.....................................................] (4/31)     [=========...................................................] (5/31)     [===========.................................................] (6/31)     [=============...............................................] (7/31)     [===============.............................................] (8/31)     [=================...........................................] (9/31)     [===================.........................................] (10/31)     [=====================.......................................] (11/31)     [=======================.....................................] (12/31)     [=========================...................................] (13/31)     [===========================.................................] (14/31)     [=============================...............................] (15/31)     [==============================..............................] (16/31)     [================================............................] (17/31)     [==================================..........................] (18/31)     [====================================........................] (19/31)     [======================================......................] (20/31)     [========================================....................] (21/31)     [==========================================..................] (22/31)     [============================================................] (23/31)     [==============================================..............] (24/31)     [================================================............] (25/31)     [==================================================..........] (26/31)     [====================================================........] (27/31)     [======================================================......] (28/31)     [========================================================....] (29/31)     [==========================================================..] (30/31)     [============================================================] (31/31)     
-Def-use graph construction completes: 0.0200000000001
-live memory : 3648 kB
+Def-use graph construction completes: 0.0200010000001
+live memory : 3377 kB
 #Nodes in def-use graph : 361
-#Locs on def-use graph : 2493
+#Locs on def-use graph : 2256
 Workorder computation begins...
 Workorder computation completes: 0.004
 Fixpoint iteration with widening begins...
-#iteration in widening : 465
-Fixpoint iteration with widening completes: 0.0120000000001
+#iteration in widening : 444
+Fixpoint iteration with widening completes: 0.0120010000001
 
-Itv Sparse Analysis completes: 0.0520000000001
+Itv Sparse Analysis completes: 0.0480030000001
 
 
 
@@ -134,4 +134,4 @@ Generate Buffer overrun report completes: 0.
 #unproven                : 6
 #bot-involved            : 0
 Finished properly.
-0.0920000000001
+0.0880050000001
