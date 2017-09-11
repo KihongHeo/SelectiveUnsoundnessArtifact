@@ -1,5 +1,5 @@
 benchmarks/bo/iquery.c 
-optarg, optind, something, 
+MaxAliasRecursion, SpaceSub, args, ascii, base_dist, base_length, bb, bi_buf, bitbuf, bitbuf___0, bitcount, bl_count, bl_desc, bl_order, bl_tree, block_sigmask, border, buf, bytes_in, bytes_out, cat_list, cfdirlist, clean, compr_level, compressed_len, configuration_table, cpdext, cpdist, cplens, cplext, crc, crc_32_tab, crc___0, d_buf, d_desc, dbits, decompress, default_config_files, delaying, depth, dist_code, dyn_dtree, dyn_ltree, egid, euid, exit_code, extra_blbits, extra_dbits, extra_lbits, fhs, file_method, file_type, flag_bit, flag_buf, flags, fsstnd, good_match, header_bytes, heap, help_msg, hidden, hufts, i, ifile_size, inbuf, init_done, ins_h, j, known_suffixes, l_desc, lbits, leaves, length_code, level, license_msg, line_length, list, lit_base, literal, ll, man_list, mandirlistmax, mask_bits, max_chain_length, max_lazy_match, max_len, maxbits, method, methods, msg, nice_match, no_time, nocats, noglob_dot_filenames, orig_len, outbuf, outcnt, parents, peek_bits, preformat, prev, pt_len, pt_table, quiet, read_buf, recursive, remove_ofname, rgid, ruid, saved_sigmask, something, static_dtree, static_ltree, status, subbitbuf, suffixes, test, test_buf, time_stamp, tmp_section_list, to_cat_filename, to_stdout, track, ultname, uncompressors, version, window, window_size, work, z_len, zfile, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.00800000000001
+Front-end completes: 0.0120010000001
 
 
 
@@ -28,7 +28,7 @@ Pre-analysis begins...
 --------------------------------------------------------------------------------
 
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 78
+mem size : 81
 
 #functions all : 4
 #recursive : 0
@@ -36,7 +36,7 @@ mem size : 78
 #unreachable   : 0
 unreachable functions : {}
 
-Pre-analysis completes: 0.
+Pre-analysis completes: 0.00400000000001
 To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
@@ -49,25 +49,25 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 1753 kB
+live memory : 1804 kB
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 78
+mem size : 81
 
 #functions all : 4
 #recursive : 0
 {}
 #unreachable   : 0
 unreachable functions : {}
-#total abstract locations  = 85
+#total abstract locations  = 86
 Def-use graph construction begins...
 draw intra-procedural edges
 [===============.............................................] (1/4)     [==============================..............................] (2/4)     [=============================================...............] (3/4)     [============================================================] (4/4)     
 draw inter-procedural edges
 [==..........................................................] (1/22)     [=====.......................................................] (2/22)     [========....................................................] (3/22)     [==========..................................................] (4/22)     [=============...............................................] (5/22)     [================............................................] (6/22)     [===================.........................................] (7/22)     [=====================.......................................] (8/22)     [========================....................................] (9/22)     [===========================.................................] (10/22)     [==============================..............................] (11/22)     [================================............................] (12/22)     [===================================.........................] (13/22)     [======================================......................] (14/22)     [========================================....................] (15/22)     [===========================================.................] (16/22)     [==============================================..............] (17/22)     [=================================================...........] (18/22)     [===================================================.........] (19/22)     [======================================================......] (20/22)     [=========================================================...] (21/22)     [============================================================] (22/22)     
-Def-use graph construction completes: 0.00800000000001
-live memory : 2025 kB
+Def-use graph construction completes: 0.00800100000001
+live memory : 2060 kB
 #Nodes in def-use graph : 126
-#Locs on def-use graph : 1006
+#Locs on def-use graph : 1012
 Workorder computation begins...
 Workorder computation completes: 0.
 Fixpoint iteration with widening begins...
@@ -89,10 +89,10 @@ Generate Buffer overrun report completes: 0.
 1. iquery-bad.c:161 {create_msg} UnProven
   *(tmp) @create_msg-237:  offset: [0, +oo], size: [10000, 10000] UnProven, allocsite: main-2750
 
-#queries                 : 34
-#queries mod alarm point : 21
-#proven                  : 20
+#queries                 : 35
+#queries mod alarm point : 22
+#proven                  : 21
 #unproven                : 1
 #bot-involved            : 1
 Finished properly.
-0.0280010000001
+0.0360020000001

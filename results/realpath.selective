@@ -1,5 +1,5 @@
 benchmarks/bo/realpath.c 
-block_sigmask, chroot_path, delaying, init_done, optarg, optind, saved_sigmask, 
+block_sigmask, buf, cat_list, catfd, cfdirlist, colon_sep_section_list, configuration_file, default_config_files, delaying, egid, euid, init_done, line_length, ll, man_list, mandirlistmax, msg, nocats, noglob_dot_filenames, old_mapped_path, progname, rgid, roff_directive, ruid, saved_sigmask, section_list, tmp_section_list, to_cat_filename, transport_strings, ultname, uncompressors, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.00800100000001
+Front-end completes: 0.0120010000001
 
 
 
@@ -19,7 +19,7 @@ Translation to graphs begins...
 #nodes all   : 572
 #unreachable : 1
 
-Translation to graphs completes: 0.0120010000001
+Translation to graphs completes: 0.0160010000001
 
 
 
@@ -28,7 +28,7 @@ Pre-analysis begins...
 --------------------------------------------------------------------------------
 
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 167
+mem size : 168
 
 #functions all : 7
 #recursive : 0
@@ -36,7 +36,7 @@ mem size : 167
 #unreachable   : 0
 unreachable functions : {}
 
-Pre-analysis completes: 0.012001
+Pre-analysis completes: 0.00800100000001
 To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
@@ -49,9 +49,9 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 2589 kB
+live memory : 2786 kB
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 167
+mem size : 168
 
 #functions all : 7
 #recursive : 0
@@ -64,17 +64,17 @@ draw intra-procedural edges
 [========....................................................] (1/7)     [=================...........................................] (2/7)     [=========================...................................] (3/7)     [==================================..........................] (4/7)     [==========================================..................] (5/7)     [===================================================.........] (6/7)     [============================================================] (7/7)     
 draw inter-procedural edges
 [............................................................] (1/113)     [=...........................................................] (2/113)     [=...........................................................] (3/113)     [==..........................................................] (4/113)     [==..........................................................] (5/113)     [===.........................................................] (6/113)     [===.........................................................] (7/113)     [====........................................................] (8/113)     [====........................................................] (9/113)     [=====.......................................................] (10/113)     [=====.......................................................] (11/113)     [======......................................................] (12/113)     [======......................................................] (13/113)     [=======.....................................................] (14/113)     [=======.....................................................] (15/113)     [========....................................................] (16/113)     [=========...................................................] (17/113)     [=========...................................................] (18/113)     [==========..................................................] (19/113)     [==========..................................................] (20/113)     [===========.................................................] (21/113)     [===========.................................................] (22/113)     [============................................................] (23/113)     [============................................................] (24/113)     [=============...............................................] (25/113)     [=============...............................................] (26/113)     [==============..............................................] (27/113)     [==============..............................................] (28/113)     [===============.............................................] (29/113)     [===============.............................................] (30/113)     [================............................................] (31/113)     [================............................................] (32/113)     [=================...........................................] (33/113)     [==================..........................................] (34/113)     [==================..........................................] (35/113)     [===================.........................................] (36/113)     [===================.........................................] (37/113)     [====================........................................] (38/113)     [====================........................................] (39/113)     [=====================.......................................] (40/113)     [=====================.......................................] (41/113)     [======================......................................] (42/113)     [======================......................................] (43/113)     [=======================.....................................] (44/113)     [=======================.....................................] (45/113)     [========================....................................] (46/113)     [========================....................................] (47/113)     [=========================...................................] (48/113)     [==========================..................................] (49/113)     [==========================..................................] (50/113)     [===========================.................................] (51/113)     [===========================.................................] (52/113)     [============================................................] (53/113)     [============================................................] (54/113)     [=============================...............................] (55/113)     [=============================...............................] (56/113)     [==============================..............................] (57/113)     [==============================..............................] (58/113)     [===============================.............................] (59/113)     [===============================.............................] (60/113)     [================================............................] (61/113)     [================================............................] (62/113)     [=================================...........................] (63/113)     [=================================...........................] (64/113)     [==================================..........................] (65/113)     [===================================.........................] (66/113)     [===================================.........................] (67/113)     [====================================........................] (68/113)     [====================================........................] (69/113)     [=====================================.......................] (70/113)     [=====================================.......................] (71/113)     [======================================......................] (72/113)     [======================================......................] (73/113)     [=======================================.....................] (74/113)     [=======================================.....................] (75/113)     [========================================....................] (76/113)     [========================================....................] (77/113)     [=========================================...................] (78/113)     [=========================================...................] (79/113)     [==========================================..................] (80/113)     [===========================================.................] (81/113)     [===========================================.................] (82/113)     [============================================................] (83/113)     [============================================................] (84/113)     [=============================================...............] (85/113)     [=============================================...............] (86/113)     [==============================================..............] (87/113)     [==============================================..............] (88/113)     [===============================================.............] (89/113)     [===============================================.............] (90/113)     [================================================............] (91/113)     [================================================............] (92/113)     [=================================================...........] (93/113)     [=================================================...........] (94/113)     [==================================================..........] (95/113)     [==================================================..........] (96/113)     [===================================================.........] (97/113)     [====================================================........] (98/113)     [====================================================........] (99/113)     [=====================================================.......] (100/113)     [=====================================================.......] (101/113)     [======================================================......] (102/113)     [======================================================......] (103/113)     [=======================================================.....] (104/113)     [=======================================================.....] (105/113)     [========================================================....] (106/113)     [========================================================....] (107/113)     [=========================================================...] (108/113)     [=========================================================...] (109/113)     [==========================================================..] (110/113)     [==========================================================..] (111/113)     [===========================================================.] (112/113)     [============================================================] (113/113)     
-Def-use graph construction completes: 0.100006000001
-live memory : 3515 kB
-#Nodes in def-use graph : 459
-#Locs on def-use graph : 3845
+Def-use graph construction completes: 0.104006000001
+live memory : 3535 kB
+#Nodes in def-use graph : 457
+#Locs on def-use graph : 3824
 Workorder computation begins...
-Workorder computation completes: 0.004001
+Workorder computation completes: 0.00400000000001
 Fixpoint iteration with widening begins...
-#iteration in widening : 549
-Fixpoint iteration with widening completes: 0.0120000000001
+#iteration in widening : 547
+Fixpoint iteration with widening completes: 0.0120010000001
 
-Itv Sparse Analysis completes: 0.140008000001
+Itv Sparse Analysis completes: 0.140009000001
 
 
 
@@ -83,75 +83,111 @@ Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
 [............................................................] (0/571)     
-Generate Buffer overrun report completes: 0.00400100000001
+Generate Buffer overrun report completes: 0.
 
 = Alarms =
-1. realpath-2.4.2-bad.c:229 {my_realpath} UnProven
+1. call-realpath-bad.c:120 {main} UnProven
+  strncpy ((char */* __restrict  */)StartOf(@chroot_path), (char const   */* __restrict  */)((char const   *)root_path), SizeOfE(@chroot_path)) @main-1256:  offset: [47, 47], size: [46, 46] UnProven, allocsite: _G_-12850
+2. realpath-2.4.2-bad.c:192 {my_realpath} UnProven
+  strcpy ((char */* __restrict  */)StartOf(curpath), (char const   */* __restrict  */)pathname) @my_realpath-870:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7610
+3. realpath-2.4.2-bad.c:229 {my_realpath} UnProven
   *(where) @my_realpath-779:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7630
   *(where) @my_realpath-779:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7610
   *(where) @my_realpath-780:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7630
   *(where) @my_realpath-780:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7610
-2. realpath-2.4.2-bad.c:255 {my_realpath} UnProven
+4. realpath-2.4.2-bad.c:255 {my_realpath} UnProven
   *(ptr) @my_realpath-898:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7630
   *(ptr) @my_realpath-898:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7610
-3. realpath-2.4.2-bad.c:257 {my_realpath} UnProven
+5. realpath-2.4.2-bad.c:257 {my_realpath} UnProven
   strcpy ((char */* __restrict  */)StartOf(namebuf), (char const   */* __restrict  */)((char const   *)StartOf(workpath))) @my_realpath-899:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7670
-4. realpath-2.4.2-bad.c:260 {my_realpath} UnProven
+6. realpath-2.4.2-bad.c:260 {my_realpath} UnProven
   *(last) @my_realpath-797:  offset: [-1, 0], size: [46, 46] UnProven, allocsite: my_realpath-7670
   *(last) @my_realpath-798:  offset: [-1, 0], size: [46, 46] UnProven, allocsite: my_realpath-7670
-5. realpath-2.4.2-bad.c:262 {my_realpath} UnProven
+7. realpath-2.4.2-bad.c:262 {my_realpath} UnProven
   strcat ((char */* __restrict  */)StartOf(namebuf), (char const   */* __restrict  */)__cil_tmp88) @my_realpath-1017:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7670
-6. realpath-2.4.2-bad.c:262 {my_realpath} UnProven
+8. realpath-2.4.2-bad.c:262 {my_realpath} UnProven
   strcat ((char */* __restrict  */)StartOf(namebuf), (char const   */* __restrict  */)__cil_tmp90) @my_realpath-1023:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7670
-7. realpath-2.4.2-bad.c:266 {my_realpath} UnProven
+9. realpath-2.4.2-bad.c:266 {my_realpath} UnProven
   strcat ((char */* __restrict  */)StartOf(namebuf), (char const   */* __restrict  */)((char const   *)where)) @my_realpath-907:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7670
-8. realpath-2.4.2-bad.c:281 {my_realpath} UnProven
+10. realpath-2.4.2-bad.c:281 {my_realpath} UnProven
   strcpy ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-917:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
-9. realpath-2.4.2-bad.c:296 {my_realpath} UnProven
+11. realpath-2.4.2-bad.c:291 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-921:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+12. realpath-2.4.2-bad.c:296 {my_realpath} UnProven
   *(ptr) @my_realpath-811:  offset: [-1, 0], size: [47, 47] UnProven, allocsite: call_realpath-12150
   *(ptr) @my_realpath-812:  offset: [-1, 0], size: [47, 47] UnProven, allocsite: call_realpath-12150
-10. realpath-2.4.2-bad.c:322 {my_realpath} UnProven
+13. realpath-2.4.2-bad.c:298 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-925:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+14. realpath-2.4.2-bad.c:298 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-928:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+15. realpath-2.4.2-bad.c:303 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)(StartOf(namebuf)+1))) @my_realpath-930:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+16. realpath-2.4.2-bad.c:322 {my_realpath} UnProven
   strcpy ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-939:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
-11. realpath-2.4.2-bad.c:336 {my_realpath} UnProven
+17. realpath-2.4.2-bad.c:331 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-943:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+18. realpath-2.4.2-bad.c:336 {my_realpath} UnProven
   *(ptr) @my_realpath-827:  offset: [-1, 0], size: [47, 47] UnProven, allocsite: call_realpath-12150
   *(ptr) @my_realpath-828:  offset: [-1, 0], size: [47, 47] UnProven, allocsite: call_realpath-12150
-12. realpath-2.4.2-bad.c:350 {my_realpath} UnProven
+19. realpath-2.4.2-bad.c:338 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-947:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+20. realpath-2.4.2-bad.c:338 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-950:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+21. realpath-2.4.2-bad.c:343 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)(StartOf(namebuf)+1))) @my_realpath-952:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+22. realpath-2.4.2-bad.c:350 {my_realpath} UnProven
   *(StartOf(linkpath)+len) @my_realpath-954:  offset: [-oo, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7650
-13. realpath-2.4.2-bad.c:354 {my_realpath} UnProven
+23. realpath-2.4.2-bad.c:354 {my_realpath} UnProven
   *(where) @my_realpath-831:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7630
   *(where) @my_realpath-831:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7610
   *(where) @my_realpath-832:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7630
   *(where) @my_realpath-832:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7610
-14. realpath-2.4.2-bad.c:356 {my_realpath} UnProven
+24. realpath-2.4.2-bad.c:356 {my_realpath} UnProven
   strcat ((char */* __restrict  */)StartOf(linkpath), (char const   */* __restrict  */)__cil_tmp105) @my_realpath-1068:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7650
-15. realpath-2.4.2-bad.c:359 {my_realpath} UnProven
+25. realpath-2.4.2-bad.c:359 {my_realpath} UnProven
   strcat ((char */* __restrict  */)StartOf(linkpath), (char const   */* __restrict  */)((char const   *)where)) @my_realpath-958:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7650
-16. realpath-2.4.2-bad.c:364 {my_realpath} UnProven
+26. realpath-2.4.2-bad.c:364 {my_realpath} UnProven
   strcpy ((char */* __restrict  */)StartOf(curpath), (char const   */* __restrict  */)((char const   *)StartOf(linkpath))) @my_realpath-960:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7610
-17. realpath-2.4.2-bad.c:376 {my_realpath} UnProven
+27. realpath-2.4.2-bad.c:376 {my_realpath} UnProven
   strcpy ((char */* __restrict  */)StartOf(workpath), (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-963:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7630
-18. realpath-2.4.2-bad.c:380 {my_realpath} UnProven
+28. realpath-2.4.2-bad.c:380 {my_realpath} UnProven
   *(where) @my_realpath-835:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7630
   *(where) @my_realpath-835:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7610
   *(where) @my_realpath-836:  offset: [1, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7630
   *(where) @my_realpath-836:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7610
-19. realpath-2.4.2-bad.c:383 {my_realpath} UnProven
+29. realpath-2.4.2-bad.c:383 {my_realpath} UnProven
   strcpy ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-965:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
-20. realpath-2.4.2-bad.c:395 {my_realpath} UnProven
+30. realpath-2.4.2-bad.c:390 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-968:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+31. realpath-2.4.2-bad.c:395 {my_realpath} UnProven
   *(ptr) @my_realpath-847:  offset: [-1, 0], size: [47, 47] UnProven, allocsite: call_realpath-12150
   *(ptr) @my_realpath-848:  offset: [-1, 0], size: [47, 47] UnProven, allocsite: call_realpath-12150
-21. realpath-2.4.2-bad.c:410 {my_realpath} UnProven
+32. realpath-2.4.2-bad.c:397 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-972:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+33. realpath-2.4.2-bad.c:397 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-975:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+34. realpath-2.4.2-bad.c:402 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)(StartOf(namebuf)+1))) @my_realpath-977:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+35. realpath-2.4.2-bad.c:410 {my_realpath} UnProven
   strcpy ((char */* __restrict  */)StartOf(workpath), (char const   */* __restrict  */)((char const   *)StartOf(namebuf))) @my_realpath-979:  offset: [0, +oo], size: [46, 46] UnProven, allocsite: my_realpath-7630
-22. realpath-2.4.2-bad.c:416 {my_realpath} UnProven
+36. realpath-2.4.2-bad.c:416 {my_realpath} UnProven
   strcpy ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(workpath))) @my_realpath-981:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
-23. realpath-2.4.2-bad.c:430 {my_realpath} UnProven
+37. realpath-2.4.2-bad.c:425 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(workpath))) @my_realpath-985:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+38. realpath-2.4.2-bad.c:430 {my_realpath} UnProven
   *(ptr) @my_realpath-859:  offset: [-1, 0], size: [47, 47] UnProven, allocsite: call_realpath-12150
   *(ptr) @my_realpath-860:  offset: [-1, 0], size: [47, 47] UnProven, allocsite: call_realpath-12150
+39. realpath-2.4.2-bad.c:432 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(workpath))) @my_realpath-989:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+40. realpath-2.4.2-bad.c:432 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)StartOf(workpath))) @my_realpath-992:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
+41. realpath-2.4.2-bad.c:437 {my_realpath} UnProven
+  strcat ((char */* __restrict  */)result, (char const   */* __restrict  */)((char const   *)(StartOf(workpath)+1))) @my_realpath-994:  offset: [0, +oo], size: [47, 47] UnProven, allocsite: call_realpath-12150
 
-#queries                 : 116
-#queries mod alarm point : 80
-#proven                  : 57
-#unproven                : 23
-#bot-involved            : 21
+#queries                 : 117
+#queries mod alarm point : 81
+#proven                  : 40
+#unproven                : 41
+#bot-involved            : 0
 Finished properly.
-0.180012000001
+0.184012000001

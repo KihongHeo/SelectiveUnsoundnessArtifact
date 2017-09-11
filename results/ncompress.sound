@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.0160010000001
+Front-end completes: 0.0240010000001
 
 
 
@@ -72,9 +72,9 @@ Workorder computation begins...
 Workorder computation completes: 0.036002
 Fixpoint iteration with widening begins...
 #iteration in widening : 2127
-Fixpoint iteration with widening completes: 0.0560030000001
+Fixpoint iteration with widening completes: 0.056004
 
-Itv Sparse Analysis completes: 0.380023000001
+Itv Sparse Analysis completes: 0.380024000001
 
 
 
@@ -83,7 +83,7 @@ Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
 [............................................................] (0/1386)     [===========================================.................] (1000/1386)     
-Generate Buffer overrun report completes: 0.004001
+Generate Buffer overrun report completes: 0.00400000000001
 
 = Alarms =
 1. compress42.c:1447 {compress} UnProven
@@ -114,4 +114,4 @@ Generate Buffer overrun report completes: 0.004001
 #unproven                : 10
 #bot-involved            : 14
 Finished properly.
-0.464029000001
+0.468029000001

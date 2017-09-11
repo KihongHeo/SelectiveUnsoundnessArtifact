@@ -258,22 +258,39 @@ def mkTestSet(fnames):
     testset.append(feat) 
   return testset
 
-def doOCSVM(target,trset,testset):
-  # fit the model
-  if target == "bo": 
-    clf = svm.OneClassSVM(nu=0.1, kernel="rbf", gamma=0.1)
-  else:
-    clf = svm.OneClassSVM(nu=0.2, kernel="rbf", gamma=0.1)
-  clf.fit(trset)
-  tunable = []
+def mkOracle(fnames):
+  lines = []
+  for fname in fnames:
+    f = open(fname,"r")
+    lines = lines + f.readlines()
+  oracle = []
+  for line in lines:
+    feat = []
+    tokens = re.split(r' |\t|\n',line)
+    tokens = filter(lambda x: x.strip() != '', tokens)
+    if tokens[len(tokens) - 1] == "1":
+        oracle.append(tokens[0])
+  return oracle
 
-  haru = 0
-  inter = 0
-  for feat in testset:
-    result = clf.predict(np.array(feat[1:len(feat)-1]).reshape(1,-1))
-    if result[0] == 1:
-      tunable.append(feat[0])
-  return tunable
+def doOCSVM(target,trset,testset,param=""):
+  # fit the model
+    if target == "bo": 
+        if param == "global":
+            clf = svm.OneClassSVM(nu=0.1, kernel="rbf", gamma=0.1)
+        else:
+            clf = svm.OneClassSVM(nu=0.1, kernel="rbf", gamma=0.1)
+    else:
+        clf = svm.OneClassSVM(nu=0.2, kernel="rbf", gamma=0.1)
+    clf.fit(trset)
+    tunable = []
+
+    haru = 0
+    inter = 0
+    for feat in testset:
+        result = clf.predict(np.array(feat[1:len(feat)-1]).reshape(1,-1))
+        if result[0] == 1:
+            tunable.append(feat[0])
+    return tunable
 
 def doSelectiveAnalysis(target,pgm,f_train,f_test):
   if target == "bo":
@@ -287,7 +304,26 @@ def doSelectiveAnalysis(target,pgm,f_train,f_test):
     global_test = map(lambda x: "data/"+target+"_data/global_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
     global_trset = mkTrSet(global_training)
     global_testset = mkTestSet(global_test)
-    tunable_global = doOCSVM(target,global_trset,global_testset)
+    tunable_global = doOCSVM(target,global_trset,global_testset,param="global")
+  else:
+    tunable_loop = []
+  lib_training = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
+  lib_test = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
+  lib_trset = mkTrSet(lib_training)
+  lib_testset = mkTestSet(lib_test)
+  tunable_lib = doOCSVM(target,lib_trset,lib_testset)
+  return run(target,pgm,tunable_loop,tunable_lib,[],tunable_global,False,"selective")
+
+def doSelectiveAnalysisOracle(target,pgm,f_train,f_test):
+  if target == "bo":
+    loop_training = map(lambda x: "data/"+target+"_data/loop_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
+    loop_test = map(lambda x: "data/"+target+"_data/loop_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
+    loop_trset = mkTrSet(loop_training)
+    loop_testset = mkTestSet(loop_test)
+    tunable_loop = doOCSVM(target,loop_trset,loop_testset)
+
+    global_test = map(lambda x: "data/"+target+"_data/global_data/"+x.strip("\n")+".tr", open(f_test, 'r').readlines())
+    tunable_global = mkOracle(global_test)
   else:
     tunable_loop = []
   lib_training = map(lambda x: "data/"+target+"_data/lib_data/"+x.strip("\n")+".tr", open(f_train, 'r').readlines())
@@ -313,7 +349,8 @@ def doUnsoundAnalysis(target,pgm,f_test):
     tunable_lib = ["-1"]
   return run(target,pgm,tunable_loop,tunable_lib,[],tunable_global,False,"unsound")
 
-def leave_one_out(target):
+def leave_one_out(args):
+  target = args.target
   if target == "bo":
     pgms = bo_pgms
   else:
@@ -331,12 +368,15 @@ def leave_one_out(target):
   print "%20s %5s %10s %13s %10s" % ("", "", "Sound", "Selective", "Unsound")
   print "%20s %5s %5s %5s %5s %5s %5s %5s" % ("Program", "Bug", "T", "F", "T", "F", "T", "F")
   print "-----------------------------------------------------------------"
-  for p in pgms:#[15:16]:
+  for p in pgms:
     sys.stdout.flush()
     train = "cv/"+target+"_cv/train_"+p
     test = "cv/"+target+"_cv/test_"+p
     (sound_true, sound_false) = doSoundAnalysis(target,p)
-    (selective_true, selective_false) = doSelectiveAnalysis(target,p,train,test)
+    if args.clf == "ocsvm":
+        (selective_true, selective_false) = doSelectiveAnalysis(target,p,train,test)
+    elif args.clf == "oracle":
+        (selective_true, selective_false) = doSelectiveAnalysisOracle(target,p,train,test)
     (unsound_true, unsound_false) = doUnsoundAnalysis(target,p,test)
     print "%20s %5d %5d %5d %5d %5d %5d %5d" % (p, len(bug_info[p]), sound_true, sound_false, selective_true, selective_false, unsound_true, unsound_false)
     total_bugs += len(bug_info[p])
@@ -463,10 +503,11 @@ def main(argv):
   parser = argparse.ArgumentParser(description='ICSE 2017 Experiments')
   parser.add_argument('--target')
   parser.add_argument('--cv')
+  parser.add_argument('--clf', default='ocsvm')
   args = parser.parse_args()
 
   if args.cv == 'leave-one-out':
-    leave_one_out(args.target)
+    leave_one_out(args)
   elif args.cv == 'two-fold':
     k_fold(args.target,55)
   elif args.cv == 'three-fold':

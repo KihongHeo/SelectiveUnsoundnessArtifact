@@ -1,5 +1,5 @@
 benchmarks/bo/tTflag.c 
-optarg, optind, tTdvect, tTsize, tTvect, 
+InCnt, __re_error_msgid, __re_error_msgid_idx, block_sigmask, buf, buf___0, buffer, cat_list, cfdirlist, codetab, comp_text_buffer, cur_input, default_config_files, empty_set, first_indent, freq_tab, fsize, hold, hsize, htab, in_count, last_line_length, lcmd_out_line_len, line, lmask, magic_header, man_list, maxbits, maxcode, maxmaxcode, msg, new_text_buffer, obs, orig_text_buffer, other_indent, out_count, outfile, prob_tab, prog, ratio, re_syntax_options, rmask, s_accum, saved_sigmask, seedi, stdin_argv, tTdvect, tTvect, tmp_section_list, to_cat_filename, transport_strings, ultname, uncompressors, version, words, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.00400100000001
+Front-end completes: 0.00400000000001
 
 
 
@@ -28,7 +28,7 @@ Pre-analysis begins...
 --------------------------------------------------------------------------------
 
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 24
+mem size : 35
 
 #functions all : 4
 #recursive : 0
@@ -49,30 +49,30 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 1668 kB
+live memory : 1746 kB
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 24
+mem size : 35
 
 #functions all : 4
 #recursive : 0
 {}
 #unreachable   : 0
 unreachable functions : {}
-#total abstract locations  = 38
+#total abstract locations  = 39
 Def-use graph construction begins...
 draw intra-procedural edges
 [===============.............................................] (1/4)     [==============================..............................] (2/4)     [=============================================...............] (3/4)     [============================================================] (4/4)     
 draw inter-procedural edges
 [=====.......................................................] (1/12)     [==========..................................................] (2/12)     [===============.............................................] (3/12)     [====================........................................] (4/12)     [=========================...................................] (5/12)     [==============================..............................] (6/12)     [===================================.........................] (7/12)     [========================================....................] (8/12)     [=============================================...............] (9/12)     [==================================================..........] (10/12)     [=======================================================.....] (11/12)     [============================================================] (12/12)     
-Def-use graph construction completes: 0.00400000000001
-live memory : 1826 kB
-#Nodes in def-use graph : 108
-#Locs on def-use graph : 470
+Def-use graph construction completes: 0.00400100000001
+live memory : 1896 kB
+#Nodes in def-use graph : 114
+#Locs on def-use graph : 586
 Workorder computation begins...
 Workorder computation completes: 0.
 Fixpoint iteration with widening begins...
-#iteration in widening : 108
-Fixpoint iteration with widening completes: 0.00400100000001
+#iteration in widening : 114
+Fixpoint iteration with widening completes: 0.00400000000001
 
 Itv Sparse Analysis completes: 0.0120010000001
 
@@ -87,10 +87,10 @@ Generate Buffer overrun report completes: 0.
 
 = Alarms =
 
-#queries                 : 27
-#queries mod alarm point : 12
-#proven                  : 12
+#queries                 : 50
+#queries mod alarm point : 13
+#proven                  : 13
 #unproven                : 0
-#bot-involved            : 3
+#bot-involved            : 0
 Finished properly.
-0.0200020000001
+0.0240010000001

@@ -19,7 +19,7 @@ Translation to graphs begins...
 #nodes all   : 933
 #unreachable : 4
 
-Translation to graphs completes: 0.0160010000001
+Translation to graphs completes: 0.0200010000001
 
 
 
@@ -69,12 +69,12 @@ live memory : 4304 kB
 #Nodes in def-use graph : 856
 #Locs on def-use graph : 3648
 Workorder computation begins...
-Workorder computation completes: 0.008
+Workorder computation completes: 0.012
 Fixpoint iteration with widening begins...
 #iteration in widening : 1079
-Fixpoint iteration with widening completes: 0.0320020000001
+Fixpoint iteration with widening completes: 0.028002
 
-Itv Sparse Analysis completes: 0.132008000001
+Itv Sparse Analysis completes: 0.128008000001
 
 
 

@@ -1,5 +1,5 @@
 benchmarks/bo/nxt.c 
-transport_strings, 
+InCnt, __re_error_msgid, __re_error_msgid_idx, block_sigmask, buf, buf___0, buffer, cat_list, cfdirlist, codetab, comp_text_buffer, cur_input, default_config_files, empty_set, first_indent, freq_tab, fsize, hold, hsize, htab, in_count, last_line_length, lcmd_out_line_len, line, lmask, magic_header, man_list, maxbits, maxcode, maxmaxcode, msg, new_text_buffer, obs, orig_text_buffer, other_indent, out_count, outfile, prob_tab, prog, ratio, re_syntax_options, rmask, s_accum, saved_sigmask, seedi, stdin_argv, tTdvect, tTvect, tmp_section_list, to_cat_filename, transport_strings, ultname, uncompressors, version, words, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.0120010000001
+Front-end completes: 0.0160010000001
 
 
 
@@ -16,8 +16,8 @@ Translation to graphs begins...
 --------------------------------------------------------------------------------
 
 
-#nodes all   : 712
-#unreachable : 19
+#nodes all   : 714
+#unreachable : 20
 
 Translation to graphs completes: 0.0160010000001
 
@@ -36,12 +36,12 @@ mem size : 231
 #unreachable   : 1
 unreachable functions : {newstr}
 
-Pre-analysis completes: 0.016001
+Pre-analysis completes: 0.020001
 To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
 #Procs : 9
-#Nodes : 693
+#Nodes : 694
 
 
 
@@ -65,13 +65,13 @@ draw intra-procedural edges
 draw inter-procedural edges
 [=...........................................................] (1/60)     [==..........................................................] (2/60)     [===.........................................................] (3/60)     [====........................................................] (4/60)     [=====.......................................................] (5/60)     [======......................................................] (6/60)     [=======.....................................................] (7/60)     [========....................................................] (8/60)     [=========...................................................] (9/60)     [==========..................................................] (10/60)     [===========.................................................] (11/60)     [============................................................] (12/60)     [=============...............................................] (13/60)     [==============..............................................] (14/60)     [===============.............................................] (15/60)     [================............................................] (16/60)     [=================...........................................] (17/60)     [==================..........................................] (18/60)     [===================.........................................] (19/60)     [====================........................................] (20/60)     [=====================.......................................] (21/60)     [======================......................................] (22/60)     [=======================.....................................] (23/60)     [========================....................................] (24/60)     [=========================...................................] (25/60)     [==========================..................................] (26/60)     [===========================.................................] (27/60)     [============================................................] (28/60)     [=============================...............................] (29/60)     [==============================..............................] (30/60)     [===============================.............................] (31/60)     [================================............................] (32/60)     [=================================...........................] (33/60)     [==================================..........................] (34/60)     [===================================.........................] (35/60)     [====================================........................] (36/60)     [=====================================.......................] (37/60)     [======================================......................] (38/60)     [=======================================.....................] (39/60)     [========================================....................] (40/60)     [=========================================...................] (41/60)     [==========================================..................] (42/60)     [===========================================.................] (43/60)     [============================================................] (44/60)     [=============================================...............] (45/60)     [==============================================..............] (46/60)     [===============================================.............] (47/60)     [================================================............] (48/60)     [=================================================...........] (49/60)     [==================================================..........] (50/60)     [===================================================.........] (51/60)     [====================================================........] (52/60)     [=====================================================.......] (53/60)     [======================================================......] (54/60)     [=======================================================.....] (55/60)     [========================================================....] (56/60)     [=========================================================...] (57/60)     [==========================================================..] (58/60)     [===========================================================.] (59/60)     [============================================================] (60/60)     
 Def-use graph construction completes: 0.0440030000001
-live memory : 4087 kB
+live memory : 4060 kB
 #Nodes in def-use graph : 586
 #Locs on def-use graph : 4005
 Workorder computation begins...
 Workorder computation completes: 0.00400000000001
 Fixpoint iteration with widening begins...
-#iteration in widening : 693
+#iteration in widening : 708
 Fixpoint iteration with widening completes: 0.016001
 
 Itv Sparse Analysis completes: 0.0960060000001
@@ -82,91 +82,94 @@ Itv Sparse Analysis completes: 0.0960060000001
 Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
-[............................................................] (0/693)     
-Generate Buffer overrun report completes: 0.
+[............................................................] (0/694)     
+Generate Buffer overrun report completes: 0.00400000000001
 
 = Alarms =
-1. nxt-bad.c:301 {rrextract} UnProven
-  *(t_cp+1) @rrextract-899:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-  *(t_cp+0) @rrextract-899:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-2. nxt-bad.c:305 {rrextract} UnProven
-  *(t_cp___0+1) @rrextract-905:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-  *(t_cp___0+0) @rrextract-905:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-3. nxt-bad.c:325 {rrextract} UnProven
-  *(t_cp___2+1) @rrextract-920:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-  *(t_cp___2+0) @rrextract-920:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-4. nxt-bad.c:411 {rrextract} UnProven
-  memcpy ((void */* __restrict  */)((void *)cp1), (void const   */* __restrict  */)((void const   *)cp), (size_t )(dlen-((u_int )n))) @rrextract-949:  offset: [-oo, +oo], size: [4140, 4140] UnProven, allocsite: rrextract-8400
-  memcpy ((void */* __restrict  */)((void *)cp1), (void const   */* __restrict  */)((void const   *)cp), (size_t )(dlen-((u_int )n))) @rrextract-949:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-5. nxt-bad.c:483 {create_msg} UnProven
-  *(temp) @create_msg-1057:  offset: [0, +oo], size: [400, 400] UnProven, allocsite: create_msg-12280
-  *(temp) @create_msg-1058:  offset: [0, +oo], size: [400, 400] UnProven, allocsite: create_msg-12280
-6. nxt-bad.c:484 {create_msg} UnProven
-  *(tmp___6) @create_msg-1083:  offset: [0, +oo], size: [400, 400] UnProven, allocsite: create_msg-12280
-  *(tmp___5) @create_msg-1083:  offset: [0, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-7. nxt-bad.c:500 {create_msg} UnProven
-  *(tmp___11) @create_msg-1103:  offset: [0, +oo], size: [200, 200] UnProven, allocsite: create_msg-12260
-  *(tmp___10) @create_msg-1103:  offset: [0, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-8. nxt-bad.c:504 {create_msg} UnProven
-  *(tmp___12) @create_msg-1110:  offset: [0, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+1. nxt-bad.c:138 {__res_hnok} UnProven
+  *(tmp___0) @__res_hnok-583:  offset: [1, +oo], size: [4140, 4140] UnProven, allocsite: rrextract-8430
+  *(tmp___0) @__res_hnok-583:  offset: [1, +oo], size: [100, 100] UnProven, allocsite: main-12910
+2. nxt-bad.c:301 {rrextract} UnProven
+  *(t_cp+1) @rrextract-902:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+  *(t_cp+0) @rrextract-902:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+3. nxt-bad.c:305 {rrextract} UnProven
+  *(t_cp___0+1) @rrextract-908:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+  *(t_cp___0+0) @rrextract-908:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+4. nxt-bad.c:325 {rrextract} UnProven
+  *(t_cp___2+1) @rrextract-923:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+  *(t_cp___2+0) @rrextract-923:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+5. nxt-bad.c:411 {rrextract} UnProven
+  memcpy ((void */* __restrict  */)((void *)cp1), (void const   */* __restrict  */)((void const   *)cp), (size_t )(dlen-((u_int )n))) @rrextract-952:  offset: [-oo, +oo], size: [4140, 4140] UnProven, allocsite: rrextract-8430
+  memcpy ((void */* __restrict  */)((void *)cp1), (void const   */* __restrict  */)((void const   *)cp), (size_t )(dlen-((u_int )n))) @rrextract-952:  offset: [-oo, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+6. nxt-bad.c:483 {create_msg} UnProven
+  *(temp) @create_msg-1060:  offset: [0, +oo], size: [400, 400] UnProven, allocsite: create_msg-12310
+  *(temp) @create_msg-1061:  offset: [0, +oo], size: [400, 400] UnProven, allocsite: create_msg-12310
+7. nxt-bad.c:484 {create_msg} UnProven
+  *(tmp___6) @create_msg-1086:  offset: [0, +oo], size: [400, 400] UnProven, allocsite: create_msg-12310
+  *(tmp___5) @create_msg-1086:  offset: [0, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+8. nxt-bad.c:500 {create_msg} UnProven
+  *(tmp___11) @create_msg-1106:  offset: [0, +oo], size: [200, 200] UnProven, allocsite: create_msg-12290
+  *(tmp___10) @create_msg-1106:  offset: [0, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 9. nxt-bad.c:504 {create_msg} UnProven
-  *(t_cp) @create_msg-1111:  offset: [1, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-10. nxt-bad.c:507 {create_msg} UnProven
-  *(tmp___13) @create_msg-1118:  offset: [4, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___12) @create_msg-1113:  offset: [0, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+10. nxt-bad.c:504 {create_msg} UnProven
+  *(t_cp) @create_msg-1114:  offset: [1, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 11. nxt-bad.c:507 {create_msg} UnProven
-  *(t_cp___0) @create_msg-1119:  offset: [5, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-12. nxt-bad.c:510 {create_msg} UnProven
-  *(tmp___14) @create_msg-1126:  offset: [8, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___13) @create_msg-1121:  offset: [4, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+12. nxt-bad.c:507 {create_msg} UnProven
+  *(t_cp___0) @create_msg-1122:  offset: [5, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 13. nxt-bad.c:510 {create_msg} UnProven
-  *(tmp___15) @create_msg-1129:  offset: [9, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___14) @create_msg-1129:  offset: [8, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 14. nxt-bad.c:510 {create_msg} UnProven
-  *(tmp___16) @create_msg-1132:  offset: [10, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___15) @create_msg-1132:  offset: [9, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 15. nxt-bad.c:510 {create_msg} UnProven
-  *(t_cp___1) @create_msg-1133:  offset: [11, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-16. nxt-bad.c:513 {create_msg} UnProven
-  *(tmp___17) @create_msg-1140:  offset: [16, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___16) @create_msg-1135:  offset: [10, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+16. nxt-bad.c:510 {create_msg} UnProven
+  *(t_cp___1) @create_msg-1136:  offset: [11, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 17. nxt-bad.c:513 {create_msg} UnProven
-  *(t_cp___2) @create_msg-1141:  offset: [17, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-18. nxt-bad.c:535 {create_msg} UnProven
-  *(tmp___22) @create_msg-1165:  offset: [0, +oo], size: [200, 200] UnProven, allocsite: create_msg-12270
-  *(tmp___21) @create_msg-1165:  offset: [20, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-19. nxt-bad.c:537 {create_msg} UnProven
-  *(tmp___23) @create_msg-1171:  offset: [20, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___17) @create_msg-1143:  offset: [16, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+18. nxt-bad.c:513 {create_msg} UnProven
+  *(t_cp___2) @create_msg-1144:  offset: [17, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+19. nxt-bad.c:535 {create_msg} UnProven
+  *(tmp___22) @create_msg-1168:  offset: [0, +oo], size: [200, 200] UnProven, allocsite: create_msg-12300
+  *(tmp___21) @create_msg-1168:  offset: [20, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 20. nxt-bad.c:537 {create_msg} UnProven
-  *(tmp___24) @create_msg-1174:  offset: [21, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___23) @create_msg-1174:  offset: [20, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 21. nxt-bad.c:537 {create_msg} UnProven
-  *(tmp___25) @create_msg-1177:  offset: [22, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___24) @create_msg-1177:  offset: [21, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 22. nxt-bad.c:537 {create_msg} UnProven
-  *(t_cp___3) @create_msg-1178:  offset: [23, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-23. nxt-bad.c:539 {create_msg} UnProven
-  *(tmp___26) @create_msg-1185:  offset: [28, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___25) @create_msg-1180:  offset: [22, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+23. nxt-bad.c:537 {create_msg} UnProven
+  *(t_cp___3) @create_msg-1181:  offset: [23, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 24. nxt-bad.c:539 {create_msg} UnProven
-  *(tmp___27) @create_msg-1188:  offset: [29, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___26) @create_msg-1188:  offset: [28, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 25. nxt-bad.c:539 {create_msg} UnProven
-  *(tmp___28) @create_msg-1191:  offset: [30, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___27) @create_msg-1191:  offset: [29, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 26. nxt-bad.c:539 {create_msg} UnProven
-  *(t_cp___4) @create_msg-1192:  offset: [31, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-27. nxt-bad.c:541 {create_msg} UnProven
-  *(tmp___29) @create_msg-1199:  offset: [36, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___28) @create_msg-1194:  offset: [30, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+27. nxt-bad.c:539 {create_msg} UnProven
+  *(t_cp___4) @create_msg-1195:  offset: [31, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 28. nxt-bad.c:541 {create_msg} UnProven
-  *(tmp___30) @create_msg-1202:  offset: [37, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___29) @create_msg-1202:  offset: [36, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 29. nxt-bad.c:541 {create_msg} UnProven
-  *(tmp___31) @create_msg-1205:  offset: [38, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___30) @create_msg-1205:  offset: [37, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 30. nxt-bad.c:541 {create_msg} UnProven
-  *(t_cp___5) @create_msg-1206:  offset: [39, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
-31. nxt-bad.c:543 {create_msg} UnProven
-  *(tmp___32) @create_msg-1213:  offset: [44, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___31) @create_msg-1208:  offset: [38, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+31. nxt-bad.c:541 {create_msg} UnProven
+  *(t_cp___5) @create_msg-1209:  offset: [39, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 32. nxt-bad.c:543 {create_msg} UnProven
-  *(tmp___33) @create_msg-1216:  offset: [45, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___32) @create_msg-1216:  offset: [44, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 33. nxt-bad.c:543 {create_msg} UnProven
-  *(tmp___34) @create_msg-1219:  offset: [46, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___33) @create_msg-1219:  offset: [45, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 34. nxt-bad.c:543 {create_msg} UnProven
-  *(t_cp___6) @create_msg-1220:  offset: [47, +oo], size: [1000, 1000] UnProven, allocsite: main-12890
+  *(tmp___34) @create_msg-1222:  offset: [46, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
+35. nxt-bad.c:543 {create_msg} UnProven
+  *(t_cp___6) @create_msg-1223:  offset: [47, +oo], size: [1000, 1000] UnProven, allocsite: main-12920
 
 #queries                 : 74
 #queries mod alarm point : 60
-#proven                  : 26
-#unproven                : 34
+#proven                  : 25
+#unproven                : 35
 #bot-involved            : 1
 Finished properly.
-0.148009000001
+0.152009000001

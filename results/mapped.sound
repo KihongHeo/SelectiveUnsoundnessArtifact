@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.0120010000001
+Front-end completes: 0.00800000000001
 
 
 
@@ -19,7 +19,7 @@ Translation to graphs begins...
 #nodes all   : 231
 #unreachable : 1
 
-Translation to graphs completes: 0.00400000000001
+Translation to graphs completes: 0.
 
 
 
@@ -72,9 +72,9 @@ Workorder computation begins...
 Workorder computation completes: 0.
 Fixpoint iteration with widening begins...
 #iteration in widening : 234
-Fixpoint iteration with widening completes: 0.00800100000001
+Fixpoint iteration with widening completes: 0.00400000000001
 
-Itv Sparse Analysis completes: 0.0240020000001
+Itv Sparse Analysis completes: 0.0200010000001
 
 
 
@@ -83,7 +83,7 @@ Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
 [............................................................] (0/230)     
-Generate Buffer overrun report completes: 0.
+Generate Buffer overrun report completes: 0.004001
 
 = Alarms =
 1. mapped-path-bad.c:107 {mapping_getwd} UnProven

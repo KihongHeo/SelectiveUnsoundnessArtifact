@@ -1,5 +1,5 @@
 benchmarks/bo/dns.c 
-DNS_REC_LEN, 
+InCnt, __re_error_msgid, __re_error_msgid_idx, block_sigmask, buf, buf___0, buffer, cat_list, cfdirlist, codetab, comp_text_buffer, cur_input, default_config_files, empty_set, first_indent, freq_tab, fsize, hold, hsize, htab, in_count, last_line_length, lcmd_out_line_len, line, lmask, magic_header, man_list, maxbits, maxcode, maxmaxcode, msg, new_text_buffer, obs, orig_text_buffer, other_indent, out_count, outfile, prob_tab, prog, ratio, re_syntax_options, rmask, s_accum, saved_sigmask, seedi, stdin_argv, tTdvect, tTvect, tmp_section_list, to_cat_filename, transport_strings, ultname, uncompressors, version, words, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.0160010000001
+Front-end completes: 0.0120010000001
 
 
 
@@ -16,10 +16,10 @@ Translation to graphs begins...
 --------------------------------------------------------------------------------
 
 
-#nodes all   : 580
-#unreachable : 8
+#nodes all   : 588
+#unreachable : 12
 
-Translation to graphs completes: 0.0160010000001
+Translation to graphs completes: 0.0120010000001
 
 
 
@@ -28,7 +28,7 @@ Pre-analysis begins...
 --------------------------------------------------------------------------------
 
 iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6
-mem size : 157
+mem size : 159
 
 #functions all : 9
 #recursive : 0
@@ -54,10 +54,10 @@ Translation to graphs (after inline) begins...
 --------------------------------------------------------------------------------
 
 
-#nodes all   : 706
-#unreachable : 8
+#nodes all   : 714
+#unreachable : 12
 
-Translation to graphs (after inline) completes: 0.0200010000001
+Translation to graphs (after inline) completes: 0.0160010000001
 
 
 
@@ -66,7 +66,7 @@ Pre-analysis (after inline) begins...
 --------------------------------------------------------------------------------
 
 iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5
-mem size : 250
+mem size : 253
 
 #functions all : 9
 #recursive : 0
@@ -74,9 +74,9 @@ mem size : 250
 #unreachable   : 1
 unreachable functions : {xalloc}
 
-Pre-analysis (after inline) completes: 0.0160010000001
+Pre-analysis (after inline) completes: 0.020001
 #Procs : 9
-#Nodes : 698
+#Nodes : 702
 
 
 
@@ -84,32 +84,32 @@ Pre-analysis (after inline) completes: 0.0160010000001
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 3177 kB
+live memory : 3396 kB
 iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5
-mem size : 250
+mem size : 253
 
 #functions all : 9
 #recursive : 0
 {}
 #unreachable   : 1
 unreachable functions : {xalloc}
-#total abstract locations  = 279
+#total abstract locations  = 282
 Def-use graph construction begins...
 draw intra-procedural edges
 [======......................................................] (1/9)     [=============...............................................] (2/9)     [====================........................................] (3/9)     [==========================..................................] (4/9)     [=================================...........................] (5/9)     [========================================....................] (6/9)     [==============================================..............] (7/9)     [=====================================================.......] (8/9)     [============================================================] (9/9)     
 draw inter-procedural edges
 [............................................................] (1/82)     [=...........................................................] (2/82)     [==..........................................................] (3/82)     [==..........................................................] (4/82)     [===.........................................................] (5/82)     [====........................................................] (6/82)     [=====.......................................................] (7/82)     [=====.......................................................] (8/82)     [======......................................................] (9/82)     [=======.....................................................] (10/82)     [========....................................................] (11/82)     [========....................................................] (12/82)     [=========...................................................] (13/82)     [==========..................................................] (14/82)     [==========..................................................] (15/82)     [===========.................................................] (16/82)     [============................................................] (17/82)     [=============...............................................] (18/82)     [=============...............................................] (19/82)     [==============..............................................] (20/82)     [===============.............................................] (21/82)     [================............................................] (22/82)     [================............................................] (23/82)     [=================...........................................] (24/82)     [==================..........................................] (25/82)     [===================.........................................] (26/82)     [===================.........................................] (27/82)     [====================........................................] (28/82)     [=====================.......................................] (29/82)     [=====================.......................................] (30/82)     [======================......................................] (31/82)     [=======================.....................................] (32/82)     [========================....................................] (33/82)     [========================....................................] (34/82)     [=========================...................................] (35/82)     [==========================..................................] (36/82)     [===========================.................................] (37/82)     [===========================.................................] (38/82)     [============================................................] (39/82)     [=============================...............................] (40/82)     [==============================..............................] (41/82)     [==============================..............................] (42/82)     [===============================.............................] (43/82)     [================================............................] (44/82)     [================================............................] (45/82)     [=================================...........................] (46/82)     [==================================..........................] (47/82)     [===================================.........................] (48/82)     [===================================.........................] (49/82)     [====================================........................] (50/82)     [=====================================.......................] (51/82)     [======================================......................] (52/82)     [======================================......................] (53/82)     [=======================================.....................] (54/82)     [========================================....................] (55/82)     [========================================....................] (56/82)     [=========================================...................] (57/82)     [==========================================..................] (58/82)     [===========================================.................] (59/82)     [===========================================.................] (60/82)     [============================================................] (61/82)     [=============================================...............] (62/82)     [==============================================..............] (63/82)     [==============================================..............] (64/82)     [===============================================.............] (65/82)     [================================================............] (66/82)     [=================================================...........] (67/82)     [=================================================...........] (68/82)     [==================================================..........] (69/82)     [===================================================.........] (70/82)     [===================================================.........] (71/82)     [====================================================........] (72/82)     [=====================================================.......] (73/82)     [======================================================......] (74/82)     [======================================================......] (75/82)     [=======================================================.....] (76/82)     [========================================================....] (77/82)     [=========================================================...] (78/82)     [=========================================================...] (79/82)     [==========================================================..] (80/82)     [===========================================================.] (81/82)     [============================================================] (82/82)     
-Def-use graph construction completes: 0.0840050000001
-live memory : 4451 kB
-#Nodes in def-use graph : 578
-#Locs on def-use graph : 6643
+Def-use graph construction completes: 0.088005
+live memory : 4773 kB
+#Nodes in def-use graph : 594
+#Locs on def-use graph : 6794
 Workorder computation begins...
-Workorder computation completes: 0.00400000000001
+Workorder computation completes: 0.00800100000001
 Fixpoint iteration with widening begins...
-#iteration in widening : 681
+#iteration in widening : 781
 Fixpoint iteration with widening completes: 0.0200010000001
 
-Itv Sparse Analysis completes: 0.144009000001
+Itv Sparse Analysis completes: 0.152010000001
 
 
 
@@ -117,20 +117,58 @@ Itv Sparse Analysis completes: 0.144009000001
 Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
-[............................................................] (0/698)     
+[............................................................] (0/702)     
 Generate Buffer overrun report completes: 0.
 
 = Alarms =
 1. my-util.c:105 {strlcpy} UnProven
-  *(tmp___1) @strlcpy-2062:  offset: [0, +oo], size: [64, 64] UnProven, allocsite: parse_dns_reply-14690
+  *(tmp___1) @strlcpy-2074:  offset: [0, +oo], size: [64, 64] UnProven, allocsite: parse_dns_reply-14810
 2. my-util.c:114 {strlcpy} UnProven
-  *(tmp___2) @strlcpy-2052:  offset: [0, +oo], size: [64, 64] UnProven, allocsite: parse_dns_reply-14690
-  *(tmp___2) @strlcpy-2053:  offset: [0, +oo], size: [64, 64] UnProven, allocsite: parse_dns_reply-14690
+  *(tmp___2) @strlcpy-2064:  offset: [0, +oo], size: [64, 64] UnProven, allocsite: parse_dns_reply-14810
+  *(tmp___2) @strlcpy-2065:  offset: [0, +oo], size: [64, 64] UnProven, allocsite: parse_dns_reply-14810
+3. txt-dns-file-bad.c:453 {create_dns_file} UnProven
+  *(tmp___0) @create_dns_file-1915:  offset: [0, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+4. txt-dns-file-bad.c:459 {create_dns_file} UnProven
+  *(tmp___3) @create_dns_file-1923:  offset: [0, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+5. txt-dns-file-bad.c:461 {create_dns_file} UnProven
+  *(tmp___5) @create_dns_file-1926:  offset: [0, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+6. txt-dns-file-bad.c:462 {create_dns_file} UnProven
+  *(tmp___6) @create_dns_file-1929:  offset: [1, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+7. txt-dns-file-bad.c:463 {create_dns_file} UnProven
+  *(tmp___7) @create_dns_file-1932:  offset: [2, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+8. txt-dns-file-bad.c:464 {create_dns_file} UnProven
+  *(tmp___8) @create_dns_file-1935:  offset: [3, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+9. txt-dns-file-bad.c:472 {create_dns_file} UnProven
+  *(tmp___10) @create_dns_file-1944:  offset: [4, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+10. txt-dns-file-bad.c:474 {create_dns_file} UnProven
+  *(tmp___12) @create_dns_file-1947:  offset: [4, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+11. txt-dns-file-bad.c:475 {create_dns_file} UnProven
+  *(tmp___13) @create_dns_file-1950:  offset: [5, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+12. txt-dns-file-bad.c:477 {create_dns_file} UnProven
+  *(tmp___14) @create_dns_file-1953:  offset: [6, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+13. txt-dns-file-bad.c:478 {create_dns_file} UnProven
+  *(tmp___15) @create_dns_file-1956:  offset: [7, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+14. txt-dns-file-bad.c:480 {create_dns_file} UnProven
+  *(tmp___16) @create_dns_file-1959:  offset: [8, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+15. txt-dns-file-bad.c:481 {create_dns_file} UnProven
+  *(tmp___17) @create_dns_file-1962:  offset: [9, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+16. txt-dns-file-bad.c:482 {create_dns_file} UnProven
+  *(tmp___18) @create_dns_file-1965:  offset: [10, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+17. txt-dns-file-bad.c:483 {create_dns_file} UnProven
+  *(tmp___19) @create_dns_file-1968:  offset: [11, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+18. txt-dns-file-bad.c:485 {create_dns_file} UnProven
+  *(tmp___20) @create_dns_file-1971:  offset: [12, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+19. txt-dns-file-bad.c:486 {create_dns_file} UnProven
+  *(tmp___21) @create_dns_file-1974:  offset: [13, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+20. txt-dns-file-bad.c:487 {create_dns_file} UnProven
+  *(tmp___22) @create_dns_file-1977:  offset: [14, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
+21. txt-dns-file-bad.c:495 {create_dns_file} UnProven
+  *(tmp___24) @create_dns_file-1986:  offset: [15, +oo], size: [200, 200] UnProven, allocsite: create_dns_file-18940
 
 #queries                 : 128
 #queries mod alarm point : 78
-#proven                  : 76
-#unproven                : 2
-#bot-involved            : 15
+#proven                  : 57
+#unproven                : 21
+#bot-involved            : 9
 Finished properly.
-0.228014000001
+0.240015000001

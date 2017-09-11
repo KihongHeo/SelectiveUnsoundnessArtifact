@@ -19,7 +19,7 @@ Translation to graphs begins...
 #nodes all   : 160
 #unreachable : 4
 
-Translation to graphs completes: 0.
+Translation to graphs completes: 0.00400000000001
 
 
 
@@ -36,7 +36,7 @@ mem size : 84
 #unreachable   : 0
 unreachable functions : {}
 
-Pre-analysis completes: 0.00400100000001
+Pre-analysis completes: 0.
 To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
@@ -72,7 +72,7 @@ Workorder computation begins...
 Workorder computation completes: 0.
 Fixpoint iteration with widening begins...
 #iteration in widening : 153
-Fixpoint iteration with widening completes: 0.004001
+Fixpoint iteration with widening completes: 0.00400100000001
 
 Itv Sparse Analysis completes: 0.0160010000001
 
@@ -107,4 +107,4 @@ Generate Buffer overrun report completes: 0.
 #unproven                : 5
 #bot-involved            : 0
 Finished properly.
-0.0280020000001
+0.0320020000001
