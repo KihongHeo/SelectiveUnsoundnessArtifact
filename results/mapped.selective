@@ -1,5 +1,5 @@
 benchmarks/bo/mapped-path.c 
-block_sigmask, buf, cat_list, catfd, cfdirlist, colon_sep_section_list, configuration_file, default_config_files, delaying, egid, euid, init_done, line_length, ll, man_list, mandirlistmax, msg, nocats, noglob_dot_filenames, old_mapped_path, progname, rgid, roff_directive, ruid, saved_sigmask, section_list, tmp_section_list, to_cat_filename, transport_strings, ultname, uncompressors, 
+mapped_path, old_mapped_path, 
 
 
 --------------------------------------------------------------------------------
@@ -28,7 +28,7 @@ Pre-analysis begins...
 --------------------------------------------------------------------------------
 
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 85
+mem size : 78
 
 #functions all : 6
 #recursive : 0
@@ -36,7 +36,7 @@ mem size : 85
 #unreachable   : 0
 unreachable functions : {}
 
-Pre-analysis completes: 0.00400000000001
+Pre-analysis completes: 0.00400100000001
 To inline : []
 Excluded variable-arguments functions : []
 Excluded recursive functions : []
@@ -49,32 +49,32 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 1927 kB
+live memory : 1862 kB
 iteration : 1iteration : 2iteration : 3iteration : 4
-mem size : 85
+mem size : 78
 
 #functions all : 6
 #recursive : 0
 {}
 #unreachable   : 0
 unreachable functions : {}
-#total abstract locations  = 90
+#total abstract locations  = 89
 Def-use graph construction begins...
 draw intra-procedural edges
 [==========..................................................] (1/6)     [====================........................................] (2/6)     [==============================..............................] (3/6)     [========================================....................] (4/6)     [==================================================..........] (5/6)     [============================================================] (6/6)     
 draw inter-procedural edges
 [=...........................................................] (1/44)     [==..........................................................] (2/44)     [====........................................................] (3/44)     [=====.......................................................] (4/44)     [======......................................................] (5/44)     [========....................................................] (6/44)     [=========...................................................] (7/44)     [==========..................................................] (8/44)     [============................................................] (9/44)     [=============...............................................] (10/44)     [===============.............................................] (11/44)     [================............................................] (12/44)     [=================...........................................] (13/44)     [===================.........................................] (14/44)     [====================........................................] (15/44)     [=====================.......................................] (16/44)     [=======================.....................................] (17/44)     [========================....................................] (18/44)     [=========================...................................] (19/44)     [===========================.................................] (20/44)     [============================................................] (21/44)     [==============================..............................] (22/44)     [===============================.............................] (23/44)     [================================............................] (24/44)     [==================================..........................] (25/44)     [===================================.........................] (26/44)     [====================================........................] (27/44)     [======================================......................] (28/44)     [=======================================.....................] (29/44)     [========================================....................] (30/44)     [==========================================..................] (31/44)     [===========================================.................] (32/44)     [=============================================...............] (33/44)     [==============================================..............] (34/44)     [===============================================.............] (35/44)     [=================================================...........] (36/44)     [==================================================..........] (37/44)     [===================================================.........] (38/44)     [=====================================================.......] (39/44)     [======================================================......] (40/44)     [=======================================================.....] (41/44)     [=========================================================...] (42/44)     [==========================================================..] (43/44)     [============================================================] (44/44)     
-Def-use graph construction completes: 0.0120000000001
-live memory : 2233 kB
-#Nodes in def-use graph : 186
-#Locs on def-use graph : 1166
+Def-use graph construction completes: 0.012001
+live memory : 2173 kB
+#Nodes in def-use graph : 180
+#Locs on def-use graph : 1079
 Workorder computation begins...
 Workorder computation completes: 0.
 Fixpoint iteration with widening begins...
-#iteration in widening : 226
-Fixpoint iteration with widening completes: 0.004001
+#iteration in widening : 191
+Fixpoint iteration with widening completes: 0.004
 
-Itv Sparse Analysis completes: 0.0200020000001
+Itv Sparse Analysis completes: 0.020001
 
 
 
@@ -83,52 +83,16 @@ Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
 [............................................................] (0/230)     
-Generate Buffer overrun report completes: 0.004
+Generate Buffer overrun report completes: 0.
 
 = Alarms =
-1. mapped-path-bad.c:107 {mapping_getwd} UnProven
-  strcpy ((char */* __restrict  */)path, (char const   */* __restrict  */)((char const   *)StartOf(@mapped_path))) @mapping_getwd-115:  offset: [0, +oo], size: [11, 11] UnProven, allocsite: pwd-2970
-2. mapped-path-bad.c:125 {do_elem} UnProven
-  *(dir+0) @do_elem-139:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-  *(dir+0) @do_elem-140:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-3. mapped-path-bad.c:125 {do_elem} UnProven
-  *(dir+1) @do_elem-141:  offset: [1, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-  *(dir+1) @do_elem-142:  offset: [1, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-4. mapped-path-bad.c:131 {do_elem} UnProven
-  *(dir+0) @do_elem-143:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-  *(dir+0) @do_elem-144:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-5. mapped-path-bad.c:131 {do_elem} UnProven
-  *(dir+1) @do_elem-145:  offset: [1, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-  *(dir+1) @do_elem-146:  offset: [1, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-6. mapped-path-bad.c:131 {do_elem} UnProven
-  *(dir+2) @do_elem-147:  offset: [2, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-  *(dir+2) @do_elem-148:  offset: [2, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-7. mapped-path-bad.c:138 {do_elem} UnProven
-  *(last) @do_elem-159:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3750
-8. mapped-path-bad.c:146 {do_elem} UnProven
-  strcat ((char */* __restrict  */)StartOf(@mapped_path), (char const   */* __restrict  */)__cil_tmp5) @do_elem-163:  offset: [1, +oo], size: [10, 10] UnProven, allocsite: _G_-3750
-9. mapped-path-bad.c:146 {do_elem} UnProven
-  strcat ((char */* __restrict  */)StartOf(@mapped_path), (char const   */* __restrict  */)__cil_tmp6) @do_elem-166:  offset: [1, +oo], size: [10, 10] UnProven, allocsite: _G_-3750
-10. mapped-path-bad.c:149 {do_elem} UnProven
-  strcat ((char */* __restrict  */)StartOf(@mapped_path), (char const   */* __restrict  */)((char const   *)dir)) @do_elem-162:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3750
-11. mapped-path-bad.c:169 {mapping_chdir} UnProven
+1. mapped-path-bad.c:169 {mapping_chdir} UnProven
   strcpy ((char */* __restrict  */)path, (char const   */* __restrict  */)((char const   *)orig_path)) @mapping_chdir-228:  offset: [0, 30], size: [10, 10] UnProven, allocsite: _G_-3800
-12. mapped-path-bad.c:187 {mapping_chdir} UnProven
-  *(sl) @mapping_chdir-239:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-13. mapped-path-bad.c:189 {mapping_chdir} UnProven
-  *(dir) @mapping_chdir-215:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-  *(dir) @mapping_chdir-216:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-14. mapped-path-bad.c:191 {mapping_chdir} UnProven
-  *(path) @mapping_chdir-217:  offset: [1, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-  *(path) @mapping_chdir-218:  offset: [1, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-15. mapped-path-bad.c:194 {mapping_chdir} UnProven
-  *(path) @mapping_chdir-219:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
-  *(path) @mapping_chdir-220:  offset: [0, +oo], size: [10, 10] UnProven, allocsite: _G_-3800
 
-#queries                 : 33
-#queries mod alarm point : 22
-#proven                  : 7
-#unproven                : 15
-#bot-involved            : 2
+#queries                 : 21
+#queries mod alarm point : 13
+#proven                  : 12
+#unproven                : 1
+#bot-involved            : 4
 Finished properly.
-0.0440030000001
+0.0400030000001

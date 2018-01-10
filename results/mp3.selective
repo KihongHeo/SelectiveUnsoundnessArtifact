@@ -1,0 +1,134 @@
+alloc
+strdup
+----------------------------------------------------------------------
+Front-end begins...
+----------------------------------------------------------------------
+
+Front-end completes: 0.0 sec
+
+To inline : 
+Excluded variable-arguments functions : 
+Excluded recursive functions : 
+----------------------------------------------------------------------
+Translation to graphs begins...
+----------------------------------------------------------------------
+
+Translation to graphs completes: 0.0 sec
+
+----------------------------------------------------------------------
+Pre-analysis begins...
+----------------------------------------------------------------------
+
+Remove unreachable nodes begins...
+#nodes: 1493
+#unreachable nodes: 52
+Remove unreachable nodes completes: 0.0 sec
+
+Fixpoint iteration begins...
+#iters: 1#iters: 2#iters: 3#iters: 4
+#mem entries: 201
+Fixpoint iteration completes: 0.0 sec
+
+Initialize callgraph begins...
+Initialize callgraph completes: 0.0 sec
+
+Initialize access info begins...
+#abstract locations: 327
+Initialize access info completes: 0.0 sec
+
+Remove unreachable functions begins...
+#functions: 7
+#unreachable functions: 0
+Remove unreachable functions completes: 0.0 sec
+
+Draw inter edges begins...
+Draw inter edges completes: 0.0 sec
+
+Pre-analysis completes: 0.1 sec
+
+----------------------------------------------------------------------
+Main Sparse Analysis begins...
+----------------------------------------------------------------------
+
+Rank locations begins...
+#selected locations: 0/327
+Rank locations completes: 0.0 sec
+
+Def-use graph construction begins...
+- drawing intra-procedural edges
+  [=====...................................] (1/7)  [===========.............................] (2/7)  [=================.......................] (3/7)  [======================..................] (4/7)  [============================............] (5/7)  [==================================......] (6/7)  [========================================] (7/7)
+- drawing inter-procedural edges
+  [=======================.................] (100/172)  [========================================] (172/172)
+#nodes in def-use graph: 0
+#locations on def-use graph: 0
+Def-use graph construction completes: 0.0 sec
+
+Compute workorder begins...
+Compute workorder completes: 0.0 sec
+
+Flow-insensitive analysis begins...
+#iters: 1#iters: 2#iters: 3#iters: 4
+#mem entries: 201
+Flow-insensitive analysis completes: 0.1 sec
+
+Bind flow-insensitive entries begins...
+Bind flow-insensitive entries completes: 0.0 sec
+
+Fixpoint iteration begins...
+#total iters: 0
+Fixpoint iteration completes: 0.0 sec
+
+Meet with flow-insensitive memory begins...
+Meet with flow-insensitive memory completes: 0.0 sec
+
+Main Sparse Analysis completes: 0.1 sec
+
+----------------------------------------------------------------------
+Generate report begins...
+----------------------------------------------------------------------
+
+Query status begins...
+#all: 73
+#clean: 72
+#tainted: 1
+Query status completes: 0.0 sec
+
+All queries begins...
+mp3rename.c:554:CastE(Some 1, CastE(Some 1, *argv)):tainted: {argv@mp3rename.c:25,
+                                                              argv@mp3rename.c:25,
+                                                              argv@mp3rename.c:25,
+                                                              argv@mp3rename.c:25,
+                                                              argv@mp3rename.c:25}
+All queries completes: 0.0 sec
+
+Alarms
+mp3rename.c:554<-argv@mp3rename.c:25
+
+#bugs : 1
+#unproven : 1
+#found bugs : 1
+Generating callgraphs for each queries begins...
+Generating callgraphs for each queries completes: 0.0 sec
+
+Number of SCC :0
+Number of SCC vertex : 0
+Before SCC Decompose : 7
+After SCC Decompose : 7
+Do MaxSAT!
+======Call X ====
+============
+======Ret X ====
+============
+======Call Y ====
+============
+success cnf_conv
+IO time is 0.00637292861938
+sh: 1: /home/khheo/project/open-wbo/open-wbo_static: not found
+Solving time is 0.00405597686768
+System Error!
+Total IO time is 0.00637197494507
+UNSAT
+File "research/MaxSatHeuristic.ml", line 78, characters 4-10: Assertion failed
+Raised at file "str.ml", line 612, characters 31-46
+Called from file "research/MaxSat.ml", line 39, characters 10-65
+

@@ -1,0 +1,171 @@
+alloc
+strdup
+----------------------------------------------------------------------
+Front-end begins...
+----------------------------------------------------------------------
+
+/home/wslee/benchmarks/textformat/uni2ascii-4.14/enttbl.c:611: Warning: Body of function LookupHDMLEntityForCode falls-through. Adding a return statement
+Front-end completes: 0.1 sec
+
+To inline : 
+Excluded variable-arguments functions : 
+Excluded recursive functions : 
+----------------------------------------------------------------------
+Translation to graphs begins...
+----------------------------------------------------------------------
+
+Translation to graphs completes: 0.1 sec
+
+----------------------------------------------------------------------
+Pre-analysis begins...
+----------------------------------------------------------------------
+
+Remove unreachable nodes begins...
+#nodes: 14054
+#unreachable nodes: 14
+Remove unreachable nodes completes: 0.0 sec
+
+Fixpoint iteration begins...
+#iters: 1#iters: 2#iters: 3#iters: 4#iters: 5
+#mem entries: 954
+Fixpoint iteration completes: 0.3 sec
+
+Initialize callgraph begins...
+Initialize callgraph completes: 0.0 sec
+
+Initialize access info begins...
+#abstract locations: 2043
+Initialize access info completes: 0.3 sec
+
+Remove unreachable functions begins...
+#functions: 30
+#unreachable functions: 3
+Remove unreachable functions completes: 0.0 sec
+
+Draw inter edges begins...
+Draw inter edges completes: 0.0 sec
+
+Pre-analysis completes: 0.7 sec
+
+----------------------------------------------------------------------
+Main Sparse Analysis begins...
+----------------------------------------------------------------------
+
+Rank locations begins...
+#selected locations: 0/2043
+Rank locations completes: 0.1 sec
+
+Def-use graph construction begins...
+- drawing intra-procedural edges
+  [=.......................................] (1/27)  [==......................................] (2/27)  [====....................................] (3/27)  [=====...................................] (4/27)  [=======.................................] (5/27)  [========................................] (6/27)  [==========..............................] (7/27)  [===========.............................] (8/27)  [=============...........................] (9/27)  [==============..........................] (10/27)  [================........................] (11/27)  [=================.......................] (12/27)  [===================.....................] (13/27)  [====================....................] (14/27)  [======================..................] (15/27)  [=======================.................] (16/27)  [=========================...............] (17/27)  [==========================..............] (18/27)  [============================............] (19/27)  [=============================...........] (20/27)  [===============================.........] (21/27)  [================================........] (22/27)  [==================================......] (23/27)  [===================================.....] (24/27)  [=====================================...] (25/27)  [======================================..] (26/27)  [========================================] (27/27)
+- drawing inter-procedural edges
+  [====....................................] (100/844)  [=========...............................] (200/844)  [==============..........................] (300/844)  [==================......................] (400/844)  [=======================.................] (500/844)  [============================............] (600/844)  [=================================.......] (700/844)  [=====================================...] (800/844)  [========================================] (844/844)
+#nodes in def-use graph: 0
+#locations on def-use graph: 0
+Def-use graph construction completes: 0.5 sec
+
+Compute workorder begins...
+Compute workorder completes: 0.0 sec
+
+Flow-insensitive analysis begins...
+#iters: 1#iters: 2#iters: 3#iters: 4#iters: 5
+#mem entries: 890
+Flow-insensitive analysis completes: 0.3 sec
+
+Bind flow-insensitive entries begins...
+Bind flow-insensitive entries completes: 0.1 sec
+
+Fixpoint iteration begins...
+#total iters: 0
+Fixpoint iteration completes: 0.0 sec
+
+Meet with flow-insensitive memory begins...
+Meet with flow-insensitive memory completes: 0.0 sec
+
+Main Sparse Analysis completes: 0.9 sec
+
+----------------------------------------------------------------------
+Generate report begins...
+----------------------------------------------------------------------
+
+Query status begins...
+#all: 183
+#clean: 176
+#tainted: 7
+Query status completes: 0.0 sec
+
+All queries begins...
+uni2ascii.c:3111:CastE(Some 1, CastE(Some 1, fmt)):tainted: {argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722}
+uni2ascii.c:3120:CastE(Some 1, CastE(Some 1, fmt)):tainted: {argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722}
+uni2ascii.c:3130:CastE(Some 1, CastE(Some 1, fmt)):tainted: {argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722}
+uni2ascii.c:3148:CastE(Some 1, CastE(Some 1, fmt)):tainted: {argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722}
+uni2ascii.c:3152:CastE(Some 1, CastE(Some 1, fmt)):tainted: {argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722}
+uni2ascii.c:3165:CastE(Some 1, CastE(Some 1, fmt)):tainted: {argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722}
+uni2ascii.c:3167:CastE(Some 1, CastE(Some 1, fmt)):tainted: {argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722,
+                                                             argv@uni2ascii.c:2722}
+All queries completes: 0.0 sec
+
+Alarms
+uni2ascii.c:3111<-argv@uni2ascii.c:2722
+uni2ascii.c:3120<-argv@uni2ascii.c:2722
+uni2ascii.c:3130<-argv@uni2ascii.c:2722
+uni2ascii.c:3148<-argv@uni2ascii.c:2722
+uni2ascii.c:3152<-argv@uni2ascii.c:2722
+uni2ascii.c:3165<-argv@uni2ascii.c:2722
+uni2ascii.c:3167<-argv@uni2ascii.c:2722
+
+#bugs : 7
+#unproven : 7
+#found bugs : 7
+Generating callgraphs for each queries begins...
+Generating callgraphs for each queries completes: 0.0 sec
+
+Number of SCC :0
+Number of SCC vertex : 0
+Before SCC Decompose : 27
+After SCC Decompose : 27
+Do MaxSAT!
+======Call X ====
+============
+======Ret X ====
+============
+======Call Y ====
+============
+success cnf_conv
+IO time is 0.00654315948486
+sh: 1: /home/khheo/project/open-wbo/open-wbo_static: not found
+Solving time is 0.00820207595825
+System Error!
+Total IO time is 0.00654196739197
+UNSAT
+File "research/MaxSatHeuristic.ml", line 78, characters 4-10: Assertion failed
+Raised at file "str.ml", line 612, characters 31-46
+Called from file "research/MaxSat.ml", line 39, characters 10-65
+

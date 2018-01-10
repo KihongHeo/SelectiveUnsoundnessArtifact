@@ -1,0 +1,10 @@
+ai.trm:153:strncpy	0
+ai.trm:155:strncpy	0
+ai.trm:170:strcpy	0
+ai.trm:479:strcspn	0
+ai.trm:481:strncpy	0
+ai.trm:484:sscanf	0
+ai.trm:486:strcpy	0
+ai.trm:491:strcpy	0
+alloc.c:309:realloc	0
+alloc.c:313:realloc	0

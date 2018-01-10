@@ -1,0 +1,10 @@
+axis.c:1029:fabs	0
+axis.c:1029:floor	0
+axis.c:1029:log10	0
+axis.c:1029:pow	0
+axis.c:1048:fabs	0
+axis.c:1080:fabs	0
+axis.c:1096:fabs	0
+axis.c:1100:exp	0
+axis.c:1112:floor	0
+axis.c:1119:floor	0

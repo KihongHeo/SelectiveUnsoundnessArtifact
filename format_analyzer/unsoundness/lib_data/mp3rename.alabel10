@@ -1,0 +1,10 @@
+mp3rename.c:142:fread	0
+mp3rename.c:150:fread	0
+mp3rename.c:151:fseek	0
+mp3rename.c:155:strcmp	0
+mp3rename.c:159:fseek	0
+mp3rename.c:160:fread	0
+mp3rename.c:161:fread	0
+mp3rename.c:162:fread	0
+mp3rename.c:163:fread	0
+mp3rename.c:164:fread	0

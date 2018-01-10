@@ -1,0 +1,4438 @@
+benchmarks/mp3rename-0.6.c 
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+
+Front-end completes: 0.016
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs begins...
+--------------------------------------------------------------------------------
+
+
+Translation to graphs completes: 0.024002
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 1107
+#unreachable : 26
+iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7
+mem size : 312
+#total abstract locations  = 320
+
+#functions all : 7
+#unreachable   : 0
+unreachable functions : {}
+
+Pre-analysis completes: 0.044002
+To inline : []
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+#Procs : 7
+#Nodes : 1081
+-1
+[]
+
+
+lib id : mp3rename.c:93
+extern
+{main-695,__extern__}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,filenamelook),(main,fp),main-695}
+{(main,filenamelook),(main,fp),main-695,__extern__,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+{(main,filenamelook),main-695}
+defof
+{(main,filenamelook),main-695}
+cstring
+
+fgets in stdio.h:604
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:111
+extern
+{main-691}
+extern
+{main-691}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fp),(main,sig)}
+{(main,fp),(main,sig),main-691,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:126
+extern
+{__extern__fopen}
+extern
+{}
+extern
+{}
+add_gvar
+{(main,fp),(main,tmp___10),__extern__fseek}
+{(main,fp),(main,tmp___10),__extern__fopen,__extern__fseek}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp___10)}
+defof
+{(main,tmp___10),__extern__fseek}
+cstring
+
+fseek in stdio.h:722
+constant : true
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:134
+extern
+{main-709}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fbuf),(main,fp)}
+{(main,fbuf),(main,fp),main-709,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:170
+extern
+{__extern__fopen}
+extern
+{}
+extern
+{}
+add_gvar
+{(main,fp)}
+{(main,fp),__extern__fopen}
+loop
+bot
+loop
+bot
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fseek in stdio.h:722
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:159
+extern
+{__extern__fopen}
+extern
+{}
+extern
+{}
+add_gvar
+{(main,fp)}
+{(main,fp),__extern__fopen}
+loop
+bot
+loop
+bot
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fseek in stdio.h:722
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:160
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fp),(main,title)}
+{(main,fp),(main,title),main-699,main-701,main-703,main-705,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:161
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,artist),(main,fp)}
+{(main,artist),(main,fp),main-699,main-701,main-703,main-705,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:162
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,album),(main,fp)}
+{(main,album),(main,fp),main-699,main-701,main-703,main-705,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:163
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fp),(main,year)}
+{(main,fp),(main,year),main-699,main-701,main-703,main-705,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:164
+extern
+{NULL,main-707}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,comment),(main,fp)}
+{(main,comment),(main,fp),main-707,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:165
+extern
+{main-693}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fp),(main,genre)}
+{(main,fp),(main,genre),main-693,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:167
+extern
+{__extern__fopen}
+extern
+{}
+extern
+{}
+add_gvar
+{(main,fp)}
+{(main,fp),__extern__fopen}
+loop
+bot
+loop
+bot
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fseek in stdio.h:722
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:179
+extern
+{main-695,__extern__}
+add_gvar
+{(main,filenamelook),(main,tmp___16)}
+{(main,filenamelook),(main,tmp___16),main-695}
+loop
+{(main,filenamelook)}
+loop
+{(main,filenamelook)}
+use_ret_in
+{(main,tmp___16)}
+defof
+{(main,tmp___16)}
+cstring
+{main-695}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:190
+add_gvar
+{(main,tmp___12),__extern__getchar}
+{(main,tmp___12),__extern__getchar}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp___12)}
+defof
+{(main,tmp___12),__extern__getchar}
+cstring
+
+getchar in stdio.h:520
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:203
+add_gvar
+{(main,tmp___13),__extern__getchar}
+{(main,tmp___13),__extern__getchar}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp___13)}
+defof
+{(main,tmp___13),__extern__getchar}
+cstring
+
+getchar in stdio.h:520
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:216
+add_gvar
+{(main,tmp___14),__extern__getchar}
+{(main,tmp___14),__extern__getchar}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp___14)}
+defof
+{(main,tmp___14),__extern__getchar}
+cstring
+
+getchar in stdio.h:520
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:229
+add_gvar
+{(main,tmp___15),__extern__getchar}
+{(main,tmp___15),__extern__getchar}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp___15)}
+defof
+{(main,tmp___15),__extern__getchar}
+cstring
+
+getchar in stdio.h:520
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:251
+add_gvar
+{(main,tmp___17),__extern__getchar}
+{(main,tmp___17),__extern__getchar}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp___17)}
+defof
+{(main,tmp___17),__extern__getchar}
+cstring
+
+getchar in stdio.h:520
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:262
+add_gvar
+{(main,tmp___18),__extern__getchar}
+{(main,tmp___18),__extern__getchar}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp___18)}
+defof
+{(main,tmp___18),__extern__getchar}
+cstring
+
+getchar in stdio.h:520
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:274
+add_gvar
+{(main,tmp___19),__extern__getchar}
+{(main,tmp___19),__extern__getchar}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp___19)}
+defof
+{(main,tmp___19),__extern__getchar}
+cstring
+
+getchar in stdio.h:520
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:285
+add_gvar
+{(main,tmp___20),__extern__getchar}
+{(main,tmp___20),__extern__getchar}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp___20)}
+defof
+{(main,tmp___20),__extern__getchar}
+cstring
+
+getchar in stdio.h:520
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:137
+extern
+{__extern__fopen}
+extern
+{}
+extern
+{}
+add_gvar
+{(main,fp)}
+{(main,fp),__extern__fopen}
+loop
+bot
+loop
+bot
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fseek in stdio.h:722
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:138
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fp),(main,title)}
+{(main,fp),(main,title),main-699,main-701,main-703,main-705,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:139
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,artist),(main,fp)}
+{(main,artist),(main,fp),main-699,main-701,main-703,main-705,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:140
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,album),(main,fp)}
+{(main,album),(main,fp),main-699,main-701,main-703,main-705,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:141
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fp),(main,year)}
+{(main,fp),(main,year),main-699,main-701,main-703,main-705,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:142
+extern
+{NULL,main-707}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,comment),(main,fp)}
+{(main,comment),(main,fp),main-707,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:150
+extern
+{main-693}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fp),(main,genre)}
+{(main,fp),(main,genre),main-693,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:151
+extern
+{__extern__fopen}
+extern
+{}
+extern
+{}
+add_gvar
+{(main,fp)}
+{(main,fp),__extern__fopen}
+loop
+bot
+loop
+bot
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fseek in stdio.h:722
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:333
+extern
+{main-695,__extern__}
+add_gvar
+{(main,filenamelook),(main,tmp___24)}
+{(main,filenamelook),(main,tmp___24),main-695}
+loop
+{(main,filenamelook)}
+loop
+{(main,filenamelook)}
+use_ret_in
+{(main,tmp___24)}
+defof
+{(main,tmp___24)}
+cstring
+{main-695}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:342
+extern
+{main-711}
+extern
+{main-723}
+add_gvar
+{(main,newfilename),(main,tmp___22)}
+{(main,newfilename),(main,tmp___22),main-711,main-723}
+loop
+{(main,tmp___22)}
+loop
+{(main,tmp___22)}
+use_ret_in
+{(main,newfilename)}
+defof
+{(main,newfilename)}
+cstring
+{main-723}
+nullpos
+bot
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:347
+extern
+{main-711}
+extern
+{main-723}
+add_gvar
+{(main,newfilename),(main,tmp___22)}
+{(main,newfilename),(main,tmp___22),main-711,main-723}
+loop
+{(main,tmp___22)}
+loop
+{(main,tmp___22)}
+use_ret_in
+{(main,newfilename)}
+defof
+{(main,newfilename)}
+cstring
+{main-723}
+nullpos
+bot
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:352
+extern
+{main-711}
+extern
+{main-723}
+add_gvar
+{(main,newfilename),(main,tmp___22)}
+{(main,newfilename),(main,tmp___22),main-711,main-723}
+loop
+{(main,tmp___22)}
+loop
+{(main,tmp___22)}
+use_ret_in
+{(main,newfilename)}
+defof
+{(main,newfilename)}
+cstring
+{main-723}
+nullpos
+bot
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:357
+extern
+{main-711}
+extern
+{main-723}
+add_gvar
+{(main,newfilename),(main,tmp___22)}
+{(main,newfilename),(main,tmp___22),main-711,main-723}
+loop
+{(main,tmp___22)}
+loop
+{(main,tmp___22)}
+use_ret_in
+{(main,newfilename)}
+defof
+{(main,newfilename)}
+cstring
+{main-723}
+nullpos
+bot
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:369
+extern
+{main-711}
+extern
+{main-723}
+add_gvar
+{(main,newfilename),(main,tmp___22)}
+{(main,newfilename),(main,tmp___22),main-711,main-723}
+loop
+{(main,tmp___22)}
+loop
+{(main,tmp___22)}
+use_ret_in
+{(main,newfilename)}
+defof
+{(main,newfilename)}
+cstring
+{main-723}
+nullpos
+bot
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:382
+extern
+{main-711}
+extern
+{main-725}
+add_gvar
+{(main,newfilename),(main,tmp___23)}
+{(main,newfilename),(main,tmp___23),main-711,main-725}
+loop
+{(main,tmp___23)}
+loop
+{(main,tmp___23)}
+use_ret_in
+{(main,newfilename)}
+defof
+{(main,newfilename)}
+cstring
+{main-725}
+nullpos
+bot
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:389
+extern
+{main-717}
+add_gvar
+{(main,dirsource),(main,tmp___25)}
+{(main,dirsource),(main,tmp___25),main-717}
+loop
+{(main,dirsource)}
+loop
+{(main,dirsource)}
+use_ret_in
+{(main,tmp___25)}
+defof
+{(main,tmp___25)}
+cstring
+{main-717}
+nullpos
+bot
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:406
+extern
+{main-719}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fp),(main,fullline)}
+{(main,fp),(main,fullline),main-719,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fwrite in stdio.h:688
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:406
+extern
+{main-719}
+extern
+{}
+extern
+{}
+extern
+{__extern__fopen}
+add_gvar
+{(main,fp),(main,fullline)}
+{(main,fp),(main,fullline),main-719,__extern__fopen}
+loop
+{(main,fp)}
+def
+{(main,fp),__extern__fopen}
+loop
+{(main,fp)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fwrite in stdio.h:688
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:411
+extern
+{main-711}
+add_gvar
+{(main,newfilename),(main,tmp___26)}
+{(main,newfilename),(main,tmp___26),main-711}
+loop
+{(main,newfilename)}
+def
+{(main,newfilename)}
+loop
+{(main,newfilename)}
+use_ret_in
+{(main,tmp___26)}
+defof
+{(main,tmp___26)}
+cstring
+{main-711}
+nullpos
+bot
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:440
+extern
+{main-721}
+extern
+{main-711}
+extern
+{main-721}
+add_gvar
+{(main,burnname),(main,newfilename)}
+{(main,burnname),(main,newfilename),main-711,main-721}
+loop
+{(main,burnname)}
+loop
+{(main,burnname)}
+use_ret_in
+{(main,burnname)}
+defof
+{(main,burnname)}
+cstring
+
+strncpy in string.h:130
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:447
+extern
+{NULL,_G_-1747,__extern__}
+extern
+{main-713}
+add_gvar
+{(main,argv),(main,nieuw),(main,tmp___27),_G_-1747,__extern__rename}
+{(main,argv),(main,nieuw),(main,tmp___27),_G_-1747,main-713,__extern__,__extern__rename}
+loop
+{(main,nieuw)}
+loop
+{(main,nieuw)}
+use_ret_in
+{(main,tmp___27)}
+defof
+{(main,tmp___27),__extern__rename}
+cstring
+{main-713}
+nullpos
+bot
+
+rename in stdio.h:157
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:47
+extern
+{__extern__}
+extern
+{NULL,_G_-1747,__extern__}
+extern
+{main-1228}
+add_gvar
+{(main,__cil_tmp163),(main,argc),(main,argv),(main,ch),__extern__getopt}
+{(main,__cil_tmp163),(main,argc),(main,argv),(main,ch),_G_-1747,main-1228,__extern__,__extern__getopt}
+loop
+{(main,__cil_tmp163)}
+loop
+{(main,__cil_tmp163)}
+def
+{(main,__cil_tmp163),main-1228}
+use_ret_in
+{(main,ch)}
+defof
+{(main,ch),__extern__getopt}
+cstring
+
+getopt in getopt.h:152
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.66666666667
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:85
+extern
+{main-1240}
+add_gvar
+{(main,__cil_tmp167),(main,tmp),__extern__getenv}
+{(main,__cil_tmp167),(main,tmp),main-1240,__extern__,__extern__getenv}
+loop
+{(main,__cil_tmp167)}
+loop
+{(main,__cil_tmp167)}
+use_ret_in
+{(main,tmp)}
+defof
+{(main,tmp),__extern__getenv}
+cstring
+{main-1240}
+nullpos
+[4, 4]
+
+getenv in stdlib.h:566
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:87
+extern
+{main-697}
+extern
+{main-1246}
+add_gvar
+{(main,__cil_tmp169),(main,fp),(main,str),__extern__fopen}
+{(main,__cil_tmp169),(main,fp),(main,str),main-697,main-1246,__extern__fopen}
+loop
+{(main,__cil_tmp169)}
+loop
+{(main,__cil_tmp169)}
+use_ret_in
+{(main,fp)}
+defof
+{(main,fp),__extern__fopen}
+cstring
+{main-1246}
+nullpos
+[1, 1]
+
+fopen in stdio.h:249
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:96
+extern
+{main-695,__extern__}
+extern
+{main-1255}
+add_gvar
+{(main,__cil_tmp172),(main,filenamelook)}
+{(main,__cil_tmp172),(main,filenamelook),main-695,main-1255}
+loop
+{(main,__cil_tmp172)}
+loop
+{(main,__cil_tmp172)}
+use_ret_in
+{(main,filenamelook)}
+defof
+{(main,filenamelook)}
+cstring
+{main-1255}
+nullpos
+[4, 4]
+
+strcat in string.h:135
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:102
+extern
+{NULL,_G_-1747,__extern__}
+extern
+{main-1258}
+add_gvar
+{(main,__cil_tmp173),(main,argv),(main,fp),_G_-1747,__extern__fopen}
+{(main,__cil_tmp173),(main,argv),(main,fp),_G_-1747,main-1258,__extern__,__extern__fopen}
+loop
+{(main,__cil_tmp173)}
+def
+{(main,__cil_tmp173),main-1258}
+loop
+{(main,__cil_tmp173)}
+use_ret_in
+{(main,fp)}
+defof
+{(main,fp),__extern__fopen}
+cstring
+{main-1258}
+nullpos
+[3, 3]
+
+fopen in stdio.h:249
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:135
+extern
+{main-1270}
+extern
+{main-709}
+add_gvar
+{(main,__cil_tmp177),(main,fbuf),(main,tmp___21),__extern__strcmp}
+{(main,__cil_tmp177),(main,fbuf),(main,tmp___21),main-709,main-1270,__extern__strcmp}
+loop
+{(main,fbuf)}
+loop
+{(main,fbuf)}
+use_ret_in
+{(main,tmp___21)}
+defof
+{(main,tmp___21),__extern__strcmp}
+cstring
+{main-709}
+nullpos
+bot
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:155
+extern
+{main-1273}
+extern
+{main-709}
+add_gvar
+{(main,__cil_tmp178),(main,fbuf),(main,tmp___11),__extern__strcmp}
+{(main,__cil_tmp178),(main,fbuf),(main,tmp___11),main-709,main-1273,__extern__strcmp}
+loop
+{(main,fbuf)}
+loop
+{(main,fbuf)}
+use_ret_in
+{(main,tmp___11)}
+defof
+{(main,tmp___11),__extern__strcmp}
+cstring
+{main-709}
+nullpos
+bot
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:192
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{main-1285}
+add_gvar
+{(main,__cil_tmp182),(main,artist)}
+{(main,__cil_tmp182),(main,artist),main-699,main-701,main-703,main-705,main-1285}
+loop
+{(main,__cil_tmp182)}
+def
+{(main,__cil_tmp182),main-1285}
+loop
+{(main,__cil_tmp182)}
+use_ret_in
+{(main,artist)}
+defof
+{(main,artist)}
+cstring
+{main-1285}
+nullpos
+[0, 0]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:205
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{main-1294}
+add_gvar
+{(main,__cil_tmp185),(main,title)}
+{(main,__cil_tmp185),(main,title),main-699,main-701,main-703,main-705,main-1294}
+loop
+{(main,__cil_tmp185)}
+def
+{(main,__cil_tmp185),main-1294}
+loop
+{(main,__cil_tmp185)}
+use_ret_in
+{(main,title)}
+defof
+{(main,title)}
+cstring
+{main-1294}
+nullpos
+[0, 0]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:218
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{main-1303}
+add_gvar
+{(main,__cil_tmp188),(main,album)}
+{(main,__cil_tmp188),(main,album),main-699,main-701,main-703,main-705,main-1303}
+loop
+{(main,__cil_tmp188)}
+def
+{(main,__cil_tmp188),main-1303}
+loop
+{(main,__cil_tmp188)}
+use_ret_in
+{(main,album)}
+defof
+{(main,album)}
+cstring
+{main-1303}
+nullpos
+[0, 0]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:231
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{main-1312}
+add_gvar
+{(main,__cil_tmp191),(main,year)}
+{(main,__cil_tmp191),(main,year),main-699,main-701,main-703,main-705,main-1312}
+loop
+{(main,__cil_tmp191)}
+def
+{(main,__cil_tmp191),main-1312}
+loop
+{(main,__cil_tmp191)}
+use_ret_in
+{(main,year)}
+defof
+{(main,year)}
+cstring
+{main-1312}
+nullpos
+[0, 0]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:253
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{main-1324}
+add_gvar
+{(main,__cil_tmp195),(main,artist)}
+{(main,__cil_tmp195),(main,artist),main-699,main-701,main-703,main-705,main-1324}
+loop
+{(main,__cil_tmp195)}
+def
+{(main,__cil_tmp195),main-1324}
+loop
+{(main,__cil_tmp195)}
+use_ret_in
+{(main,artist)}
+defof
+{(main,artist)}
+cstring
+{main-1324}
+nullpos
+[0, 0]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:264
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{main-1333}
+add_gvar
+{(main,__cil_tmp198),(main,title)}
+{(main,__cil_tmp198),(main,title),main-699,main-701,main-703,main-705,main-1333}
+loop
+{(main,__cil_tmp198)}
+def
+{(main,__cil_tmp198),main-1333}
+loop
+{(main,__cil_tmp198)}
+use_ret_in
+{(main,title)}
+defof
+{(main,title)}
+cstring
+{main-1333}
+nullpos
+[0, 0]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:276
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{main-1342}
+add_gvar
+{(main,__cil_tmp201),(main,album)}
+{(main,__cil_tmp201),(main,album),main-699,main-701,main-703,main-705,main-1342}
+loop
+{(main,__cil_tmp201)}
+def
+{(main,__cil_tmp201),main-1342}
+loop
+{(main,__cil_tmp201)}
+use_ret_in
+{(main,album)}
+defof
+{(main,album)}
+cstring
+{main-1342}
+nullpos
+[0, 0]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:287
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{main-1351}
+add_gvar
+{(main,__cil_tmp204),(main,year)}
+{(main,__cil_tmp204),(main,year),main-699,main-701,main-703,main-705,main-1351}
+loop
+{(main,__cil_tmp204)}
+def
+{(main,__cil_tmp204),main-1351}
+loop
+{(main,__cil_tmp204)}
+use_ret_in
+{(main,year)}
+defof
+{(main,year)}
+cstring
+{main-1351}
+nullpos
+[0, 0]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:461
+extern
+{(main,album),(main,artist),(main,title),(main,year),main-699,main-701,main-703,main-705}
+add_gvar
+{(rtrim,astring),(rtrim,tmp)}
+{(main,album),(main,artist),(main,title),(main,year),(rtrim,astring),(rtrim,tmp)}
+loop
+{(rtrim,astring)}
+use_ret_in
+{(rtrim,tmp)}
+defof
+{(rtrim,tmp)}
+cstring
+{(main,album),(main,artist),(main,title),(main,year)}
+nullpos
+bot
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:474
+extern
+{main-719}
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+add_gvar
+{(buildtag,buf),(buildtag,title)}
+{(buildtag,buf),(buildtag,title),main-699,main-701,main-703,main-705,main-719}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+strncat in string.h:138
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:476
+extern
+{main-719}
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+add_gvar
+{(buildtag,artist),(buildtag,buf)}
+{(buildtag,artist),(buildtag,buf),main-699,main-701,main-703,main-705,main-719}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+strncat in string.h:138
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:478
+extern
+{main-719}
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+add_gvar
+{(buildtag,album),(buildtag,buf)}
+{(buildtag,album),(buildtag,buf),main-699,main-701,main-703,main-705,main-719}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+strncat in string.h:138
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:480
+extern
+{main-719}
+extern
+{main-699,main-701,main-703,main-705}
+extern
+{}
+add_gvar
+{(buildtag,buf),(buildtag,year)}
+{(buildtag,buf),(buildtag,year),main-699,main-701,main-703,main-705,main-719}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+strncat in string.h:138
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:482
+extern
+{main-719}
+extern
+{NULL,main-707}
+extern
+{}
+add_gvar
+{(buildtag,buf),(buildtag,comment)}
+{(buildtag,buf),(buildtag,comment),main-707,main-719}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+strncat in string.h:138
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:483
+extern
+{main-719}
+extern
+{main-693}
+extern
+{}
+add_gvar
+{(buildtag,buf),(buildtag,genre)}
+{(buildtag,buf),(buildtag,genre),main-693,main-719}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+strncat in string.h:138
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+
+
+lib id : mp3rename.c:472
+extern
+{main-719}
+extern
+{buildtag-1569}
+add_gvar
+{(buildtag,__cil_tmp9),(buildtag,buf)}
+{(buildtag,__cil_tmp9),(buildtag,buf),buildtag-1569,main-719}
+use_ret_in
+{(buildtag,buf)}
+defof
+{(buildtag,buf)}
+cstring
+{buildtag-1569}
+nullpos
+[3, 3]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:490
+extern
+{NULL,main-699,main-701,main-703,main-705,main-707}
+add_gvar
+{(pad,string),(pad,tmp)}
+{(pad,string),(pad,tmp),main-699,main-701,main-703,main-705,main-707}
+loop
+{(pad,string)}
+use_ret_in
+{(pad,tmp)}
+defof
+{(pad,tmp)}
+cstring
+{main-699,main-701,main-703,main-705,main-707}
+nullpos
+[0, 0]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:529
+extern
+{NULL,_G_-1747,__extern__}
+extern
+{set_filename-1683}
+add_gvar
+{(set_filename,__cil_tmp26),(set_filename,argv),(set_filename,tmp),_G_-1747,__extern__strcmp}
+{(set_filename,__cil_tmp26),(set_filename,argv),(set_filename,tmp),_G_-1747,set_filename-1683,__extern__,__extern__strcmp}
+use_ret_in
+{(set_filename,tmp)}
+defof
+{(set_filename,tmp),__extern__strcmp}
+cstring
+{set_filename-1683}
+nullpos
+[4, 4]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:539
+extern
+{set_filename-1704}
+add_gvar
+{(set_filename,__cil_tmp33),(set_filename,tmp___0),__extern__getenv}
+{(set_filename,__cil_tmp33),(set_filename,tmp___0),set_filename-1704,__extern__,__extern__getenv}
+use_ret_in
+{(set_filename,tmp___0)}
+defof
+{(set_filename,tmp___0),__extern__getenv}
+cstring
+{set_filename-1704}
+nullpos
+[4, 4]
+
+getenv in stdlib.h:566
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:541
+extern
+{set_filename-1650}
+extern
+{set_filename-1710}
+add_gvar
+{(set_filename,__cil_tmp35),(set_filename,fp),(set_filename,str),__extern__fopen}
+{(set_filename,__cil_tmp35),(set_filename,fp),(set_filename,str),set_filename-1650,set_filename-1710,__extern__fopen}
+use_ret_in
+{(set_filename,fp)}
+defof
+{(set_filename,fp),__extern__fopen}
+cstring
+{set_filename-1710}
+nullpos
+[1, 1]
+
+fopen in stdio.h:249
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : mp3rename.c:547
+extern
+{NULL,_G_-1747,__extern__}
+extern
+{set_filename-1716}
+add_gvar
+{(set_filename,__cil_tmp37),(set_filename,argv),(set_filename,tmp___1),_G_-1747,__extern__strcmp}
+{(set_filename,__cil_tmp37),(set_filename,argv),(set_filename,tmp___1),_G_-1747,set_filename-1716,__extern__,__extern__strcmp}
+use_ret_in
+{(set_filename,tmp___1)}
+defof
+{(set_filename,tmp___1),__extern__strcmp}
+cstring
+{set_filename-1716}
+nullpos
+[0, 0]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+== features for library ==
+mp3rename.c:102:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+mp3rename.c:111:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:126:fseek
+constant : true
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+mp3rename.c:134:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:135:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+mp3rename.c:137:fseek
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+mp3rename.c:138:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:139:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:140:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:141:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:142:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:150:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:151:fseek
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+mp3rename.c:155:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+mp3rename.c:159:fseek
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+mp3rename.c:160:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:161:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:162:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:163:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:164:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:165:fread
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:167:fseek
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+mp3rename.c:170:fseek
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+mp3rename.c:179:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+mp3rename.c:190:getchar
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+mp3rename.c:192:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+mp3rename.c:203:getchar
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+mp3rename.c:205:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+mp3rename.c:216:getchar
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+mp3rename.c:218:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+mp3rename.c:229:getchar
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+mp3rename.c:231:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+mp3rename.c:251:getchar
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+mp3rename.c:253:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+mp3rename.c:262:getchar
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+mp3rename.c:264:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+mp3rename.c:274:getchar
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+mp3rename.c:276:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+mp3rename.c:285:getchar
+constant : true
+size : 0.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+mp3rename.c:287:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+mp3rename.c:333:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+mp3rename.c:342:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+mp3rename.c:347:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+mp3rename.c:352:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+mp3rename.c:357:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+mp3rename.c:369:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+mp3rename.c:382:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+mp3rename.c:389:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+mp3rename.c:406:fwrite
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+mp3rename.c:411:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+mp3rename.c:440:strncpy
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+mp3rename.c:447:rename
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 0.
+
+
+mp3rename.c:461:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+mp3rename.c:472:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+mp3rename.c:474:strncat
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+mp3rename.c:476:strncat
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+mp3rename.c:478:strncat
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+mp3rename.c:47:getopt
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.66666666667
+cstring : 0.
+
+
+mp3rename.c:480:strncat
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+mp3rename.c:482:strncat
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+mp3rename.c:483:strncat
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+mp3rename.c:490:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+mp3rename.c:529:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+mp3rename.c:539:getenv
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 1.
+
+
+mp3rename.c:541:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+mp3rename.c:547:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+mp3rename.c:85:getenv
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 1.
+
+
+mp3rename.c:87:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+mp3rename.c:93:fgets
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+mp3rename.c:96:strcat
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+Finished properly.
+0.148008

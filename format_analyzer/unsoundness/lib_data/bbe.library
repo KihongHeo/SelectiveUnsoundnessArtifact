@@ -1,0 +1,7330 @@
+benchmarks/bbe-0.2.2.c 
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+
+Front-end completes: 0.036002
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs begins...
+--------------------------------------------------------------------------------
+
+
+Translation to graphs completes: 0.056003
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 3315
+#unreachable : 59
+iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7iteration : 8
+mem size : 735
+#total abstract locations  = 753
+
+#functions all : 47
+#unreachable   : 2
+unreachable functions : {error,error_at_line}
+
+Pre-analysis completes: 0.172011
+To inline : [xstrdup;xmalloc]
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+-inline xstrdup @execute.c:554
+-inline xstrdup @execute.c:587
+-inline xstrdup @buffer.c:58
+-inline xmalloc @buffer.c:76
+-inline xstrdup @buffer.c:102
+-inline xmalloc @buffer.c:134
+-inline xmalloc @buffer.c:140
+-inline xmalloc @bbe.c:260
+-inline xmalloc @bbe.c:285
+-inline xstrdup @bbe.c:409
+-inline xmalloc @bbe.c:438
+-inline xstrdup @bbe.c:472
+-inline xmalloc @bbe.c:505
+-inline xmalloc @bbe.c:521
+-inline xmalloc @bbe.c:664
+-inline xmalloc @bbe.c:665
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs (after inline) begins...
+--------------------------------------------------------------------------------
+
+
+Translation to graphs (after inline) completes: 0.080005
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis (after inline) begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 3481
+#unreachable : 59
+iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7iteration : 8
+mem size : 842
+#total abstract locations  = 860
+
+#functions all : 47
+#unreachable   : 4
+unreachable functions : {error,error_at_line,xmalloc,xstrdup}
+
+Pre-analysis (after inline) completes: 0.200013
+#Procs : 43
+#Nodes : 3389
+-1
+[]
+InterCfg.cfgof
+InterCfg.cfgof
+
+
+lib id : execute.c:77
+add_gvar
+{(byte_to_string,tmp___1),__extern____ctype_b_loc}
+{(byte_to_string,tmp___1),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(byte_to_string,tmp___1)}
+defof
+{(byte_to_string,tmp___1),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:420
+extern
+{NULL,parse_command-5269,__extern__fopen}
+extern
+{}
+extern
+{}
+add_gvar
+{(execute_commands,c),(execute_commands,tmp___5),parse_command-5269.fd,__extern__fseeko}
+{(execute_commands,c),(execute_commands,tmp___5),parse_command-5269,parse_command-5269.fd,__extern__fopen,__extern__fseeko}
+loop
+bot
+use_ret_in
+{(execute_commands,tmp___5)}
+defof
+{(execute_commands,tmp___5),__extern__fseeko}
+cstring
+
+fseeko in stdio.h:754
+constant : true
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.33333333333
+cstring : 0.
+
+
+
+
+lib id : execute.c:420
+add_gvar
+{(execute_commands,tmp___3),__extern____errno_location}
+{(execute_commands,tmp___3),__extern____errno_location}
+loop
+bot
+use_ret_in
+{(execute_commands,tmp___3)}
+defof
+{(execute_commands,tmp___3),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:420
+extern
+{__extern____errno_location}
+add_gvar
+{(execute_commands,tmp___3),(execute_commands,tmp___4),__extern____errno_location,__extern__strerror}
+{(execute_commands,tmp___3),(execute_commands,tmp___4),__extern____errno_location,__extern__strerror}
+loop
+{(execute_commands,tmp___3),__extern____errno_location}
+def
+{(execute_commands,tmp___3),__extern____errno_location}
+use_ret_in
+{(execute_commands,tmp___4)}
+defof
+{(execute_commands,tmp___4),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : execute.c:423
+extern
+{_G_-5860}
+extern
+{}
+extern
+{}
+extern
+{NULL,parse_command-5269,__extern__fopen}
+add_gvar
+{ioblock,(execute_commands,c),(execute_commands,tmp___6),parse_command-5269.fd,__extern__fread}
+{ioblock,(execute_commands,c),(execute_commands,tmp___6),_G_-5860,parse_command-5269,parse_command-5269.fd,__extern__fopen,__extern__fread}
+loop
+{(execute_commands,c),parse_command-5269.fd}
+def
+{(execute_commands,c)}
+use_ret_in
+{(execute_commands,tmp___6)}
+defof
+{(execute_commands,tmp___6),__extern__fread}
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.25
+cstring : 0.
+
+
+
+
+lib id : execute.c:463
+extern
+{NULL,init_buffer-4047,__extern__,__extern__strtok,__extern__toupper}
+extern
+{}
+extern
+{}
+extern
+{NULL,parse_command-5269,__extern__fopen}
+add_gvar
+{(write_w_command,buf),(write_w_command,c),(write_w_command,length),(write_w_command,tmp___1),parse_command-5269.fd,__extern__fwrite}
+{(write_w_command,buf),(write_w_command,c),(write_w_command,length),(write_w_command,tmp___1),init_buffer-4047,parse_command-5269,parse_command-5269.fd,__extern__fopen,__extern__fwrite}
+loop
+{(write_w_command,c),parse_command-5269.fd}
+def
+{(write_w_command,c)}
+use_ret_in
+{(write_w_command,tmp___1)}
+defof
+{(write_w_command,tmp___1),__extern__fwrite}
+cstring
+
+fwrite in stdio.h:688
+constant : true
+size : 4.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.5
+cstring : 0.
+
+
+
+
+lib id : execute.c:463
+add_gvar
+{(write_w_command,tmp),__extern____errno_location}
+{(write_w_command,tmp),__extern____errno_location}
+loop
+bot
+use_ret_in
+{(write_w_command,tmp)}
+defof
+{(write_w_command,tmp),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:463
+extern
+{__extern____errno_location}
+add_gvar
+{(write_w_command,tmp),(write_w_command,tmp___0),__extern____errno_location,__extern__strerror}
+{(write_w_command,tmp),(write_w_command,tmp___0),__extern____errno_location,__extern__strerror}
+loop
+{(write_w_command,tmp),__extern____errno_location}
+def
+{(write_w_command,tmp),__extern____errno_location}
+use_ret_in
+{(write_w_command,tmp___0)}
+defof
+{(write_w_command,tmp___0),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : execute.c:486
+add_gvar
+{(find_block_w_file,tmp),__extern____ctype_b_loc}
+{(find_block_w_file,tmp),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(find_block_w_file,tmp)}
+defof
+{(find_block_w_file,tmp),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:514
+extern
+{_G_-5866}
+extern
+{NULL,parse_command-5146,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+extern
+{NULL,parse_command-5146,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+add_gvar
+{(bn_printf,bstart),(bn_printf,f),(bn_printf,file___0)}
+{(bn_printf,bstart),(bn_printf,f),(bn_printf,file___0),_G_-5866,parse_command-5146,parse_command-5270,parse_string-4631}
+loop
+{(bn_printf,bstart),(bn_printf,f)}
+def
+{(bn_printf,f)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+strncat in string.h:138
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : execute.c:515
+extern
+{bn_printf-3598}
+extern
+{NULL,parse_command-5146,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+extern
+{}
+add_gvar
+{(bn_printf,blen),(bn_printf,bstart),(bn_printf,format)}
+{(bn_printf,blen),(bn_printf,bstart),(bn_printf,format),bn_printf-3598,parse_command-5146,parse_command-5270,parse_string-4631}
+loop
+{(bn_printf,blen)}
+use_ret_in
+{(bn_printf,format)}
+defof
+{(bn_printf,format)}
+cstring
+
+strncpy in string.h:130
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : execute.c:519
+extern
+{_G_-5866}
+add_gvar
+{(bn_printf,file___0),(bn_printf,tmp)}
+{(bn_printf,file___0),(bn_printf,tmp),_G_-5866}
+loop
+{(bn_printf,file___0)}
+def
+{(bn_printf,file___0)}
+use_ret_in
+{(bn_printf,tmp)}
+defof
+{(bn_printf,tmp)}
+cstring
+{_G_-5866}
+nullpos
+bot
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : execute.c:519
+extern
+{bn_printf-3596}
+add_gvar
+{(bn_printf,num),(bn_printf,tmp___0)}
+{(bn_printf,num),(bn_printf,tmp___0),bn_printf-3596}
+loop
+{(bn_printf,num)}
+use_ret_in
+{(bn_printf,tmp___0)}
+defof
+{(bn_printf,tmp___0)}
+cstring
+{bn_printf-3596}
+nullpos
+bot
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : execute.c:520
+extern
+{_G_-5866}
+extern
+{bn_printf-3596}
+add_gvar
+{(bn_printf,file___0),(bn_printf,num)}
+{(bn_printf,file___0),(bn_printf,num),_G_-5866,bn_printf-3596}
+loop
+{(bn_printf,num)}
+use_ret_in
+{(bn_printf,file___0)}
+defof
+{(bn_printf,file___0)}
+cstring
+{bn_printf-3596}
+nullpos
+bot
+
+strcat in string.h:135
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : execute.c:523
+extern
+{_G_-5866}
+extern
+{NULL,parse_command-5146,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+add_gvar
+{(bn_printf,f),(bn_printf,file___0)}
+{(bn_printf,f),(bn_printf,file___0),_G_-5866,parse_command-5146,parse_command-5270,parse_string-4631}
+loop
+{(bn_printf,f)}
+def
+{(bn_printf,f)}
+use_ret_in
+{(bn_printf,file___0)}
+defof
+{(bn_printf,file___0)}
+cstring
+{NULL,parse_command-5146,parse_command-5270,parse_string-4631}
+nullpos
+[-oo, +oo]
+
+strcat in string.h:135
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : execute.c:517
+extern
+{bn_printf-3598}
+extern
+{bn_printf-3622}
+add_gvar
+{(bn_printf,__cil_tmp21),(bn_printf,format)}
+{(bn_printf,__cil_tmp21),(bn_printf,format),bn_printf-3598,bn_printf-3622}
+loop
+{(bn_printf,__cil_tmp21)}
+def
+{(bn_printf,__cil_tmp21),bn_printf-3622}
+use_ret_in
+{(bn_printf,format)}
+defof
+{(bn_printf,format)}
+cstring
+{bn_printf-3622}
+nullpos
+[3, 3]
+
+strcat in string.h:135
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : execute.c:541
+add_gvar
+{(open_w_files,tmp),__extern____errno_location}
+{(open_w_files,tmp),__extern____errno_location}
+loop
+bot
+use_ret_in
+{(open_w_files,tmp)}
+defof
+{(open_w_files,tmp),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:541
+extern
+{__extern____errno_location}
+add_gvar
+{(open_w_files,tmp),(open_w_files,tmp___0),__extern____errno_location,__extern__strerror}
+{(open_w_files,tmp),(open_w_files,tmp___0),__extern____errno_location,__extern__strerror}
+loop
+{(open_w_files,tmp),__extern____errno_location}
+def
+{(open_w_files,tmp___2),__extern____errno_location}
+use_ret_in
+{(open_w_files,tmp___0)}
+defof
+{(open_w_files,tmp___0),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : execute.c:551
+add_gvar
+{(open_w_files,tmp___2),__extern____errno_location}
+{(open_w_files,tmp___2),__extern____errno_location}
+loop
+bot
+use_ret_in
+{(open_w_files,tmp___2)}
+defof
+{(open_w_files,tmp___2),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:551
+extern
+{__extern____errno_location}
+add_gvar
+{(open_w_files,tmp___2),(open_w_files,tmp___3),__extern____errno_location,__extern__strerror}
+{(open_w_files,tmp___2),(open_w_files,tmp___3),__extern____errno_location,__extern__strerror}
+loop
+{(open_w_files,tmp___2),__extern____errno_location}
+def
+{(open_w_files,tmp___2),__extern____errno_location}
+use_ret_in
+{(open_w_files,tmp___3)}
+defof
+{(open_w_files,tmp___3),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : xmalloc.c:40
+extern
+{_G_-5866}
+add_gvar
+{(open_w_files,str15),(open_w_files,tmp17),__extern__strdup}
+{(open_w_files,str15),(open_w_files,tmp17),_G_-5866,open_w_files-3671,__extern__strdup}
+loop
+{(open_w_files,str15)}
+def
+{(open_w_files,str15)}
+use_ret_in
+{(open_w_files,tmp17)}
+defof
+{(open_w_files,tmp17),__extern__strdup}
+cstring
+{_G_-5866}
+nullpos
+bot
+
+strdup in string.h:173
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 0.
+
+
+
+
+lib id : execute.c:550
+extern
+{_G_-5866}
+extern
+{open_w_files-3683}
+add_gvar
+{file,(open_w_files,__cil_tmp21),(open_w_files,c),parse_command-5269.fd,__extern__fopen}
+{file,(open_w_files,__cil_tmp21),(open_w_files,c),_G_-5866,open_w_files-3683,parse_command-5269,parse_command-5269.fd,__extern__fopen}
+loop
+{(open_w_files,__cil_tmp21)}
+def
+{(open_w_files,__cil_tmp21),open_w_files-3683}
+use_ret_in
+{parse_command-5269.fd}
+defof
+{parse_command-5269.fd,__extern__fopen}
+cstring
+{open_w_files-3683}
+nullpos
+[1, 1]
+
+fopen in stdio.h:260
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+
+
+lib id : execute.c:585
+add_gvar
+{(init_commands,tmp),__extern____errno_location}
+{(init_commands,tmp),__extern____errno_location}
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(init_commands,tmp)}
+defof
+{(init_commands,tmp),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:585
+extern
+{__extern____errno_location}
+add_gvar
+{(init_commands,tmp),(init_commands,tmp___0),__extern____errno_location,__extern__strerror}
+{(init_commands,tmp),(init_commands,tmp___0),__extern____errno_location,__extern__strerror}
+loop
+{(init_commands,tmp),__extern____errno_location}
+def
+{(init_commands,tmp___5),__extern____errno_location}
+loop
+{(init_commands,tmp),__extern____errno_location}
+loop
+{(init_commands,tmp),__extern____errno_location}
+use_ret_in
+{(init_commands,tmp___0)}
+defof
+{(init_commands,tmp___0),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : xmalloc.c:40
+extern
+{NULL,parse_command-5146,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+add_gvar
+{(init_commands,str24),(init_commands,tmp26),__extern__strdup}
+{(init_commands,str24),(init_commands,tmp26),init_commands-3737,parse_command-5146,parse_command-5270,parse_string-4631,__extern__strdup}
+loop
+{(init_commands,str24)}
+loop
+{(init_commands,str24)}
+loop
+{(init_commands,str24)}
+def
+{(init_commands,str24)}
+use_ret_in
+{(init_commands,tmp26)}
+defof
+{(init_commands,tmp26),__extern__strdup}
+cstring
+{NULL,parse_command-5146,parse_command-5270,parse_string-4631}
+nullpos
+[-oo, +oo]
+
+strdup in string.h:173
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 0.
+
+
+
+
+lib id : execute.c:603
+add_gvar
+{(init_commands,tmp___3),__extern____errno_location}
+{(init_commands,tmp___3),__extern____errno_location}
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(init_commands,tmp___3)}
+defof
+{(init_commands,tmp___3),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:603
+extern
+{__extern____errno_location}
+add_gvar
+{(init_commands,tmp___3),(init_commands,tmp___4),__extern____errno_location,__extern__strerror}
+{(init_commands,tmp___3),(init_commands,tmp___4),__extern____errno_location,__extern__strerror}
+loop
+{(init_commands,tmp___3),__extern____errno_location}
+def
+{(init_commands,tmp___5),__extern____errno_location}
+loop
+{(init_commands,tmp___3),__extern____errno_location}
+loop
+{(init_commands,tmp___3),__extern____errno_location}
+use_ret_in
+{(init_commands,tmp___4)}
+defof
+{(init_commands,tmp___4),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : execute.c:617
+add_gvar
+{(init_commands,tmp___5),__extern____errno_location}
+{(init_commands,tmp___5),__extern____errno_location}
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(init_commands,tmp___5)}
+defof
+{(init_commands,tmp___5),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:617
+extern
+{__extern____errno_location}
+add_gvar
+{(init_commands,tmp___5),(init_commands,tmp___6),__extern____errno_location,__extern__strerror}
+{(init_commands,tmp___5),(init_commands,tmp___6),__extern____errno_location,__extern__strerror}
+loop
+{(init_commands,tmp___5),__extern____errno_location}
+def
+{(init_commands,tmp___5),__extern____errno_location}
+loop
+{(init_commands,tmp___5),__extern____errno_location}
+loop
+{(init_commands,tmp___5),__extern____errno_location}
+use_ret_in
+{(init_commands,tmp___6)}
+defof
+{(init_commands,tmp___6),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : execute.c:584
+extern
+{NULL,parse_command-5146,parse_command-5269,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+extern
+{init_commands-3759}
+add_gvar
+{(init_commands,__cil_tmp29),(init_commands,c),parse_command-5269.fd,parse_command-5269.s1,__extern__fopen}
+{(init_commands,__cil_tmp29),(init_commands,c),init_commands-3759,parse_command-5146,parse_command-5269,parse_command-5269.fd,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__fopen}
+loop
+{(init_commands,__cil_tmp29)}
+loop
+{(init_commands,__cil_tmp29)}
+loop
+{(init_commands,__cil_tmp29)}
+def
+{(init_commands,__cil_tmp29),init_commands-3759}
+use_ret_in
+{parse_command-5269.fd}
+defof
+{parse_command-5269.fd,__extern__fopen}
+cstring
+{init_commands-3759}
+nullpos
+[1, 1]
+
+fopen in stdio.h:260
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+
+
+lib id : execute.c:602
+extern
+{NULL,parse_command-5146,parse_command-5269,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+extern
+{init_commands-3768}
+add_gvar
+{(init_commands,__cil_tmp32),(init_commands,c),parse_command-5269.fd,parse_command-5269.s1,__extern__fopen}
+{(init_commands,__cil_tmp32),(init_commands,c),init_commands-3768,parse_command-5146,parse_command-5269,parse_command-5269.fd,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__fopen}
+loop
+{(init_commands,__cil_tmp32)}
+loop
+{(init_commands,__cil_tmp32)}
+def
+{(init_commands,__cil_tmp32),init_commands-3768}
+loop
+{(init_commands,__cil_tmp32)}
+use_ret_in
+{parse_command-5269.fd}
+defof
+{parse_command-5269.fd,__extern__fopen}
+cstring
+{init_commands-3768}
+nullpos
+[1, 1]
+
+fopen in stdio.h:260
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+
+
+lib id : execute.c:616
+extern
+{NULL,parse_command-5146,parse_command-5269,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+extern
+{init_commands-3774}
+add_gvar
+{(init_commands,__cil_tmp34),(init_commands,c),parse_command-5269.fd,parse_command-5269.s1,__extern__fopen}
+{(init_commands,__cil_tmp34),(init_commands,c),init_commands-3774,parse_command-5146,parse_command-5269,parse_command-5269.fd,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__fopen}
+loop
+{(init_commands,__cil_tmp34)}
+def
+{(init_commands,__cil_tmp34),init_commands-3774}
+loop
+{(init_commands,__cil_tmp34)}
+loop
+{(init_commands,__cil_tmp34)}
+use_ret_in
+{parse_command-5269.fd}
+defof
+{parse_command-5269.fd,__extern__fopen}
+cstring
+{init_commands-3774}
+nullpos
+[1, 1]
+
+fopen in stdio.h:260
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+
+
+lib id : execute.c:641
+add_gvar
+{(close_commands,tmp),__extern____errno_location}
+{(close_commands,tmp),__extern____errno_location}
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(close_commands,tmp)}
+defof
+{(close_commands,tmp),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : execute.c:641
+extern
+{__extern____errno_location}
+add_gvar
+{(close_commands,tmp),(close_commands,tmp___0),__extern____errno_location,__extern__strerror}
+{(close_commands,tmp),(close_commands,tmp___0),__extern____errno_location,__extern__strerror}
+loop
+{(close_commands,tmp),__extern____errno_location}
+loop
+{(close_commands,tmp),__extern____errno_location}
+loop
+{(close_commands,tmp),__extern____errno_location}
+def
+{(close_commands,tmp),__extern____errno_location}
+use_ret_in
+{(close_commands,tmp___0)}
+defof
+{(close_commands,tmp___0),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:56
+extern
+{NULL,__extern__}
+extern
+{}
+extern
+{}
+add_gvar
+{out_stream.fd,(set_output_file,file___0),__extern__open}
+{out_stream.fd,(set_output_file,file___0),__extern__,__extern__open}
+use_ret_in
+{out_stream.fd}
+defof
+{out_stream.fd,__extern__open}
+cstring
+
+open in fcntl.h:76
+constant : true
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:57
+add_gvar
+{(set_output_file,tmp),__extern____errno_location}
+{(set_output_file,tmp),__extern____errno_location}
+use_ret_in
+{(set_output_file,tmp)}
+defof
+{(set_output_file,tmp),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : buffer.c:57
+extern
+{__extern____errno_location}
+add_gvar
+{(set_output_file,tmp),(set_output_file,tmp___0),__extern____errno_location,__extern__strerror}
+{(set_output_file,tmp),(set_output_file,tmp___0),__extern____errno_location,__extern__strerror}
+use_ret_in
+{(set_output_file,tmp___0)}
+defof
+{(set_output_file,tmp___0),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : xmalloc.c:40
+extern
+{NULL,__extern__}
+add_gvar
+{(set_output_file,str10),(set_output_file,tmp12),__extern__strdup}
+{(set_output_file,str10),(set_output_file,tmp12),set_output_file-3905,__extern__,__extern__strdup}
+use_ret_in
+{(set_output_file,tmp12)}
+defof
+{(set_output_file,tmp12),__extern__strdup}
+cstring
+{NULL,__extern__}
+nullpos
+[0, +oo]
+
+strdup in string.h:173
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:66
+extern
+{__extern__open}
+extern
+{NULL,init_buffer-4046,init_buffer-4047,__extern__,__extern__strtok,__extern__toupper}
+extern
+{}
+add_gvar
+{out_stream.fd,(write_output_stream,buffer),(write_output_stream,length),(write_output_stream,tmp___1),__extern__write}
+{out_stream.fd,(write_output_stream,buffer),(write_output_stream,length),(write_output_stream,tmp___1),init_buffer-4046,init_buffer-4047,__extern__open,__extern__write}
+use_ret_in
+{(write_output_stream,tmp___1)}
+defof
+{(write_output_stream,tmp___1),__extern__write}
+cstring
+
+write in unistd.h:363
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.66666666667
+cstring : 0.
+
+
+
+
+lib id : buffer.c:66
+add_gvar
+{(write_output_stream,tmp),__extern____errno_location}
+{(write_output_stream,tmp),__extern____errno_location}
+use_ret_in
+{(write_output_stream,tmp)}
+defof
+{(write_output_stream,tmp),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : buffer.c:66
+extern
+{__extern____errno_location}
+add_gvar
+{(write_output_stream,tmp),(write_output_stream,tmp___0),__extern____errno_location,__extern__strerror}
+{(write_output_stream,tmp),(write_output_stream,tmp___0),__extern____errno_location,__extern__strerror}
+use_ret_in
+{(write_output_stream,tmp___0)}
+defof
+{(write_output_stream,tmp___0),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:100
+extern
+{NULL,main-5824,__extern__}
+extern
+{}
+add_gvar
+{(set_input_file,file___0),(set_input_file,new),set_input_file-3982.fd,__extern__open}
+{(set_input_file,file___0),(set_input_file,new),main-5824,set_input_file-3982,set_input_file-3982.fd,__extern__,__extern__open}
+loop
+bot
+use_ret_in
+{set_input_file-3982.fd}
+defof
+{set_input_file-3982.fd,__extern__open}
+cstring
+
+open in fcntl.h:76
+constant : true
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:101
+add_gvar
+{(set_input_file,tmp___0),__extern____errno_location}
+{(set_input_file,tmp___0),__extern____errno_location}
+loop
+bot
+use_ret_in
+{(set_input_file,tmp___0)}
+defof
+{(set_input_file,tmp___0),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : buffer.c:101
+extern
+{__extern____errno_location}
+add_gvar
+{(set_input_file,tmp___0),(set_input_file,tmp___1),__extern____errno_location,__extern__strerror}
+{(set_input_file,tmp___0),(set_input_file,tmp___1),__extern____errno_location,__extern__strerror}
+loop
+{(set_input_file,tmp___0),__extern____errno_location}
+use_ret_in
+{(set_input_file,tmp___1)}
+defof
+{(set_input_file,tmp___1),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : xmalloc.c:40
+extern
+{NULL,main-5824,__extern__}
+add_gvar
+{(set_input_file,str16),(set_input_file,tmp18),__extern__strdup}
+{(set_input_file,str16),(set_input_file,tmp18),main-5824,set_input_file-3977,__extern__,__extern__strdup}
+loop
+{(set_input_file,str16)}
+use_ret_in
+{(set_input_file,tmp18)}
+defof
+{(set_input_file,tmp18),__extern__strdup}
+cstring
+{__extern__,main-5824}
+nullpos
+[0, +oo]
+
+strdup in string.h:173
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:165
+extern
+{NULL,init_buffer-4046,__extern__,__extern__strtok,__extern__toupper}
+extern
+{NULL,init_buffer-4046,__extern__,__extern__strtok,__extern__toupper}
+extern
+{}
+add_gvar
+{in_buffer.buffer,in_buffer.read_pos,(read_input_stream,to_be_saved)}
+{in_buffer.buffer,in_buffer.read_pos,(read_input_stream,to_be_saved),init_buffer-4046}
+loop
+{(read_input_stream,to_be_saved)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+memcpy in string.h:43
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:176
+extern
+{NULL,set_input_file-3982,__extern__open}
+extern
+{NULL,init_buffer-4046,__extern__,__extern__strtok,__extern__toupper}
+extern
+{}
+add_gvar
+{in_stream,(read_input_stream,buffer_write_pos),(read_input_stream,last_read),(read_input_stream,read_count),(read_input_stream,to_be_read),set_input_file-3982.fd,__extern__read}
+{in_stream,(read_input_stream,buffer_write_pos),(read_input_stream,last_read),(read_input_stream,read_count),(read_input_stream,to_be_read),init_buffer-4046,set_input_file-3982,set_input_file-3982.fd,__extern__open,__extern__read}
+loop
+{(read_input_stream,read_count),(read_input_stream,to_be_read)}
+def
+{(read_input_stream,read_count)}
+use_ret_in
+{(read_input_stream,last_read)}
+defof
+{(read_input_stream,last_read),__extern__read}
+cstring
+
+read in unistd.h:357
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.33333333333
+cstring : 0.
+
+
+
+
+lib id : buffer.c:177
+add_gvar
+{(read_input_stream,tmp),__extern____errno_location}
+{(read_input_stream,tmp),__extern____errno_location}
+loop
+bot
+use_ret_in
+{(read_input_stream,tmp)}
+defof
+{(read_input_stream,tmp),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : buffer.c:177
+extern
+{__extern____errno_location}
+add_gvar
+{(read_input_stream,tmp),(read_input_stream,tmp___0),__extern____errno_location,__extern__strerror}
+{(read_input_stream,tmp),(read_input_stream,tmp___0),__extern____errno_location,__extern__strerror}
+loop
+{(read_input_stream,tmp),__extern____errno_location}
+def
+{(read_input_stream,tmp___1),__extern____errno_location}
+use_ret_in
+{(read_input_stream,tmp___0)}
+defof
+{(read_input_stream,tmp___0),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:180
+add_gvar
+{(read_input_stream,tmp___1),__extern____errno_location}
+{(read_input_stream,tmp___1),__extern____errno_location}
+loop
+bot
+use_ret_in
+{(read_input_stream,tmp___1)}
+defof
+{(read_input_stream,tmp___1),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : buffer.c:180
+extern
+{__extern____errno_location}
+add_gvar
+{(read_input_stream,tmp___1),(read_input_stream,tmp___2),__extern____errno_location,__extern__strerror}
+{(read_input_stream,tmp___1),(read_input_stream,tmp___2),__extern____errno_location,__extern__strerror}
+loop
+{(read_input_stream,tmp___1),__extern____errno_location}
+def
+{(read_input_stream,tmp___1),__extern____errno_location}
+use_ret_in
+{(read_input_stream,tmp___2)}
+defof
+{(read_input_stream,tmp___2),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:484
+extern
+{NULL,init_buffer-4047,__extern__,__extern__strtok,__extern__toupper}
+extern
+{NULL,_G_-5854,_G_-5857,_G_-5860,get_current_file-4020,parse_command-5146,parse_command-5270,parse_string-4631,set_input_file-3977,set_input_file-3988,__extern__,__extern__strtok,__extern__toupper}
+extern
+{NULL,__extern__fread}
+add_gvar
+{out_buffer.write_pos,(write_buffer,buf),(write_buffer,length)}
+{out_buffer.write_pos,(write_buffer,buf),(write_buffer,length),_G_-5854,_G_-5857,_G_-5860,get_current_file-4020,init_buffer-4047,parse_command-5146,parse_command-5270,parse_string-4631,set_input_file-3977,set_input_file-3988,__extern__fread}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+memcpy in string.h:43
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : buffer.c:522
+add_gvar
+{(close_output_stream,tmp),__extern____errno_location}
+{(close_output_stream,tmp),__extern____errno_location}
+use_ret_in
+{(close_output_stream,tmp)}
+defof
+{(close_output_stream,tmp),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : buffer.c:522
+extern
+{__extern____errno_location}
+add_gvar
+{(close_output_stream,tmp),(close_output_stream,tmp___0),__extern____errno_location,__extern__strerror}
+{(close_output_stream,tmp),(close_output_stream,tmp___0),__extern____errno_location,__extern__strerror}
+use_ret_in
+{(close_output_stream,tmp___0)}
+defof
+{(close_output_stream,tmp___0),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+InterCfg.cfgof
+InterCfg.cfgof
+
+
+lib id : bbe.c:149
+add_gvar
+{(parse_long,tmp),__extern____ctype_b_loc}
+{(parse_long,tmp),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(parse_long,tmp)}
+defof
+{(parse_long,tmp),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:152
+add_gvar
+{(parse_long,tmp___0),__extern____ctype_b_loc}
+{(parse_long,tmp___0),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(parse_long,tmp___0)}
+defof
+{(parse_long,tmp___0),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:155
+add_gvar
+{(parse_long,tmp___1),__extern____ctype_b_loc}
+{(parse_long,tmp___1),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(parse_long,tmp___1)}
+defof
+{(parse_long,tmp___1),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:161
+extern
+{NULL,parse_block-4842,__extern__,__extern__strtok}
+extern
+{parse_long-4495}
+extern
+{}
+add_gvar
+{(parse_long,__cil_tmp25),(parse_long,long_int),(parse_long,tmp___2),__extern__sscanf}
+{(parse_long,__cil_tmp25),(parse_long,long_int),(parse_long,tmp___2),parse_block-4842,parse_long-4495,__extern__sscanf,__extern__strtok}
+loop
+bot
+use_ret_in
+{(parse_long,tmp___2)}
+defof
+{(parse_long,tmp___2),__extern__sscanf}
+cstring
+
+sscanf in stdio.h:415
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.33333333333
+cstring : 0.
+
+
+
+
+lib id : bbe.c:225
+add_gvar
+{(parse_string,tmp___4),__extern____ctype_b_loc}
+{(parse_string,tmp___4),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(parse_string,tmp___4)}
+defof
+{(parse_string,tmp___4),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:229
+add_gvar
+{(parse_string,tmp___7),__extern____ctype_b_loc}
+{(parse_string,tmp___7),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(parse_string,tmp___7)}
+defof
+{(parse_string,tmp___7),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:233
+add_gvar
+{(parse_string,tmp___10),__extern____ctype_b_loc}
+{(parse_string,tmp___10),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(parse_string,tmp___10)}
+defof
+{(parse_string,tmp___10),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:261
+extern
+{NULL,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+extern
+{NULL,parse_string-4508,__extern__,__extern__strtok}
+extern
+{}
+add_gvar
+{(parse_string,buf),(parse_string,i),(parse_string,ret)}
+{(parse_string,buf),(parse_string,i),(parse_string,ret),parse_string-4508,parse_string-4631}
+loop
+{(parse_string,i)}
+def
+{(parse_string,i)}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+memcpy in string.h:43
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : bbe.c:187
+extern
+{parse_string-4634}
+extern
+{NULL,parse_block-4842,parse_command-5271,__extern__,__extern__strtok}
+add_gvar
+{(parse_string,__cil_tmp52),(parse_string,p),(parse_string,tmp___12),parse_block-4842,parse_command-5271,__extern__strchr,__extern__strtok}
+{(parse_string,__cil_tmp52),(parse_string,p),(parse_string,tmp___12),parse_block-4842,parse_command-5271,parse_string-4634,__extern__,__extern__strchr,__extern__strtok}
+loop
+{(parse_string,p),parse_block-4842,parse_command-5271,__extern__strtok}
+def
+{(parse_string,p)}
+use_ret_in
+{(parse_string,tmp___12)}
+defof
+{(parse_string,tmp___12),__extern__strchr}
+cstring
+{NULL,__extern__,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strchr in string.h:233
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.5
+cstring : 1.
+
+
+
+
+lib id : bbe.c:238
+extern
+{NULL,parse_string-4510,__extern__,__extern__strtok}
+extern
+{parse_string-4637}
+extern
+{}
+add_gvar
+{(parse_string,__cil_tmp53),(parse_string,num),(parse_string,tmp___11),__extern__sscanf}
+{(parse_string,__cil_tmp53),(parse_string,num),(parse_string,tmp___11),parse_string-4510,parse_string-4637,__extern__sscanf}
+loop
+bot
+use_ret_in
+{(parse_string,tmp___11)}
+defof
+{(parse_string,tmp___11),__extern__sscanf}
+cstring
+
+sscanf in stdio.h:415
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.33333333333
+cstring : 0.
+
+
+
+
+lib id : bbe.c:280
+extern
+{NULL,main-5821,__extern__}
+add_gvar
+{(parse_block,bs),(parse_block,tmp)}
+{(parse_block,bs),(parse_block,tmp),main-5821,__extern__}
+loop
+{(parse_block,bs)}
+loop
+{(parse_block,bs)}
+loop
+{(parse_block,bs)}
+loop
+{(parse_block,bs)}
+loop
+{(parse_block,bs)}
+loop
+{(parse_block,bs)}
+loop
+{(parse_block,bs)}
+loop
+{(parse_block,bs)}
+use_ret_in
+{(parse_block,tmp)}
+defof
+{(parse_block,tmp)}
+cstring
+{__extern__,main-5821}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : bbe.c:293
+add_gvar
+{(parse_block,tmp___15),__extern____ctype_b_loc}
+{(parse_block,tmp___15),__extern____ctype_b_loc}
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(parse_block,tmp___15)}
+defof
+{(parse_block,tmp___15),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:301
+add_gvar
+{(parse_block,tmp___6),__extern____ctype_b_loc}
+{(parse_block,tmp___6),__extern____ctype_b_loc}
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(parse_block,tmp___6)}
+defof
+{(parse_block,tmp___6),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:304
+add_gvar
+{(parse_block,tmp___9),__extern____ctype_b_loc}
+{(parse_block,tmp___9),__extern____ctype_b_loc}
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(parse_block,tmp___9)}
+defof
+{(parse_block,tmp___9),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:307
+add_gvar
+{(parse_block,tmp___12),__extern____ctype_b_loc}
+{(parse_block,tmp___12),__extern____ctype_b_loc}
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(parse_block,tmp___12)}
+defof
+{(parse_block,tmp___12),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:340
+add_gvar
+{(parse_block,tmp___30),__extern____ctype_b_loc}
+{(parse_block,tmp___30),__extern____ctype_b_loc}
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(parse_block,tmp___30)}
+defof
+{(parse_block,tmp___30),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:348
+add_gvar
+{(parse_block,tmp___21),__extern____ctype_b_loc}
+{(parse_block,tmp___21),__extern____ctype_b_loc}
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(parse_block,tmp___21)}
+defof
+{(parse_block,tmp___21),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:351
+add_gvar
+{(parse_block,tmp___24),__extern____ctype_b_loc}
+{(parse_block,tmp___24),__extern____ctype_b_loc}
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(parse_block,tmp___24)}
+defof
+{(parse_block,tmp___24),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:354
+add_gvar
+{(parse_block,tmp___27),__extern____ctype_b_loc}
+{(parse_block,tmp___27),__extern____ctype_b_loc}
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(parse_block,tmp___27)}
+defof
+{(parse_block,tmp___27),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:405
+add_gvar
+{(parse_command,tmp),__extern____ctype_b_loc}
+{(parse_command,tmp),__extern____ctype_b_loc}
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+loop
+bot
+use_ret_in
+{(parse_command,tmp)}
+defof
+{(parse_command,tmp),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : xmalloc.c:40
+extern
+{NULL,parse_command_file-5615,__extern__}
+add_gvar
+{(parse_command,str153),(parse_command,tmp155),__extern__strdup}
+{(parse_command,str153),(parse_command,tmp155),parse_command-5097,parse_command_file-5615,__extern__,__extern__strdup}
+loop
+{(parse_command,str153)}
+loop
+{(parse_command,str153)}
+loop
+{(parse_command,str153)}
+loop
+{(parse_command,str153)}
+loop
+{(parse_command,str153)}
+loop
+{(parse_command,str153)}
+loop
+{(parse_command,str153)}
+loop
+{(parse_command,str153)}
+loop
+{(parse_command,str153)}
+use_ret_in
+{(parse_command,tmp155)}
+defof
+{(parse_command,tmp155),__extern__strdup}
+cstring
+{NULL,__extern__,parse_command_file-5615}
+nullpos
+[0, +oo]
+
+strdup in string.h:173
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 0.
+
+
+
+
+lib id : bbe.c:453
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___5),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___5),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___5)}
+defof
+{(parse_command,tmp___5)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:465
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___6),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___6),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___6)}
+defof
+{(parse_command,tmp___6)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:471
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___7),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___7),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___7)}
+defof
+{(parse_command,tmp___7)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : xmalloc.c:40
+extern
+{NULL,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,str163),(parse_command,tmp165),__extern__strdup}
+{(parse_command,str163),(parse_command,tmp165),parse_command-5146,__extern__strdup,__extern__strtok}
+loop
+{(parse_command,str163)}
+loop
+{(parse_command,str163)}
+loop
+{(parse_command,str163)}
+loop
+{(parse_command,str163)}
+loop
+{(parse_command,str163)}
+loop
+{(parse_command,str163)}
+loop
+{(parse_command,str163)}
+loop
+{(parse_command,str163)}
+loop
+{(parse_command,str163)}
+use_ret_in
+{(parse_command,tmp165)}
+defof
+{(parse_command,tmp165),__extern__strdup}
+cstring
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strdup in string.h:173
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:476
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___9),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___9),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___9)}
+defof
+{(parse_command,tmp___9)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:481
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___10),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___10),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___10)}
+defof
+{(parse_command,tmp___10)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:486
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___11),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___11),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___11)}
+defof
+{(parse_command,tmp___11)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:491
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___12),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___12),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___12)}
+defof
+{(parse_command,tmp___12)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:504
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___13),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___13),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___13)}
+defof
+{(parse_command,tmp___13)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:504
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___14),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___14),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___14)}
+defof
+{(parse_command,tmp___14)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:504
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___15),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___15),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___15)}
+defof
+{(parse_command,tmp___15)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:505
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___16),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___16),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___16)}
+defof
+{(parse_command,tmp___16)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:505
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___17),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___17),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___17)}
+defof
+{(parse_command,tmp___17)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:506
+extern
+{NULL,parse_command-5146,parse_command-5269,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,new),(parse_command,token),parse_command-4881,parse_command-5269.s1}
+{(parse_command,new),(parse_command,token),parse_command-4881,parse_command-5146,parse_command-5269,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{parse_command-5269.s1}
+defof
+{parse_command-5269.s1}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:507
+extern
+{NULL,parse_command-5146,parse_command-5269,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,new),(parse_command,token),parse_command-4881,parse_command-5269.s1}
+{(parse_command,new),(parse_command,token),parse_command-4881,parse_command-5146,parse_command-5269,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{parse_command-5269.s1}
+defof
+{parse_command-5269.s1}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strcat in string.h:135
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:510
+extern
+{NULL,parse_command-5146,parse_command-5269,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+add_gvar
+{(parse_command,j),(parse_command,new),(parse_command,tmp___19),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__toupper}
+{(parse_command,j),(parse_command,new),(parse_command,tmp___19),parse_command-5146,parse_command-5269,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+def
+{(parse_command,j)}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+use_ret_in
+{(parse_command,tmp___19)}
+defof
+{(parse_command,tmp___19),__extern__toupper}
+cstring
+{NULL,__extern__,__extern__strtok,__extern__toupper}
+nullpos
+[-oo, +oo]
+
+toupper in ctype.h:119
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 8.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:514
+extern
+{NULL,_G_-5904,_G_-5994,_G_-5997,_G_-6000}
+extern
+{NULL,parse_command-5146,parse_command-5269,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+add_gvar
+{convert_strings,(parse_command,j),(parse_command,new),(parse_command,tmp___20),_G_-5904,parse_command-5269.s1,__extern__strcmp}
+{convert_strings,(parse_command,j),(parse_command,new),(parse_command,tmp___20),_G_-5904,_G_-5994,_G_-5997,_G_-6000,parse_command-5146,parse_command-5269,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__strcmp}
+loop
+{(parse_command,new),parse_command-5269.s1}
+loop
+{(parse_command,new),parse_command-5269.s1}
+loop
+{(parse_command,new),parse_command-5269.s1}
+loop
+{(parse_command,new),parse_command-5269.s1}
+loop
+{(parse_command,new),parse_command-5269.s1}
+loop
+{(parse_command,new),parse_command-5269.s1}
+loop
+{(parse_command,new),parse_command-5269.s1}
+loop
+{(parse_command,new),parse_command-5269.s1}
+loop
+{(parse_command,new),parse_command-5269.s1}
+use_ret_in
+{(parse_command,tmp___20)}
+defof
+{(parse_command,tmp___20),__extern__strcmp}
+cstring
+{NULL,parse_command-5269}
+nullpos
+bot
+{NULL,parse_command-5146,parse_command-5270,parse_string-4631}
+nullpos
+[-oo, +oo]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.5
+cstring : 0.
+
+
+
+
+lib id : bbe.c:519
+extern
+{NULL,parse_command_file-5615,__extern__}
+add_gvar
+{(parse_command,command_string),(parse_command,tmp___21)}
+{(parse_command,command_string),(parse_command,tmp___21),parse_command_file-5615,__extern__}
+loop
+{(parse_command,command_string)}
+loop
+{(parse_command,command_string)}
+loop
+{(parse_command,command_string)}
+loop
+{(parse_command,command_string)}
+loop
+{(parse_command,command_string)}
+loop
+{(parse_command,command_string)}
+loop
+{(parse_command,command_string)}
+loop
+{(parse_command,command_string)}
+loop
+{(parse_command,command_string)}
+use_ret_in
+{(parse_command,tmp___21)}
+defof
+{(parse_command,tmp___21)}
+cstring
+{NULL,__extern__,parse_command_file-5615}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : bbe.c:548
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___27),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___27),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___27)}
+defof
+{(parse_command,tmp___27)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:550
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___28),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___28),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___28)}
+defof
+{(parse_command,tmp___28)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:554
+extern
+{NULL,parse_command-5146,parse_command-5269,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+add_gvar
+{(parse_command,j),(parse_command,new),(parse_command,tmp___29),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__toupper}
+{(parse_command,j),(parse_command,new),(parse_command,tmp___29),parse_command-5146,parse_command-5269,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+def
+{(parse_command,j)}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+loop
+{(parse_command,j),(parse_command,new),parse_command-5146,parse_command-5269.s1,parse_command-5270,parse_string-4631}
+use_ret_in
+{(parse_command,tmp___29)}
+defof
+{(parse_command,tmp___29),__extern__toupper}
+cstring
+{NULL,__extern__,__extern__strtok,__extern__toupper}
+nullpos
+[-oo, +oo]
+
+toupper in ctype.h:119
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 8.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:564
+extern
+{NULL,parse_command-5146,parse_command-5269,parse_command-5270,parse_string-4631,__extern__,__extern__strtok,__extern__toupper}
+extern
+{NULL,_G_-6003,_G_-6006}
+add_gvar
+{(parse_command,f),(parse_command,new),(parse_command,tmp___30),_G_-6003,_G_-6006,parse_command-5269.s1,__extern__strchr}
+{(parse_command,f),(parse_command,new),(parse_command,tmp___30),_G_-6003,_G_-6006,parse_command-5146,parse_command-5269,parse_command-5269.s1,parse_command-5270,parse_string-4631,__extern__strchr}
+loop
+{(parse_command,f),_G_-6003,_G_-6006}
+loop
+{(parse_command,f),_G_-6003,_G_-6006}
+loop
+{(parse_command,f),_G_-6003,_G_-6006}
+loop
+{(parse_command,f),_G_-6003,_G_-6006}
+loop
+{(parse_command,f),_G_-6003,_G_-6006}
+def
+{(parse_command,f)}
+loop
+{(parse_command,f),_G_-6003,_G_-6006}
+loop
+{(parse_command,f),_G_-6003,_G_-6006}
+loop
+{(parse_command,f),_G_-6003,_G_-6006}
+loop
+{(parse_command,f),_G_-6003,_G_-6006}
+use_ret_in
+{(parse_command,tmp___30)}
+defof
+{(parse_command,tmp___30),__extern__strchr}
+cstring
+{NULL}
+nullpos
+bot
+{_G_-6003,_G_-6006}
+nullpos
+[3, 5]
+
+strchr in string.h:233
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.5
+cstring : 1.
+
+
+
+
+lib id : bbe.c:568
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___31),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___31),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___31)}
+defof
+{(parse_command,tmp___31)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:573
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___32),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___32),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___32)}
+defof
+{(parse_command,tmp___32)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:579
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___33),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___33),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___33)}
+defof
+{(parse_command,tmp___33)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:583
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,tmp___34),(parse_command,token),parse_command-4881}
+{(parse_command,tmp___34),(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+loop
+{(parse_command,token),parse_command-4881}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881}
+use_ret_in
+{(parse_command,tmp___34)}
+defof
+{(parse_command,tmp___34)}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:412
+extern
+{NULL,parse_command-5097,__extern__}
+extern
+{parse_command-5277}
+add_gvar
+{(parse_command,__cil_tmp180),(parse_command,c),(parse_command,i),(parse_command,token),parse_command-4881,__extern__strtok}
+{(parse_command,__cil_tmp180),(parse_command,c),(parse_command,i),(parse_command,token),parse_command-4881,parse_command-5097,parse_command-5277,__extern__,__extern__strtok}
+loop
+{(parse_command,__cil_tmp180)}
+loop
+{(parse_command,__cil_tmp180)}
+loop
+{(parse_command,__cil_tmp180)}
+loop
+{(parse_command,__cil_tmp180)}
+loop
+{(parse_command,__cil_tmp180)}
+loop
+{(parse_command,__cil_tmp180)}
+loop
+{(parse_command,__cil_tmp180)}
+loop
+{(parse_command,__cil_tmp180)}
+loop
+{(parse_command,__cil_tmp180)}
+use_ret_in
+{parse_command-4881}
+defof
+{parse_command-4881,__extern__strtok}
+cstring
+{parse_command-5277}
+nullpos
+[3, 3]
+
+strtok in string.h:346
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:414
+extern
+{}
+extern
+{parse_command-5280}
+add_gvar
+{(parse_command,__cil_tmp181),(parse_command,tmp___0),(parse_command,token),parse_command-4881,__extern__strtok}
+{(parse_command,__cil_tmp181),(parse_command,tmp___0),(parse_command,token),parse_command-4881,parse_command-5280,__extern__,__extern__strtok}
+loop
+{(parse_command,__cil_tmp181)}
+loop
+{(parse_command,__cil_tmp181)}
+loop
+{(parse_command,__cil_tmp181)}
+loop
+{(parse_command,__cil_tmp181)}
+loop
+{(parse_command,__cil_tmp181)}
+loop
+{(parse_command,__cil_tmp181)}
+loop
+{(parse_command,__cil_tmp181)}
+loop
+{(parse_command,__cil_tmp181)}
+def
+{(parse_command,__cil_tmp181),parse_command-5280}
+loop
+{(parse_command,__cil_tmp181)}
+use_ret_in
+{parse_command-4881}
+defof
+{parse_command-4881,__extern__strtok}
+cstring
+{parse_command-5280}
+nullpos
+[3, 3]
+
+strtok in string.h:346
+constant : true
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+
+
+lib id : bbe.c:417
+extern
+{parse_command-5283}
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,__cil_tmp182),(parse_command,tmp___3),(parse_command,token),parse_command-4881,__extern__strchr,__extern__strtok}
+{(parse_command,__cil_tmp182),(parse_command,tmp___3),(parse_command,token),parse_command-4881,parse_command-5283,__extern__,__extern__strchr,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+use_ret_in
+{(parse_command,tmp___3)}
+defof
+{(parse_command,tmp___3),__extern__strchr}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strchr in string.h:233
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:421
+extern
+{parse_command-5286}
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,__cil_tmp183),(parse_command,tmp___2),(parse_command,token),parse_command-4881,__extern__strchr,__extern__strtok}
+{(parse_command,__cil_tmp183),(parse_command,tmp___2),(parse_command,token),parse_command-4881,parse_command-5286,__extern__,__extern__strchr,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+use_ret_in
+{(parse_command,tmp___2)}
+defof
+{(parse_command,tmp___2),__extern__strchr}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strchr in string.h:233
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:425
+extern
+{parse_command-5289}
+extern
+{NULL,parse_command-4881,__extern__,__extern__strtok}
+add_gvar
+{(parse_command,__cil_tmp184),(parse_command,tmp___1),(parse_command,token),parse_command-4881,__extern__strchr,__extern__strtok}
+{(parse_command,__cil_tmp184),(parse_command,tmp___1),(parse_command,token),parse_command-4881,parse_command-5289,__extern__,__extern__strchr,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+def
+{parse_command-4881,__extern__strtok}
+loop
+{(parse_command,token),parse_command-4881,__extern__strtok}
+use_ret_in
+{(parse_command,tmp___1)}
+defof
+{(parse_command,tmp___1),__extern__strchr}
+cstring
+{parse_command-4881}
+nullpos
+bot
+{NULL,__extern__strtok}
+nullpos
+[-oo, +oo]
+
+strchr in string.h:233
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:665
+extern
+{NULL,__extern__}
+add_gvar
+{(parse_command_file,file___0),(parse_command_file,tmp___0)}
+{(parse_command_file,file___0),(parse_command_file,tmp___0),__extern__}
+loop
+{(parse_command_file,file___0)}
+use_ret_in
+{(parse_command_file,tmp___0)}
+defof
+{(parse_command_file,tmp___0)}
+cstring
+{__extern__}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : bbe.c:668
+add_gvar
+{(parse_command_file,tmp___2),__extern____errno_location}
+{(parse_command_file,tmp___2),__extern____errno_location}
+loop
+bot
+use_ret_in
+{(parse_command_file,tmp___2)}
+defof
+{(parse_command_file,tmp___2),__extern____errno_location}
+cstring
+
+__errno_location in errno.h:43
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:668
+extern
+{__extern____errno_location}
+add_gvar
+{(parse_command_file,tmp___2),(parse_command_file,tmp___3),__extern____errno_location,__extern__strerror}
+{(parse_command_file,tmp___2),(parse_command_file,tmp___3),__extern____errno_location,__extern__strerror}
+loop
+{(parse_command_file,tmp___2),__extern____errno_location}
+use_ret_in
+{(parse_command_file,tmp___3)}
+defof
+{(parse_command_file,tmp___3),__extern__strerror}
+cstring
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+{__extern____errno_location}
+nullpos
+[-oo, +oo]
+
+strerror in string.h:411
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : bbe.c:671
+extern
+{}
+extern
+{}
+extern
+{NULL,__extern__fopen}
+add_gvar
+{(parse_command_file,fp),(parse_command_file,tmp___4),__extern__getline}
+{(parse_command_file,fp),(parse_command_file,tmp___4),__extern__fopen,__extern__getline}
+loop
+{(parse_command_file,fp)}
+use_ret_in
+{(parse_command_file,tmp___4)}
+defof
+{(parse_command_file,tmp___4),__extern__getline}
+cstring
+
+getline in stdio.h:651
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : bbe.c:667
+extern
+{NULL,__extern__}
+extern
+{parse_command_file-5625}
+add_gvar
+{(parse_command_file,__cil_tmp31),(parse_command_file,file___0),(parse_command_file,fp),__extern__fopen}
+{(parse_command_file,__cil_tmp31),(parse_command_file,file___0),(parse_command_file,fp),parse_command_file-5625,__extern__,__extern__fopen}
+loop
+{(parse_command_file,__cil_tmp31)}
+use_ret_in
+{(parse_command_file,fp)}
+defof
+{(parse_command_file,fp),__extern__fopen}
+cstring
+{parse_command_file-5625}
+nullpos
+[1, 1]
+
+fopen in stdio.h:260
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : bbe.c:754
+extern
+{NULL,__extern__}
+extern
+{_G_-5975,__extern__}
+extern
+{_G_-5911}
+extern
+{_G_-5925}
+extern
+{}
+add_gvar
+{long_opts,short_opts,(main,argc),(main,argv),(main,opt),__extern__getopt_long}
+{long_opts,short_opts,(main,argc),(main,argv),(main,opt),_G_-5911,_G_-5925,_G_-5975,__extern__,__extern__getopt_long}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,opt)}
+defof
+{(main,opt),__extern__getopt_long}
+cstring
+
+getopt_long in getopt.h:175
+constant : true
+size : 5.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.2
+cstring : 0.
+
+
+== features for library ==
+bbe.c:149:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:152:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:155:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:161:sscanf
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.33333333333
+cstring : 0.
+
+
+bbe.c:187:strchr
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.5
+cstring : 1.
+
+
+bbe.c:225:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:229:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:233:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:238:sscanf
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.33333333333
+cstring : 0.
+
+
+bbe.c:261:memcpy
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+bbe.c:280:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+bbe.c:293:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:301:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:304:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:307:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:340:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:348:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:351:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:354:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:405:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:412:strtok
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:414:strtok
+constant : true
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+bbe.c:417:strchr
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:421:strchr
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:425:strchr
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:453:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:465:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:471:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:476:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:481:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:486:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:491:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:504:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:505:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:506:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 1.
+
+
+bbe.c:507:strcat
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 1.
+
+
+bbe.c:510:toupper
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 8.
+cstring : 1.
+
+
+bbe.c:514:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.5
+cstring : 0.
+
+
+bbe.c:519:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+bbe.c:548:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:550:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:554:toupper
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 8.
+cstring : 1.
+
+
+bbe.c:564:strchr
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.5
+cstring : 1.
+
+
+bbe.c:568:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:573:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:579:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:583:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+bbe.c:665:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+bbe.c:667:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+bbe.c:668:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+bbe.c:668:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+bbe.c:671:getline
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+bbe.c:754:getopt_long
+constant : true
+size : 5.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.2
+cstring : 0.
+
+
+buffer.c:100:open
+constant : true
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+buffer.c:101:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+buffer.c:101:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+buffer.c:165:memcpy
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+buffer.c:176:read
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.33333333333
+cstring : 0.
+
+
+buffer.c:177:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+buffer.c:177:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+buffer.c:180:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+buffer.c:180:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+buffer.c:484:memcpy
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+buffer.c:522:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+buffer.c:522:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+buffer.c:56:open
+constant : true
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+buffer.c:57:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+buffer.c:57:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+buffer.c:66:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+buffer.c:66:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+buffer.c:66:write
+constant : false
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.66666666667
+cstring : 0.
+
+
+execute.c:420:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+execute.c:420:fseeko
+constant : true
+size : 3.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.33333333333
+cstring : 0.
+
+
+execute.c:420:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+execute.c:423:fread
+constant : true
+size : 4.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.25
+cstring : 0.
+
+
+execute.c:463:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+execute.c:463:fwrite
+constant : true
+size : 4.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.5
+cstring : 0.
+
+
+execute.c:463:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+execute.c:486:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+execute.c:514:strncat
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+execute.c:515:strncpy
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+execute.c:517:strcat
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+execute.c:519:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+execute.c:520:strcat
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+execute.c:523:strcat
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+execute.c:541:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+execute.c:541:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+execute.c:550:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+execute.c:551:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+execute.c:551:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+execute.c:584:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+execute.c:585:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+execute.c:585:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+execute.c:602:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+execute.c:603:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+execute.c:603:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+execute.c:616:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+execute.c:617:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+execute.c:617:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+execute.c:641:__errno_location
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+execute.c:641:strerror
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+execute.c:77:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+xmalloc.c:40:strdup
+constant : false
+size : 1.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 1.
+
+
+Finished properly.
+0.616038

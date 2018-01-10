@@ -1,0 +1,10 @@
+S TntInput/**
+S debug/**
+S analysis/**
+S extract/**
+S frontend/**
+S main/**
+S lib/**
+S research/**
+B _build/**
+PKG ocamlgraph cil batteries yojson Z3 ocamlyices

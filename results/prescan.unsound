@@ -1,5 +1,5 @@
 benchmarks/bo/prescan.c 
-ConfigLevel, CurEnv, InBuff, InCnt, OperatorChars, OutBuff, StateTab, TokTypeNoC, TokTypeTab, base, block, blockRandomised, blockSize100k, block_compress, block_sigmask, british, bsBuff, bsLive, bsStream, bsWriting, buf, buf___0, bytesIn, bytesOut, bytes_out, checkpoint, chroot_path, clear_flg, code, codetab, comp_text_buffer, crc32Table, dbglvl, delaying, delimptr, delimptrbuf, dictionary, do_decomp, exit_stat, firstAttempt, force, free_ent, freq_tab, fsize, ftab, globalCrc, hsize, htab, inName, inUse, in_count, incs, index_64, index_hex, init_done, interactive, ispell_prog, keepInputFiles, last, len, limit, ll16, ll4, ll8, lmask, long_options, longestFileName, magic_header, maxbits, maxcode, maxmaxcode, minLens, mtfFreq, nBlocksRandomised, nInUse, nMTF, n_bits, new_text_buffer, nomagic, numFileNames, numFilesProcessed, number_lines, offset, offset___0, ofname, opMode, optarg, optind, origPtr, orig_text_buffer, outName, out_count, outputHandleJustInCase, perm, print_file_names, prob_tab, progNameReally, program_name, quadrant, quiet, rNums, ratio, rcs_ident, read_stdin, rfreq, rmask, saved_sigmask, seedi, selector, selectorMtf, seqToUnseq, show_ispell_version, size, smallMode, spec_fd, srcMode, szptr, testFailsExist, tt, unseqToSeq, unzftab, verbose, verbosity, version, workDone, workFactor, workLimit, zcat_flg, zptr, 
+ConfigLevel, CurEnv, OperatorChars, StateTab, TokTypeNoC, TokTypeTab, delimptr, delimptrbuf, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.0120010000001
+Front-end completes: 0.0160010000001
 
 
 
@@ -49,7 +49,7 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 3310 kB
+live memory : 3257 kB
 iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5
 mem size : 97
 
@@ -65,16 +65,16 @@ draw intra-procedural edges
 draw inter-procedural edges
 [=...........................................................] (1/34)     [===.........................................................] (2/34)     [=====.......................................................] (3/34)     [=======.....................................................] (4/34)     [========....................................................] (5/34)     [==========..................................................] (6/34)     [============................................................] (7/34)     [==============..............................................] (8/34)     [===============.............................................] (9/34)     [=================...........................................] (10/34)     [===================.........................................] (11/34)     [=====================.......................................] (12/34)     [======================......................................] (13/34)     [========================....................................] (14/34)     [==========================..................................] (15/34)     [============================................................] (16/34)     [==============================..............................] (17/34)     [===============================.............................] (18/34)     [=================================...........................] (19/34)     [===================================.........................] (20/34)     [=====================================.......................] (21/34)     [======================================......................] (22/34)     [========================================....................] (23/34)     [==========================================..................] (24/34)     [============================================................] (25/34)     [=============================================...............] (26/34)     [===============================================.............] (27/34)     [=================================================...........] (28/34)     [===================================================.........] (29/34)     [====================================================........] (30/34)     [======================================================......] (31/34)     [========================================================....] (32/34)     [==========================================================..] (33/34)     [============================================================] (34/34)     
 Def-use graph construction completes: 0.0480030000001
-live memory : 3781 kB
+live memory : 3563 kB
 #Nodes in def-use graph : 842
 #Locs on def-use graph : 2708
 Workorder computation begins...
 Workorder computation completes: 0.00400000000001
 Fixpoint iteration with widening begins...
 #iteration in widening : 847
-Fixpoint iteration with widening completes: 0.0120010000001
+Fixpoint iteration with widening completes: 0.012001
 
-Itv Sparse Analysis completes: 0.0880050000001
+Itv Sparse Analysis completes: 0.0920060000001
 
 
 
@@ -83,7 +83,7 @@ Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
 [............................................................] (0/926)     
-Generate Buffer overrun report completes: 0.00400000000001
+Generate Buffer overrun report completes: 0.
 
 = Alarms =
 
@@ -93,4 +93,4 @@ Generate Buffer overrun report completes: 0.00400000000001
 #unproven                : 0
 #bot-involved            : 8
 Finished properly.
-0.136008000001
+0.140009000001

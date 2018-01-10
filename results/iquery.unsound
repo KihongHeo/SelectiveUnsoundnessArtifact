@@ -1,5 +1,5 @@
 benchmarks/bo/iquery.c 
-ColonOkInAddr, MatchGecos, MaxAliasRecursion, MustQuoteChars, SpaceSub, alt_system, alt_system_name, apropos, args, ascii, base_dist, base_length, bb, bi_buf, bi_valid, bitbuf, bitbuf___0, bitcount, bk, bl_count, bl_desc, bl_order, bl_tree, block_mode, block_sigmask, block_start, blocksize, border, buf, bytes_in, bytes_out, can_use_cache, cat_is_open, cat_list, catfd, cfdirlist, clean, colon_sep_section_list, compr_level, compressed_len, configuration_file, configuration_table, cpdext, cpdist, cplens, cplext, crc, crc_32_tab, crc___0, curr_dir, d_buf, d_desc, dbits, debug, decompress, decrypt, default_config_files, delaying, depth, dist_code, do_compress, do_irix, do_lzw, do_troff, dohp, done, dyn_dtree, dyn_ltree, egid, env, eofile, euid, exit_code, ext_header, extra_blbits, extra_dbits, extra_lbits, fhs, file_method, file_type, findall, first_time, flag_bit, flag_buf, flags, force, foreground, fsstnd, global_apropos, good_match, header_bytes, heap, heap_len, heap_max, help_msg, hidden, hidn_file, hufts, i, ifd, ifile_size, ifname, in_exit, inbuf, init_done, init_file, inptr, input_len, ins_h, insize, interrupted, istat, j, known_suffixes, l_desc, last_dist, last_flags, last_lit, last_member, lbits, leaves, length_code, level, license_msg, line_length, list, lit_base, literal, ll, long_opts, longopts, lookahead, man_list, mandirlist, mandirlistlth, mandirlistmax, mantexts, mask_bits, match_start, max_chain_length, max_lazy_match, max_len, maxbits, method, methods, msg, msg_done, nice_match, no_name, no_time, nocats, noglob_dot_filenames, ofd, ofname, one_per_line, opt_len, opt_manpath, optarg, optind, orig_len, outbuf, outcnt, pager, parents, part_nb, paths, peek_bits, pkzip, preformat, prev, prev_length, print_where, progname, pt_len, pt_table, quiet, read_buf, recursive, remove_ofname, rgid, roff_directive, ruid, save_orig_name, saved_sigmask, section_list, short_opts, something, standards, static_dtree, static_len, static_ltree, status, strstart, subbitbuf, suffixes, suid, target, test, test_buf, time_stamp, tmp_section_list, tmpbuf, to_cat_filename, to_stdout, total_in, total_out, track, ultname, uncompressors, valid, verbose, version, victim, wd, whatis, window, window_size, work, z_len, z_suffix, zfile, 
+optarg, optind, something, 
 
 
 --------------------------------------------------------------------------------
@@ -7,7 +7,7 @@ Front-end begins...
 --------------------------------------------------------------------------------
 
 
-Front-end completes: 0.00400000000001
+Front-end completes: 0.00800000000001
 
 
 
@@ -49,7 +49,7 @@ Excluded recursive functions : []
 Itv Sparse Analysis begins...
 --------------------------------------------------------------------------------
 
-live memory : 1912 kB
+live memory : 1736 kB
 iteration : 1iteration : 2iteration : 3iteration : 4
 mem size : 73
 
@@ -65,16 +65,16 @@ draw intra-procedural edges
 draw inter-procedural edges
 [==..........................................................] (1/22)     [=====.......................................................] (2/22)     [========....................................................] (3/22)     [==========..................................................] (4/22)     [=============...............................................] (5/22)     [================............................................] (6/22)     [===================.........................................] (7/22)     [=====================.......................................] (8/22)     [========================....................................] (9/22)     [===========================.................................] (10/22)     [==============================..............................] (11/22)     [================================............................] (12/22)     [===================================.........................] (13/22)     [======================================......................] (14/22)     [========================================....................] (15/22)     [===========================================.................] (16/22)     [==============================================..............] (17/22)     [=================================================...........] (18/22)     [===================================================.........] (19/22)     [======================================================......] (20/22)     [=========================================================...] (21/22)     [============================================================] (22/22)     
 Def-use graph construction completes: 0.00800100000001
-live memory : 2165 kB
+live memory : 2014 kB
 #Nodes in def-use graph : 120
 #Locs on def-use graph : 985
 Workorder computation begins...
 Workorder computation completes: 0.
 Fixpoint iteration with widening begins...
 #iteration in widening : 120
-Fixpoint iteration with widening completes: 0.00400000000001
+Fixpoint iteration with widening completes: 0.
 
-Itv Sparse Analysis completes: 0.0160010000001
+Itv Sparse Analysis completes: 0.0120010000001
 
 
 
@@ -83,7 +83,7 @@ Generate Buffer overrun report begins...
 --------------------------------------------------------------------------------
 
 [............................................................] (0/155)     
-Generate Buffer overrun report completes: 0.
+Generate Buffer overrun report completes: 0.00400000000001
 
 = Alarms =
 

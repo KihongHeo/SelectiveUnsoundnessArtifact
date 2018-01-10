@@ -1,0 +1,145 @@
+benchmarks/bo/crackaddr.c 
+buf, test_buf, 
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+
+Front-end completes: 0.00800000000001
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 563
+#unreachable : 11
+
+Translation to graphs completes: 0.0120010000001
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+
+iteration : 1iteration : 2iteration : 3
+mem size : 69
+
+#functions all : 3
+#recursive : 0
+{}
+#unreachable   : 0
+unreachable functions : {}
+
+Pre-analysis completes: 0.00800100000001
+To inline : []
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+#Procs : 3
+#Nodes : 552
+
+
+
+--------------------------------------------------------------------------------
+Itv Sparse Analysis begins...
+--------------------------------------------------------------------------------
+
+live memory : 2731 kB
+iteration : 1iteration : 2iteration : 3
+mem size : 69
+
+#functions all : 3
+#recursive : 0
+{}
+#unreachable   : 0
+unreachable functions : {}
+#total abstract locations  = 112
+Def-use graph construction begins...
+draw intra-procedural edges
+[====================........................................] (1/3)     [========================================....................] (2/3)     [============================================================] (3/3)     
+draw inter-procedural edges
+[==..........................................................] (1/23)     [=====.......................................................] (2/23)     [=======.....................................................] (3/23)     [==========..................................................] (4/23)     [=============...............................................] (5/23)     [===============.............................................] (6/23)     [==================..........................................] (7/23)     [====================........................................] (8/23)     [=======================.....................................] (9/23)     [==========================..................................] (10/23)     [============================................................] (11/23)     [===============================.............................] (12/23)     [=================================...........................] (13/23)     [====================================........................] (14/23)     [=======================================.....................] (15/23)     [=========================================...................] (16/23)     [============================================................] (17/23)     [==============================================..............] (18/23)     [=================================================...........] (19/23)     [====================================================........] (20/23)     [======================================================......] (21/23)     [=========================================================...] (22/23)     [============================================================] (23/23)     
+Def-use graph construction completes: 0.032002
+live memory : 3343 kB
+#Nodes in def-use graph : 448
+#Locs on def-use graph : 2200
+Workorder computation begins...
+Workorder computation completes: 0.00400000000001
+Fixpoint iteration with widening begins...
+#iteration in widening : 755
+Fixpoint iteration with widening completes: 0.0160010000001
+
+Itv Sparse Analysis completes: 0.0680040000001
+
+
+
+--------------------------------------------------------------------------------
+Generate Buffer overrun report begins...
+--------------------------------------------------------------------------------
+
+[............................................................] (0/552)     
+Generate Buffer overrun report completes: 0.
+
+= Alarms =
+1. crackaddr-bad.c:163 {crackaddr} UnProven
+  *(addr) @crackaddr-630:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(addr) @crackaddr-631:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10410
+2. crackaddr-bad.c:163 {crackaddr} UnProven
+  *(addr) @crackaddr-632:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(addr) @crackaddr-633:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10410
+3. crackaddr-bad.c:163 {crackaddr} UnProven
+  *(addr) @crackaddr-634:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(addr) @crackaddr-635:  offset: [0, +oo], size: [100, 100] UnProven, allocsite: main-10410
+4. crackaddr-bad.c:182 {crackaddr} UnProven
+  *(tmp___36) @crackaddr-831:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+5. crackaddr-bad.c:206 {crackaddr} UnProven
+  *(tmp___1) @crackaddr-840:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+6. crackaddr-bad.c:296 {crackaddr} UnProven
+  *(p) @crackaddr-698:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(p) @crackaddr-699:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+7. crackaddr-bad.c:296 {crackaddr} UnProven
+  *(p) @crackaddr-700:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(p) @crackaddr-701:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+8. crackaddr-bad.c:305 {crackaddr} UnProven
+  *(p) @crackaddr-873:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+9. crackaddr-bad.c:322 {crackaddr} UnProven
+  *(p) @crackaddr-712:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(p) @crackaddr-713:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+10. crackaddr-bad.c:322 {crackaddr} UnProven
+  *(p) @crackaddr-714:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(p) @crackaddr-715:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+11. crackaddr-bad.c:328 {crackaddr} UnProven
+  *(tmp___10) @crackaddr-887:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+12. crackaddr-bad.c:347 {crackaddr} UnProven
+  *(tmp___15) @crackaddr-900:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+13. crackaddr-bad.c:359 {crackaddr} UnProven
+  *(p) @crackaddr-732:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(p) @crackaddr-733:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+14. crackaddr-bad.c:359 {crackaddr} UnProven
+  *(p) @crackaddr-734:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(p) @crackaddr-735:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+15. crackaddr-bad.c:362 {crackaddr} UnProven
+  *(tmp___18) @crackaddr-912:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+16. crackaddr-bad.c:415 {crackaddr} UnProven
+  *(p) @crackaddr-760:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(p) @crackaddr-761:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+17. crackaddr-bad.c:415 {crackaddr} UnProven
+  *(p) @crackaddr-762:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+  *(p) @crackaddr-763:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+18. crackaddr-bad.c:421 {crackaddr} UnProven
+  *(tmp___24) @crackaddr-938:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+19. crackaddr-bad.c:438 {crackaddr} UnProven
+  *(tmp___29) @crackaddr-951:  offset: [-oo, +oo], size: [100, 100] UnProven, allocsite: main-10410
+
+#queries                 : 47
+#queries mod alarm point : 26
+#proven                  : 7
+#unproven                : 19
+#bot-involved            : 13
+Finished properly.
+0.0960060000001

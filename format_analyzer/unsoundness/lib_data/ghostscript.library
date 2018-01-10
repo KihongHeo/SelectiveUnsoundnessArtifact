@@ -1,0 +1,4216 @@
+benchmarks/ghostscript-8.71@genconf.c 
+
+
+
+--------------------------------------------------------------------------------
+Front-end begins...
+--------------------------------------------------------------------------------
+
+
+Front-end completes: 0.016
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs begins...
+--------------------------------------------------------------------------------
+
+
+Translation to graphs completes: 0.020001
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 1423
+#unreachable : 15
+iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7iteration : 8iteration : 9iteration : 10iteration : 11
+mem size : 506
+#total abstract locations  = 555
+
+#functions all : 16
+#unreachable   : 2
+unreachable functions : {cmp_index,cmp_str}
+
+Pre-analysis completes: 0.096006
+To inline : [alloc_list;mrealloc]
+Excluded variable-arguments functions : []
+Excluded recursive functions : []
+-inline alloc_list @genconf.c:349
+-inline alloc_list @genconf.c:350
+-inline alloc_list @genconf.c:351
+-inline alloc_list @genconf.c:353
+-inline mrealloc @genconf.c:886
+
+
+
+--------------------------------------------------------------------------------
+Translation to graphs (after inline) begins...
+--------------------------------------------------------------------------------
+
+
+Translation to graphs (after inline) completes: 0.028002
+
+
+
+--------------------------------------------------------------------------------
+Pre-analysis (after inline) begins...
+--------------------------------------------------------------------------------
+
+
+#nodes all   : 1492
+#unreachable : 15
+iteration : 1iteration : 2iteration : 3iteration : 4iteration : 5iteration : 6iteration : 7iteration : 8iteration : 9
+mem size : 545
+#total abstract locations  = 602
+
+#functions all : 16
+#unreachable   : 4
+unreachable functions : {alloc_list,cmp_index,cmp_str,mrealloc}
+
+Pre-analysis (after inline) completes: 0.092006
+#Procs : 12
+#Nodes : 1419
+-1
+[]
+
+
+lib id : genconf.c:347
+extern
+{}
+extern
+{_G_-2897}
+extern
+{}
+add_gvar
+{init_config_lists,(main,conf).lists.indexed}
+{init_config_lists,(main,conf).lists.indexed,_G_-2897}
+loop
+{(main,conf).lists.indexed}
+loop
+{(main,conf).lists.indexed}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+memcpy in string.h:43
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+
+
+lib id : genconf.c:548
+extern
+{(main,conf).file_names}
+extern
+{}
+add_gvar
+{(main,conf).file_names.max_count,(main,list55),(main,tmp56),__extern__calloc}
+{(main,conf).file_names,(main,conf).file_names.max_count,(main,list55),(main,tmp56),main-1647,__extern__calloc}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp56)}
+defof
+{(main,tmp56),__extern__calloc}
+cstring
+
+calloc in stdlib.h:473
+constant : true
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:548
+extern
+{(main,conf).file_contents}
+extern
+{}
+add_gvar
+{(main,conf).file_contents.max_count,(main,list60),(main,tmp61),__extern__calloc}
+{(main,conf).file_contents,(main,conf).file_contents.max_count,(main,list60),(main,tmp61),main-1652,__extern__calloc}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp61)}
+defof
+{(main,tmp61),__extern__calloc}
+cstring
+
+calloc in stdlib.h:473
+constant : true
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:548
+extern
+{(main,conf).replaces}
+extern
+{}
+add_gvar
+{(main,conf).replaces.max_count,(main,list65),(main,tmp66),__extern__calloc}
+{(main,conf).replaces,(main,conf).replaces.max_count,(main,list65),(main,tmp66),main-1657,__extern__calloc}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp66)}
+defof
+{(main,tmp66),__extern__calloc}
+cstring
+
+calloc in stdlib.h:473
+constant : true
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:548
+extern
+{}
+extern
+{}
+add_gvar
+{(main,list70),(main,tmp71),__extern__calloc}
+{(main,list70),(main,tmp71),main-1663,__extern__calloc}
+loop
+bot
+loop
+bot
+use_ret_in
+{(main,tmp71)}
+defof
+{(main,tmp71),__extern__calloc}
+cstring
+
+calloc in stdlib.h:473
+constant : true
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.5
+cstring : 0.
+
+
+
+
+lib id : genconf.c:358
+extern
+{}
+extern
+{main-1780}
+add_gvar
+{(main,__cil_tmp88),(main,conf).lib_p.pattern}
+{(main,__cil_tmp88),(main,conf).lib_p.pattern,main-1780}
+loop
+{(main,__cil_tmp88)}
+loop
+{(main,__cil_tmp88)}
+use_ret_in
+{(main,conf).lib_p.pattern}
+defof
+{(main,conf).lib_p.pattern}
+cstring
+{main-1780}
+nullpos
+[3, 3]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:410
+extern
+{(main,conf).lib_p,(main,conf).libpath_p,(main,conf).obj_p}
+extern
+{main-1792}
+add_gvar
+{(main,__cil_tmp92),(main,conf).lib_p.pattern,(main,conf).libpath_p.pattern,(main,conf).obj_p.pattern,(main,pat)}
+{(main,__cil_tmp92),(main,conf).lib_p,(main,conf).lib_p.pattern,(main,conf).libpath_p,(main,conf).libpath_p.pattern,(main,conf).obj_p,(main,conf).obj_p.pattern,(main,pat),main-1792}
+loop
+{(main,__cil_tmp92)}
+def
+{(main,__cil_tmp92),main-1792}
+loop
+{(main,__cil_tmp92)}
+use_ret_in
+{(main,conf).lib_p.pattern,(main,conf).libpath_p.pattern,(main,conf).obj_p.pattern}
+defof
+{(main,conf).lib_p.pattern,(main,conf).libpath_p.pattern,(main,conf).obj_p.pattern}
+cstring
+{main-1792}
+nullpos
+[3, 3]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+
+
+lib id : genconf.c:463
+extern
+{NULL,_G_-2959,__extern__}
+extern
+{main-1801}
+add_gvar
+{(main,__cil_tmp95),(main,argv),(main,i),(main,out),_G_-2959,__extern__fopen}
+{(main,__cil_tmp95),(main,argv),(main,i),(main,out),_G_-2959,main-1801,__extern__,__extern__fopen}
+loop
+{(main,__cil_tmp95)}
+def
+{(main,__cil_tmp95),main-1801}
+loop
+{(main,__cil_tmp95)}
+use_ret_in
+{(main,out)}
+defof
+{(main,out),__extern__fopen}
+cstring
+{main-1801}
+nullpos
+[1, 1]
+
+fopen in stdio.h:249
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 1.
+
+
+InterCfg.cfgof
+InterCfg.cfgof
+
+
+lib id : genconf.c:558
+extern
+{NULL,add_entry-2150,process_replaces-1926}
+add_gvar
+{(dev_file_name,str),(dev_file_name,tmp)}
+{(dev_file_name,str),(dev_file_name,tmp),add_entry-2150,process_replaces-1926}
+use_ret_in
+{(dev_file_name,tmp)}
+defof
+{(dev_file_name,tmp)}
+cstring
+{add_entry-2150,process_replaces-1926}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:561
+extern
+{NULL,add_entry-2150,process_replaces-1926}
+extern
+{dev_file_name-1915}
+add_gvar
+{(dev_file_name,__cil_tmp11),(dev_file_name,str)}
+{(dev_file_name,__cil_tmp11),(dev_file_name,str),add_entry-2150,dev_file_name-1915,process_replaces-1926}
+use_ret_in
+{(dev_file_name,str)}
+defof
+{(dev_file_name,str)}
+cstring
+{dev_file_name-1915}
+nullpos
+[4, 4]
+
+strcat in string.h:135
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:560
+extern
+{dev_file_name-1918}
+extern
+{NULL,add_entry-2150,process_replaces-1926}
+add_gvar
+{(dev_file_name,__cil_tmp12),(dev_file_name,len),(dev_file_name,str),(dev_file_name,tmp___0),__extern__strcmp}
+{(dev_file_name,__cil_tmp12),(dev_file_name,len),(dev_file_name,str),(dev_file_name,tmp___0),add_entry-2150,dev_file_name-1918,process_replaces-1926,__extern__strcmp}
+use_ret_in
+{(dev_file_name,tmp___0)}
+defof
+{(dev_file_name,tmp___0),__extern__strcmp}
+cstring
+{add_entry-2150,process_replaces-1926}
+nullpos
+[0, +oo]
+{}
+nullpos
+bot
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 0.
+
+
+
+
+lib id : genconf.c:561
+extern
+{NULL,add_entry-2150,process_replaces-1926}
+extern
+{dev_file_name-1921}
+add_gvar
+{(dev_file_name,__cil_tmp13),(dev_file_name,str)}
+{(dev_file_name,__cil_tmp13),(dev_file_name,str),add_entry-2150,dev_file_name-1921,process_replaces-1926}
+use_ret_in
+{(dev_file_name,str)}
+defof
+{(dev_file_name,str)}
+cstring
+{dev_file_name-1921}
+nullpos
+[4, 4]
+
+strcat in string.h:135
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:574
+extern
+{process_replaces-1926}
+extern
+{NULL,(main,conf),add_item-2480,add_item-2481,main-1647,main-1652,main-1657,process_replaces-1975}
+add_gvar
+{(main,conf).replaces.items,(process_replaces,bufname),(process_replaces,i),(process_replaces,pconf),add_item-2481.str,main-1647.str,main-1652.str,main-1657.str}
+{(main,conf),(main,conf).replaces.items,(process_replaces,bufname),(process_replaces,i),(process_replaces,pconf),add_item-2480,add_item-2481,add_item-2481.str,main-1647,main-1647.str,main-1652,main-1652.str,main-1657,main-1657.str,process_replaces-1926,process_replaces-1975}
+loop
+{(main,conf).replaces.items,(process_replaces,i),(process_replaces,pconf),add_item-2481.str,main-1647.str,main-1652.str,main-1657.str}
+def
+{add_item-2481.str,main-1647.str,main-1652.str,main-1657.str}
+use_ret_in
+{(process_replaces,bufname)}
+defof
+{(process_replaces,bufname)}
+cstring
+{(main,conf)}
+nullpos
+bot
+{NULL,add_item-2481,main-1647,main-1652,main-1657}
+nullpos
+bot
+{}
+nullpos
+bot
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:580
+extern
+{NULL,add_item-2480,process_replaces-1975}
+extern
+{process_replaces-1926}
+add_gvar
+{(process_replaces,bufname),(process_replaces,fname),(process_replaces,tmp___0),__extern__strcmp}
+{(process_replaces,bufname),(process_replaces,fname),(process_replaces,tmp___0),add_item-2480,process_replaces-1926,process_replaces-1975,__extern__strcmp}
+loop
+{(process_replaces,bufname)}
+def
+{(process_replaces,bufname)}
+use_ret_in
+{(process_replaces,tmp___0)}
+defof
+{(process_replaces,tmp___0),__extern__strcmp}
+cstring
+{process_replaces-1926}
+nullpos
+[0, +oo]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:629
+extern
+{NULL,add_entry-2150,__extern__}
+add_gvar
+{(read_file,fname),(read_file,tmp)}
+{(read_file,fname),(read_file,tmp),add_entry-2150,__extern__}
+loop
+{(read_file,fname)}
+use_ret_in
+{(read_file,tmp)}
+defof
+{(read_file,tmp)}
+cstring
+{__extern__,add_entry-2150}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:629
+extern
+{NULL,(main,conf),main-1786,__extern__}
+add_gvar
+{(main,conf).file_prefix,(read_file,pconf),(read_file,tmp___0)}
+{(main,conf),(main,conf).file_prefix,(read_file,pconf),(read_file,tmp___0),main-1786,__extern__}
+loop
+{(main,conf).file_prefix,(read_file,pconf)}
+use_ret_in
+{(read_file,tmp___0)}
+defof
+{(read_file,tmp___0)}
+cstring
+{(main,conf)}
+nullpos
+bot
+{__extern__,main-1786}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:641
+extern
+{NULL,read_file-2027}
+extern
+{NULL,(main,conf),main-1786,__extern__}
+add_gvar
+{(main,conf).file_prefix,(read_file,cname),(read_file,pconf)}
+{(main,conf),(main,conf).file_prefix,(read_file,cname),(read_file,pconf),main-1786,read_file-2027,__extern__}
+loop
+{(main,conf).file_prefix,(read_file,pconf)}
+use_ret_in
+{(read_file,cname)}
+defof
+{(read_file,cname)}
+cstring
+{(main,conf)}
+nullpos
+bot
+{__extern__,main-1786}
+nullpos
+[0, +oo]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.5
+cstring : 0.
+
+
+
+
+lib id : genconf.c:642
+extern
+{NULL,read_file-2027}
+extern
+{NULL,add_entry-2150,__extern__}
+add_gvar
+{(read_file,cname),(read_file,fname)}
+{(read_file,cname),(read_file,fname),add_entry-2150,read_file-2027,__extern__}
+loop
+{(read_file,fname)}
+use_ret_in
+{(read_file,cname)}
+defof
+{(read_file,cname)}
+cstring
+{__extern__,add_entry-2150}
+nullpos
+[0, +oo]
+
+strcat in string.h:135
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:644
+extern
+{NULL,(main,conf),add_item-2480,add_item-2481,main-1647,main-1652,main-1657,process_replaces-1975}
+extern
+{NULL,read_file-2027}
+add_gvar
+{(main,conf).file_names.items,(read_file,cname),(read_file,i),(read_file,pconf),(read_file,tmp___2),add_item-2481.str,main-1647.str,main-1652.str,main-1657.str,__extern__strcmp}
+{(main,conf),(main,conf).file_names.items,(read_file,cname),(read_file,i),(read_file,pconf),(read_file,tmp___2),add_item-2480,add_item-2481,add_item-2481.str,main-1647,main-1647.str,main-1652,main-1652.str,main-1657,main-1657.str,process_replaces-1975,read_file-2027,__extern__strcmp}
+loop
+{(read_file,cname)}
+use_ret_in
+{(read_file,tmp___2)}
+defof
+{(read_file,tmp___2),__extern__strcmp}
+cstring
+{NULL,read_file-2027}
+nullpos
+[0, +oo]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 5.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:658
+extern
+{NULL,__extern__fopen}
+extern
+{}
+extern
+{}
+add_gvar
+{(read_file,in)}
+{(read_file,in),__extern__fopen}
+loop
+bot
+use_ret_in
+bot
+defof
+bot
+cstring
+
+fseek in stdio.h:722
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+
+
+lib id : genconf.c:659
+extern
+{NULL,__extern__fopen}
+add_gvar
+{(read_file,in),(read_file,tmp___3),__extern__ftell}
+{(read_file,in),(read_file,tmp___3),__extern__fopen,__extern__ftell}
+loop
+{(read_file,in)}
+use_ret_in
+{(read_file,tmp___3)}
+defof
+{(read_file,tmp___3),__extern__ftell}
+cstring
+{NULL,__extern__fopen}
+nullpos
+[-oo, +oo]
+
+ftell in stdio.h:727
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:666
+extern
+{NULL,__extern__fopen}
+add_gvar
+{(read_file,in)}
+{(read_file,in),__extern__fopen}
+loop
+{(read_file,in)}
+use_ret_in
+bot
+defof
+bot
+cstring
+{NULL,__extern__fopen}
+nullpos
+[-oo, +oo]
+
+rewind in stdio.h:732
+constant : false
+size : 1.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:667
+extern
+{NULL,read_file-2028}
+extern
+{}
+extern
+{__extern__ftell}
+extern
+{NULL,__extern__fopen}
+add_gvar
+{(read_file,cont),(read_file,end),(read_file,in),(read_file,tmp___5),__extern__fread}
+{(read_file,cont),(read_file,end),(read_file,in),(read_file,tmp___5),read_file-2028,__extern__fopen,__extern__fread,__extern__ftell}
+loop
+{(read_file,in)}
+use_ret_in
+{(read_file,tmp___5)}
+defof
+{(read_file,tmp___5),__extern__fread}
+cstring
+
+fread in stdio.h:682
+constant : true
+size : 4.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.25
+cstring : 0.
+
+
+
+
+lib id : genconf.c:650
+extern
+{NULL,read_file-2027}
+extern
+{read_file-2034}
+add_gvar
+{(read_file,__cil_tmp30),(read_file,cname),(read_file,in),__extern__fopen}
+{(read_file,__cil_tmp30),(read_file,cname),(read_file,in),read_file-2027,read_file-2034,__extern__fopen}
+loop
+{(read_file,__cil_tmp30)}
+use_ret_in
+{(read_file,in)}
+defof
+{(read_file,in),__extern__fopen}
+cstring
+{read_file-2034}
+nullpos
+[2, 2]
+
+fopen in stdio.h:249
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:652
+extern
+{NULL,read_file-2027}
+extern
+{read_file-2037}
+add_gvar
+{(read_file,__cil_tmp31),(read_file,cname),(read_file,in),__extern__fopen}
+{(read_file,__cil_tmp31),(read_file,cname),(read_file,in),read_file-2027,read_file-2037,__extern__fopen}
+loop
+{(read_file,__cil_tmp31)}
+use_ret_in
+{(read_file,in)}
+defof
+{(read_file,in),__extern__fopen}
+cstring
+{read_file-2037}
+nullpos
+[1, 1]
+
+fopen in stdio.h:249
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:701
+extern
+{NULL,read_dev-2100}
+extern
+{read_dev-2109}
+add_gvar
+{(read_dev,__cil_tmp24),(read_dev,category)}
+{(read_dev,__cil_tmp24),(read_dev,category),read_dev-2100,read_dev-2109}
+loop
+{(read_dev,__cil_tmp24)}
+use_ret_in
+{(read_dev,category)}
+defof
+{(read_dev,category)}
+cstring
+{read_dev-2109}
+nullpos
+[3, 3]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:729
+add_gvar
+{(read_token,tmp),__extern____ctype_b_loc}
+{(read_token,tmp),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(read_token,tmp)}
+defof
+{(read_token,tmp),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:745
+add_gvar
+{(add_entry,tmp___23),__extern____ctype_b_loc}
+{(add_entry,tmp___23),__extern____ctype_b_loc}
+use_ret_in
+{(add_entry,tmp___23)}
+defof
+{(add_entry,tmp___23),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:746
+extern
+{NULL,read_dev-2100}
+extern
+{NULL,add_entry-2150,read_dev-2099}
+add_gvar
+{(add_entry,category),(add_entry,item)}
+{(add_entry,category),(add_entry,item),add_entry-2150,read_dev-2099,read_dev-2100}
+use_ret_in
+bot
+defof
+bot
+cstring
+{NULL,add_entry-2150,read_dev-2099}
+nullpos
+bot
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:778
+extern
+{NULL,add_entry-2150,read_dev-2099}
+add_gvar
+{(add_entry,item),(add_entry,tmp___2)}
+{(add_entry,item),(add_entry,tmp___2),add_entry-2150,read_dev-2099}
+use_ret_in
+{(add_entry,tmp___2)}
+defof
+{(add_entry,tmp___2)}
+cstring
+{NULL,add_entry-2150,read_dev-2099}
+nullpos
+bot
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:806
+extern
+{NULL,add_entry-2150}
+extern
+{NULL,add_entry-2150,read_dev-2099}
+add_gvar
+{(add_entry,item),(add_entry,str)}
+{(add_entry,item),(add_entry,str),add_entry-2150,read_dev-2099}
+use_ret_in
+{(add_entry,str)}
+defof
+{(add_entry,str)}
+cstring
+{NULL,add_entry-2150,read_dev-2099}
+nullpos
+bot
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:831
+extern
+{add_entry-2152}
+extern
+{NULL,(main,conf),main-1786,__extern__}
+add_gvar
+{(add_entry,pconf),(add_entry,template),(main,conf).file_prefix}
+{(add_entry,pconf),(add_entry,template),(main,conf),(main,conf).file_prefix,add_entry-2152,main-1786,__extern__}
+use_ret_in
+{(add_entry,template)}
+defof
+{(add_entry,template)}
+cstring
+{(main,conf)}
+nullpos
+bot
+{__extern__,main-1786}
+nullpos
+[0, +oo]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.5
+cstring : 0.
+
+
+
+
+lib id : genconf.c:843
+extern
+{NULL,add_entry-2150,read_dev-2099}
+add_gvar
+{(add_entry,item),(add_entry,tmp___18)}
+{(add_entry,item),(add_entry,tmp___18),add_entry-2150,read_dev-2099}
+use_ret_in
+{(add_entry,tmp___18)}
+defof
+{(add_entry,tmp___18)}
+cstring
+{NULL,add_entry-2150,read_dev-2099}
+nullpos
+bot
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:866
+extern
+{NULL,add_entry-2150}
+add_gvar
+{(add_entry,str),(add_entry,tmp___22)}
+{(add_entry,str),(add_entry,tmp___22),add_entry-2150}
+use_ret_in
+{(add_entry,tmp___22)}
+defof
+{(add_entry,tmp___22)}
+cstring
+{add_entry-2150}
+nullpos
+bot
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:760
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2295}
+add_gvar
+{(add_entry,__cil_tmp119),(add_entry,category),(add_entry,tmp),__extern__strcmp}
+{(add_entry,__cil_tmp119),(add_entry,category),(add_entry,tmp),add_entry-2295,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp)}
+defof
+{(add_entry,tmp),__extern__strcmp}
+cstring
+{add_entry-2295}
+nullpos
+[4, 4]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:766
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2301}
+add_gvar
+{(add_entry,__cil_tmp121),(add_entry,category),(add_entry,tmp___1),__extern__strcmp}
+{(add_entry,__cil_tmp121),(add_entry,category),(add_entry,tmp___1),add_entry-2301,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___1)}
+defof
+{(add_entry,tmp___1),__extern__strcmp}
+cstring
+{add_entry-2301}
+nullpos
+[3, 3]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:768
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2304}
+add_gvar
+{(add_entry,__cil_tmp122),(add_entry,category),(add_entry,tmp___0),__extern__strcmp}
+{(add_entry,__cil_tmp122),(add_entry,category),(add_entry,tmp___0),add_entry-2304,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___0)}
+defof
+{(add_entry,tmp___0),__extern__strcmp}
+cstring
+{add_entry-2304}
+nullpos
+[4, 4]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:777
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2313}
+add_gvar
+{(add_entry,__cil_tmp125),(add_entry,category),(add_entry,tmp___3),__extern__strcmp}
+{(add_entry,__cil_tmp125),(add_entry,category),(add_entry,tmp___3),add_entry-2313,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___3)}
+defof
+{(add_entry,tmp___3),__extern__strcmp}
+cstring
+{add_entry-2313}
+nullpos
+[8, 8]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:785
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2319}
+add_gvar
+{(add_entry,__cil_tmp127),(add_entry,category),(add_entry,tmp___5),__extern__strcmp}
+{(add_entry,__cil_tmp127),(add_entry,category),(add_entry,tmp___5),add_entry-2319,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___5)}
+defof
+{(add_entry,tmp___5),__extern__strcmp}
+cstring
+{add_entry-2319}
+nullpos
+[4, 4]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:788
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2322}
+add_gvar
+{(add_entry,__cil_tmp128),(add_entry,category),(add_entry,tmp___4),__extern__strcmp}
+{(add_entry,__cil_tmp128),(add_entry,category),(add_entry,tmp___4),add_entry-2322,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___4)}
+defof
+{(add_entry,tmp___4),__extern__strcmp}
+cstring
+{add_entry-2322}
+nullpos
+[12, 12]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:794
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2328}
+add_gvar
+{(add_entry,__cil_tmp130),(add_entry,category),(add_entry,tmp___6),__extern__strcmp}
+{(add_entry,__cil_tmp130),(add_entry,category),(add_entry,tmp___6),add_entry-2328,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___6)}
+defof
+{(add_entry,tmp___6),__extern__strcmp}
+cstring
+{add_entry-2328}
+nullpos
+[8, 8]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:800
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2334}
+add_gvar
+{(add_entry,__cil_tmp132),(add_entry,category),(add_entry,tmp___12),__extern__strcmp}
+{(add_entry,__cil_tmp132),(add_entry,category),(add_entry,tmp___12),add_entry-2334,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___12)}
+defof
+{(add_entry,tmp___12),__extern__strcmp}
+cstring
+{add_entry-2334}
+nullpos
+[10, 10]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:803
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2337}
+add_gvar
+{(add_entry,__cil_tmp133),(add_entry,category),(add_entry,tmp___11),__extern__strcmp}
+{(add_entry,__cil_tmp133),(add_entry,category),(add_entry,tmp___11),add_entry-2337,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___11)}
+defof
+{(add_entry,tmp___11),__extern__strcmp}
+cstring
+{add_entry-2337}
+nullpos
+[9, 9]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:805
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2340}
+add_gvar
+{(add_entry,__cil_tmp134),(add_entry,category),(add_entry,tmp___10),__extern__strcmp}
+{(add_entry,__cil_tmp134),(add_entry,category),(add_entry,tmp___10),add_entry-2340,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___10)}
+defof
+{(add_entry,tmp___10),__extern__strcmp}
+cstring
+{add_entry-2340}
+nullpos
+[7, 7]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:809
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2343}
+add_gvar
+{(add_entry,__cil_tmp135),(add_entry,category),(add_entry,tmp___9),__extern__strcmp}
+{(add_entry,__cil_tmp135),(add_entry,category),(add_entry,tmp___9),add_entry-2343,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___9)}
+defof
+{(add_entry,tmp___9),__extern__strcmp}
+cstring
+{add_entry-2343}
+nullpos
+[4, 4]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:811
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2346}
+add_gvar
+{(add_entry,__cil_tmp136),(add_entry,category),(add_entry,tmp___8),__extern__strcmp}
+{(add_entry,__cil_tmp136),(add_entry,category),(add_entry,tmp___8),add_entry-2346,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___8)}
+defof
+{(add_entry,tmp___8),__extern__strcmp}
+cstring
+{add_entry-2346}
+nullpos
+[5, 5]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:817
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2361}
+add_gvar
+{(add_entry,__cil_tmp141),(add_entry,category),(add_entry,tmp___15),__extern__strcmp}
+{(add_entry,__cil_tmp141),(add_entry,category),(add_entry,tmp___15),add_entry-2361,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___15)}
+defof
+{(add_entry,tmp___15),__extern__strcmp}
+cstring
+{add_entry-2361}
+nullpos
+[3, 3]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:820
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2364}
+add_gvar
+{(add_entry,__cil_tmp142),(add_entry,category),(add_entry,tmp___14),__extern__strcmp}
+{(add_entry,__cil_tmp142),(add_entry,category),(add_entry,tmp___14),add_entry-2364,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___14)}
+defof
+{(add_entry,tmp___14),__extern__strcmp}
+cstring
+{add_entry-2364}
+nullpos
+[7, 7]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:823
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2367}
+add_gvar
+{(add_entry,__cil_tmp143),(add_entry,category),(add_entry,tmp___13),__extern__strcmp}
+{(add_entry,__cil_tmp143),(add_entry,category),(add_entry,tmp___13),add_entry-2367,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___13)}
+defof
+{(add_entry,tmp___13),__extern__strcmp}
+cstring
+{add_entry-2367}
+nullpos
+[4, 4]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:829
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2370}
+add_gvar
+{(add_entry,__cil_tmp144),(add_entry,category),(add_entry,tmp___16),__extern__strcmp}
+{(add_entry,__cil_tmp144),(add_entry,category),(add_entry,tmp___16),add_entry-2370,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___16)}
+defof
+{(add_entry,tmp___16),__extern__strcmp}
+cstring
+{add_entry-2370}
+nullpos
+[3, 3]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:832
+extern
+{add_entry-2152}
+extern
+{add_entry-2373}
+add_gvar
+{(add_entry,__cil_tmp145),(add_entry,template)}
+{(add_entry,__cil_tmp145),(add_entry,template),add_entry-2152,add_entry-2373}
+use_ret_in
+{(add_entry,template)}
+defof
+{(add_entry,template)}
+cstring
+{add_entry-2373}
+nullpos
+[2, 2]
+
+strcat in string.h:135
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:836
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2376}
+add_gvar
+{(add_entry,__cil_tmp146),(add_entry,category),(add_entry,tmp___17),__extern__strcmp}
+{(add_entry,__cil_tmp146),(add_entry,category),(add_entry,tmp___17),add_entry-2376,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___17)}
+defof
+{(add_entry,tmp___17),__extern__strcmp}
+cstring
+{add_entry-2376}
+nullpos
+[4, 4]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:842
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2382}
+add_gvar
+{(add_entry,__cil_tmp148),(add_entry,category),(add_entry,tmp___20),__extern__strcmp}
+{(add_entry,__cil_tmp148),(add_entry,category),(add_entry,tmp___20),add_entry-2382,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___20)}
+defof
+{(add_entry,tmp___20),__extern__strcmp}
+cstring
+{add_entry-2382}
+nullpos
+[2, 2]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:847
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2385}
+add_gvar
+{(add_entry,__cil_tmp149),(add_entry,category),(add_entry,tmp___19),__extern__strcmp}
+{(add_entry,__cil_tmp149),(add_entry,category),(add_entry,tmp___19),add_entry-2385,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___19)}
+defof
+{(add_entry,tmp___19),__extern__strcmp}
+cstring
+{add_entry-2385}
+nullpos
+[6, 6]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:853
+extern
+{NULL,read_dev-2100}
+extern
+{add_entry-2394}
+add_gvar
+{(add_entry,__cil_tmp152),(add_entry,category),(add_entry,tmp___21),__extern__strcmp}
+{(add_entry,__cil_tmp152),(add_entry,category),(add_entry,tmp___21),add_entry-2394,read_dev-2100,__extern__strcmp}
+use_ret_in
+{(add_entry,tmp___21)}
+defof
+{(add_entry,tmp___21),__extern__strcmp}
+cstring
+{add_entry-2394}
+nullpos
+[7, 7]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:878
+extern
+{NULL,add_entry-2150,read_dev-2099,read_file-2027,read_file-2028}
+add_gvar
+{(add_item,str),(add_item,tmp)}
+{(add_item,str),(add_item,tmp),add_entry-2150,read_dev-2099,read_file-2027,read_file-2028}
+use_ret_in
+{(add_item,tmp)}
+defof
+{(add_item,tmp)}
+cstring
+{NULL,add_entry-2150,read_dev-2099,read_file-2027,read_file-2028}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:539
+extern
+{NULL,add_item-2481}
+extern
+{NULL,add_item-2481,main-1647,main-1652,main-1657}
+extern
+{}
+add_gvar
+{(add_item,new_ptr19),(add_item,old_ptr16),(add_item,tmp___021)}
+{(add_item,new_ptr19),(add_item,old_ptr16),(add_item,tmp___021),add_item-2481,main-1647,main-1652,main-1657}
+use_ret_in
+bot
+defof
+bot
+cstring
+
+memcpy in string.h:43
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:898
+extern
+{NULL,add_item-2480}
+extern
+{NULL,add_entry-2150,read_dev-2099,read_file-2027,read_file-2028}
+add_gvar
+{(add_item,rstr),(add_item,str)}
+{(add_item,rstr),(add_item,str),add_entry-2150,add_item-2480,read_dev-2099,read_file-2027,read_file-2028}
+use_ret_in
+{(add_item,rstr)}
+defof
+{(add_item,rstr)}
+cstring
+{NULL,add_entry-2150,read_dev-2099,read_file-2027,read_file-2028}
+nullpos
+[0, +oo]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+InterCfg.cfgof
+InterCfg.cfgof
+
+
+lib id : genconf.c:937
+extern
+{NULL,add_item-2481,main-1647,main-1652,main-1657}
+extern
+{NULL}
+extern
+{}
+extern
+{}
+add_gvar
+{(sort_uniq,count),(sort_uniq,strlist)}
+{(sort_uniq,count),(sort_uniq,strlist),add_item-2481,main-1647,main-1652,main-1657}
+loop
+bot
+use_ret_in
+bot
+defof
+bot
+cstring
+
+qsort in stdlib.h:756
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : genconf.c:939
+extern
+{NULL,add_item-2480,add_item-2481,main-1647,main-1652,main-1657,process_replaces-1975}
+extern
+{NULL,add_item-2480,add_item-2481,main-1647,main-1652,main-1657,process_replaces-1975}
+add_gvar
+{(sort_uniq,from),(sort_uniq,tmp___1),(sort_uniq,to),add_item-2481.str,main-1647.str,main-1652.str,main-1657.str,__extern__strcmp}
+{(sort_uniq,from),(sort_uniq,tmp___1),(sort_uniq,to),add_item-2480,add_item-2481,add_item-2481.str,main-1647,main-1647.str,main-1652,main-1652.str,main-1657,main-1657.str,process_replaces-1975,__extern__strcmp}
+loop
+{(sort_uniq,to),add_item-2481.str,main-1647.str,main-1652.str,main-1657.str}
+def
+{(sort_uniq,to)}
+use_ret_in
+{(sort_uniq,tmp___1)}
+defof
+{(sort_uniq,tmp___1),__extern__strcmp}
+cstring
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+{NULL,add_item-2481,main-1647,main-1652,main-1657}
+nullpos
+bot
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:948
+extern
+{NULL,add_item-2481,main-1647,main-1652,main-1657}
+extern
+{NULL}
+extern
+{}
+extern
+{}
+add_gvar
+{(sort_uniq,count),(sort_uniq,strlist)}
+{(sort_uniq,count),(sort_uniq,strlist),add_item-2481,main-1647,main-1652,main-1657}
+loop
+bot
+use_ret_in
+bot
+defof
+bot
+cstring
+
+qsort in stdlib.h:756
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+
+
+lib id : genconf.c:959
+extern
+{}
+extern
+{main-1570,main-1819,main-1822,main-1825,main-1828}
+add_gvar
+{(write_list,pat).pattern,(write_list,pstr)}
+{(write_list,pat).pattern,(write_list,pstr),main-1570,main-1819,main-1822,main-1825,main-1828}
+use_ret_in
+{(write_list,pat).pattern}
+defof
+{(write_list,pat).pattern}
+cstring
+{main-1570,main-1819,main-1822,main-1825,main-1828}
+nullpos
+[3, 3]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:968
+extern
+{(main,conf).lib_p,(main,conf).libpath_p,(main,conf).obj_p,(write_list,pat)}
+add_gvar
+{(main,conf).lib_p.pattern,(main,conf).libpath_p.pattern,(main,conf).obj_p.pattern,(write_list,pat).pattern,(write_list_pattern,pat),(write_list_pattern,tmp)}
+{(main,conf).lib_p,(main,conf).lib_p.pattern,(main,conf).libpath_p,(main,conf).libpath_p.pattern,(main,conf).obj_p,(main,conf).obj_p.pattern,(write_list,pat),(write_list,pat).pattern,(write_list_pattern,pat),(write_list_pattern,tmp)}
+loop
+{(main,conf).lib_p.pattern,(main,conf).libpath_p.pattern,(main,conf).obj_p.pattern,(write_list,pat).pattern,(write_list_pattern,pat)}
+use_ret_in
+{(write_list_pattern,tmp)}
+defof
+{(write_list_pattern,tmp)}
+cstring
+{}
+nullpos
+bot
+{}
+nullpos
+bot
+{}
+nullpos
+bot
+{}
+nullpos
+bot
+{(main,conf).lib_p,(main,conf).libpath_p,(main,conf).obj_p,(write_list,pat)}
+nullpos
+bot
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 6.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:973
+extern
+{NULL,add_item-2480,process_replaces-1975}
+add_gvar
+{(write_list_pattern,lstr),(write_list_pattern,tmp___0)}
+{(write_list_pattern,lstr),(write_list_pattern,tmp___0),add_item-2480,process_replaces-1975}
+loop
+{(write_list_pattern,lstr)}
+def
+{(write_list_pattern,lstr)}
+use_ret_in
+{(write_list_pattern,tmp___0)}
+defof
+{(write_list_pattern,tmp___0)}
+cstring
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+
+strlen in string.h:397
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:979
+extern
+{NULL,write_list_pattern-2615,__extern__toupper}
+extern
+{NULL,add_item-2480,process_replaces-1975}
+add_gvar
+{(write_list_pattern,lstr),(write_list_pattern,str)}
+{(write_list_pattern,lstr),(write_list_pattern,str),add_item-2480,process_replaces-1975,write_list_pattern-2615}
+loop
+{(write_list_pattern,lstr)}
+def
+{(write_list_pattern,lstr)}
+use_ret_in
+{(write_list_pattern,str)}
+defof
+{(write_list_pattern,str)}
+cstring
+{NULL,add_item-2480,process_replaces-1975}
+nullpos
+[0, +oo]
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:992
+add_gvar
+{(write_list_pattern,tmp___4),__extern____ctype_b_loc}
+{(write_list_pattern,tmp___4),__extern____ctype_b_loc}
+loop
+bot
+use_ret_in
+{(write_list_pattern,tmp___4)}
+defof
+{(write_list_pattern,tmp___4),__extern____ctype_b_loc}
+cstring
+
+__ctype_b_loc in ctype.h:81
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+
+
+lib id : genconf.c:993
+extern
+{NULL,write_list_pattern-2615,__extern__toupper}
+add_gvar
+{(write_list_pattern,ptr),(write_list_pattern,tmp___3),write_list_pattern-2615,__extern__toupper}
+{(write_list_pattern,ptr),(write_list_pattern,tmp___3),write_list_pattern-2615,__extern__toupper}
+loop
+{(write_list_pattern,ptr),write_list_pattern-2615}
+def
+{(write_list_pattern,ptr)}
+use_ret_in
+{(write_list_pattern,tmp___3)}
+defof
+{(write_list_pattern,tmp___3),__extern__toupper}
+cstring
+{NULL,write_list_pattern-2615}
+nullpos
+[0, +oo]
+{__extern__toupper}
+nullpos
+[-oo, +oo]
+
+toupper in ctype.h:119
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:1000
+extern
+{NULL,write_list_pattern-2616}
+extern
+{}
+add_gvar
+{(write_list_pattern,alist),(write_list_pattern,xstr),__extern__strchr}
+{(write_list_pattern,alist),(write_list_pattern,xstr),write_list_pattern-2616,__extern__strchr}
+loop
+bot
+use_ret_in
+{(write_list_pattern,alist)}
+defof
+{(write_list_pattern,alist),__extern__strchr}
+cstring
+
+strchr in string.h:233
+constant : true
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.5
+cstring : 0.
+
+
+
+
+lib id : genconf.c:1003
+extern
+{NULL,write_list_pattern-2616}
+extern
+{write_list_pattern-2546}
+add_gvar
+{(write_list_pattern,macname),(write_list_pattern,tmp___5),(write_list_pattern,xstr),__extern__strcmp}
+{(write_list_pattern,macname),(write_list_pattern,tmp___5),(write_list_pattern,xstr),write_list_pattern-2546,write_list_pattern-2616,__extern__strcmp}
+loop
+{(write_list_pattern,macname)}
+def
+{(write_list_pattern,macname)}
+use_ret_in
+{(write_list_pattern,tmp___5)}
+defof
+{(write_list_pattern,tmp___5),__extern__strcmp}
+cstring
+{write_list_pattern-2546}
+nullpos
+bot
+
+strcmp in string.h:142
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+
+
+lib id : genconf.c:1007
+extern
+{write_list_pattern-2546}
+extern
+{NULL,write_list_pattern-2616}
+add_gvar
+{(write_list_pattern,macname),(write_list_pattern,xstr)}
+{(write_list_pattern,macname),(write_list_pattern,xstr),write_list_pattern-2546,write_list_pattern-2616}
+loop
+{(write_list_pattern,xstr)}
+def
+{(write_list_pattern,xstr)}
+use_ret_in
+{(write_list_pattern,macname)}
+defof
+{(write_list_pattern,macname)}
+cstring
+{NULL,write_list_pattern-2616}
+nullpos
+bot
+
+strcpy in string.h:127
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+== features for library ==
+genconf.c:1000:strchr
+constant : true
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.5
+cstring : 0.
+
+
+genconf.c:1003:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+genconf.c:1007:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+genconf.c:347:memcpy
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.666666666667
+cstring : 0.
+
+
+genconf.c:358:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+genconf.c:410:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 1.
+
+
+genconf.c:463:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 3.
+cstring : 1.
+
+
+genconf.c:539:memcpy
+constant : false
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+genconf.c:548:calloc
+constant : true
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.5
+cstring : 0.
+
+
+genconf.c:558:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+genconf.c:560:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.5
+cstring : 0.
+
+
+genconf.c:561:strcat
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+genconf.c:574:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+genconf.c:580:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+genconf.c:629:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 0.
+
+
+genconf.c:641:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.5
+cstring : 0.
+
+
+genconf.c:642:strcat
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+genconf.c:644:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 5.
+cstring : 0.
+
+
+genconf.c:650:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:652:fopen
+constant : false
+size : 2.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:658:fseek
+constant : true
+size : 3.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.333333333333
+cstring : 0.
+
+
+genconf.c:659:ftell
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 3.
+cstring : 0.
+
+
+genconf.c:666:rewind
+constant : false
+size : 1.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+genconf.c:667:fread
+constant : true
+size : 4.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 1.25
+cstring : 0.
+
+
+genconf.c:701:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+genconf.c:729:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+genconf.c:745:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+genconf.c:746:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+genconf.c:760:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:766:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:768:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:777:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:778:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+genconf.c:785:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:788:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:794:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:800:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:803:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:805:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:806:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 0.
+
+
+genconf.c:809:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:811:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:817:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:820:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:823:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:829:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:831:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 1.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.5
+cstring : 0.
+
+
+genconf.c:832:strcat
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+genconf.c:836:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:842:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:843:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+genconf.c:847:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:853:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 1.
+
+
+genconf.c:866:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 2.
+cstring : 0.
+
+
+genconf.c:878:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+genconf.c:898:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+genconf.c:937:qsort
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+genconf.c:939:strcmp
+constant : false
+size : 2.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+genconf.c:948:qsort
+constant : true
+size : 4.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 0.5
+cstring : 0.
+
+
+genconf.c:959:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : true
+out_of_fun : false
+finite : 1.
+points_to : 1.
+cstring : 1.
+
+
+genconf.c:968:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : false
+update_param_in_loop : false
+use_ret_in_loop : false
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 6.
+cstring : 0.
+
+
+genconf.c:973:strlen
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 2.
+cstring : 0.
+
+
+genconf.c:979:strcpy
+constant : false
+size : 2.
+return : false
+return_int : false
+return_idx : false
+extern : 0.
+gvar : false
+from_string : true
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : true
+out_of_fun : false
+finite : 0.
+points_to : 1.
+cstring : 0.
+
+
+genconf.c:992:__ctype_b_loc
+constant : true
+size : 0.
+return : true
+return_int : false
+return_idx : false
+extern : 0.
+gvar : true
+from_string : false
+from_ctype : true
+inside_loop : true
+update_param_in_loop : false
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 1.
+points_to : 0.
+cstring : 1.
+
+
+genconf.c:993:toupper
+constant : false
+size : 1.
+return : true
+return_int : true
+return_idx : false
+extern : 0.
+gvar : false
+from_string : false
+from_ctype : false
+inside_loop : true
+update_param_in_loop : true
+use_ret_in_loop : true
+update_param_itself : false
+out_of_fun : false
+finite : 0.
+points_to : 4.
+cstring : 0.
+
+
+Finished properly.
+0.280017

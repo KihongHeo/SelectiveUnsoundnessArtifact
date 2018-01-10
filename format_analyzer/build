@@ -1,0 +1,83 @@
+#!/bin/bash
+
+set -e -u
+
+BUILD_CMD=ocamlbuild
+INCLUDE_DIRS=frontend,analysis/domain,analysis/semantics,analysis/pre,analysis/pfs,analysis/sparse,validate,lib,extract,debug,report,main,research
+INPUT_DIR_SET=false
+TARGET=main/Main.native
+PACKAGE=
+LIBS=
+STATIC_BINDING=
+DOC_FLAGS="-docflags -hide-warnings,-charset,utf-8,-keep-code"
+
+function clean
+{
+	ocamlbuild -clean
+	exit 0
+}
+
+function rebuild
+{
+	ocamlbuild -clean
+}
+
+function doc
+{
+    TARGET=zoo.docdir/index.html
+}
+
+function byte
+{
+    TARGET=core/Main.byte
+}
+
+function static
+{
+    STATIC_BINDING="-lflags -ccopt,-static"
+}
+
+function profile
+{
+    TARGET=main/Main.p.native
+}
+
+function help
+{
+echo "Usage: ./build [Options] UserInputDir
+
+Options
+  debug        Turn on debug mode after analysis(and validation).
+  clean        Clean compiled files.
+  rebuild      Clean and build.
+  doc          Generate html documents.
+  byte         OCaml bytecode compile (default is native code).
+  static       (Experimental) Static binding of libraries.
+  profile      (Experimental) Turn on profiling mode that uses gprof.
+  help         Print this.
+
+UserInputDir
+  ItvInput     Interval analysis
+  TntInput     Taint analysis"
+}
+
+while [ $# -ne 0 ] && [ ! -z $1 ]; do
+	case $1 in
+		debug|clean|rebuild|doc|byte|static|profile) "$1" ;;
+        help|-help|--help|-h|--h) help; exit 0 ;;
+		*) INPUT_DIR_SET=true; INCLUDE_DIRS="$INCLUDE_DIRS",${1%/} ;;
+	esac
+	shift
+done
+if [ "$INPUT_DIR_SET" = false ]; then
+    INCLUDE_DIRS="$INCLUDE_DIRS,TntInput"
+    INPUT_DIR_SET=true
+fi
+
+time $BUILD_CMD $TARGET \
+    $PACKAGE $LIBS \
+    -use-ocamlfind \
+    -Is $INCLUDE_DIRS \
+    -cflag -bin-annot \
+    $STATIC_BINDING \
+    $DOC_FLAGS
