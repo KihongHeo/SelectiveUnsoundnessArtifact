@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e -u
+cd bo_analyzer
+./build
+cd ../format_analyzer
+./build
+cd ../
